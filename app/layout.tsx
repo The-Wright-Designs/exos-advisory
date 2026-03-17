@@ -2,12 +2,15 @@ import type { Metadata } from "next";
 
 import { Archivo } from "next/font/google";
 
+import HeaderComponent from "@/_components/navigation/header-component";
+
 const archivoSansSerif = Archivo({
   subsets: ["latin"],
-  weight: ["300", "700"],
+  weight: ["100", "200", "300", "700"],
 });
 
 import "@/_styles/globals.css";
+import FooterComponent from "@/_components/navigation/footer-component";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://exos.global"),
@@ -41,11 +44,13 @@ export default function RootLayout({
   return (
     <html lang="en" data-scroll-behavior="smooth">
       <body>
+        <HeaderComponent />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <FooterComponent />
       </body>
     </html>
   );
