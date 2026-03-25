@@ -6,7 +6,7 @@ import Link from "next/link";
 import classNames from "classnames";
 
 import navData from "@/_data/nav-data.json";
-import { AlignLeft, AlignRight, Menu, X } from "lucide-react";
+import { AlignRight, X } from "lucide-react";
 
 interface MobileHeaderProps {
   cssClasses?: string;
