@@ -6,7 +6,7 @@ import HeaderComponent from "@/_components/navigation/header-component";
 
 const archivoSansSerif = Archivo({
   subsets: ["latin"],
-  weight: ["100", "200", "300", "700"],
+  weight: ["100", "200", "300", "500", "700"],
 });
 
 import "@/_styles/globals.css";

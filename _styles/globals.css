@@ -2,6 +2,15 @@
 
 @font-face {
   font-family: "Nudista";
+  src: url("/fonts/Nudista-Medium.woff2") format("woff2"),
+    url("/fonts/Nudista-Medium.woff") format("woff"),
+    url("/fonts/Nudista-Medium.ttf") format("truetype"),
+    url("/fonts/Nudista-Medium.otf") format("opentype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "Nudista";
   src: url("/fonts/Nudista-SemiBold.woff2") format("woff2"),
     url("/fonts/Nudista-SemiBold.woff") format("woff"),
     url("/fonts/Nudista-SemiBold.ttf") format("truetype"),
@@ -74,6 +83,12 @@
 
   a {
     @apply text-link-blue ease-in-out duration-300;
+  }
+
+  .font-nudista-hero {
+    @media (min-width: 1280px) {
+      font-family: "Nudista", Arial, sans-serif;
+    }
   }
 }
 

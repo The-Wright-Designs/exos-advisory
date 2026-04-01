@@ -70,7 +70,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
 
       <div
         className={classNames(
-          "fixed inset-0 z-50 transform bg-charcoal/97 transition-transform duration-300 ease-in-out px-5 pt-7 flex flex-col gap-10 min-[360px]:pt-13.5",
+          "fixed inset-0 z-50 transform bg-charcoal/99 transition-transform duration-300 ease-in-out px-5 pt-7 flex flex-col gap-10 min-[360px]:pt-13.5",
           {
             "translate-x-full": !isOpen,
           },
