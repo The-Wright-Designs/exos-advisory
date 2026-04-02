@@ -81,12 +81,16 @@
     letter-spacing: 0.01em;
   }
 
-  .font-nudista {
-    font-family: "Nudista", Arial, sans-serif;
-  }
-
   a {
     @apply text-link-blue ease-in-out duration-300;
+  }
+
+  img {
+    @apply rounded-[6px]
+  }
+
+  .font-nudista {
+    font-family: "Nudista", Arial, sans-serif;
   }
 
   .font-nudista-hero {
@@ -94,6 +98,7 @@
       font-family: "Nudista", Arial, sans-serif;
     }
   }
+
 }
 
 /* spinner styles */

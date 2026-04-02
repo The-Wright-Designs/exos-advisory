@@ -22,6 +22,24 @@
           "title": "Pressure to perform",
           "bubble": "Proving that success wasn’t luck"
         }
+      ],
+      "infoCards": [
+        {
+          "percentage": "30%",
+          "paragraph": "Only 30% of founders replicate prior performance"
+        },
+        {
+          "percentage": "50%",
+          "paragraph": "Many exited founders lose up to 50% of post-exit wealth within 5–7 years of exit"
+        },
+        {
+          "percentage": "55%",
+          "paragraph": "55% admit to regretting a post-exit allocation within five years"
+        },
+        {
+          "percentage": "68%",
+          "paragraph": "admit to at least one financial decision made too early"
+        }
       ]
     }
   }

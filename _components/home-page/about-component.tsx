@@ -45,7 +45,7 @@ export default function AboutComponent() {
                 What happens to everything I&apos;ve worked for if I get the
                 next chapter wrong?
               </MessageTemplate>
-              <MessageTemplate sentTime="01:17" messageClasses="w-[314px]">
+              <MessageTemplate sentTime="01:17" messageClasses="max-w-[314px]">
                 Who am I without the business?
               </MessageTemplate>
               <MessageTemplate sentTime="01:19" notDelivered>

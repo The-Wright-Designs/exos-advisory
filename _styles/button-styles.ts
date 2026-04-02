@@ -8,7 +8,7 @@ export const buttonStyles = (
   border?: "charcoal" | "citrine",
 ) =>
   classNames(
-    "border-[3px] flex items-center text-paragraph font-semibold text-white text-center px-10 py-4 justify-center ease-in-out duration-300 rounded-md gap-2",
+    "border-[3px] flex items-center min-w-[240px] text-paragraph font-semibold text-white text-center px-10 py-4 justify-center ease-in-out duration-300 rounded-md gap-2",
     cssClasses,
     {
       "opacity-50 cursor-not-allowed": pending || disabled,
