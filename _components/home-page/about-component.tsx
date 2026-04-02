@@ -4,7 +4,7 @@ import MessageTemplate from "@/_components/ui/message-template";
 
 export default function AboutComponent() {
   return (
-    <div className="w-full desktop:bg-slate">
+    <main className="w-full desktop:bg-slate">
       <div className="max-w-[1280px] mx-auto px-5 pb-15 flex flex-col gap-10 desktop:px-15 desktop:py-15 ">
         <div className="flex flex-col gap-10 desktop:grid desktop:grid-cols-[1fr_354px] desktop:gap-10">
           <div className="flex flex-col gap-10 tablet:items-start">
@@ -55,7 +55,7 @@ export default function AboutComponent() {
             <div className="relative aspect-video rounded-md overflow-hidden min-[600px]:aspect-auto min-[950px]:aspect-video min-[600px]:order-first desktop:hidden">
               <Image
                 src="/images/home-page/9715528619e46abd6bf83d3001bd5f94820584ac.jpg"
-                alt=""
+                alt="Founder reflecting on life after business exit"
                 fill
                 className="object-cover"
               />
@@ -74,7 +74,7 @@ export default function AboutComponent() {
           <div className="relative aspect-video rounded-md overflow-hidden">
             <Image
               src="/images/home-page/9715528619e46abd6bf83d3001bd5f94820584ac.jpg"
-              alt=""
+              alt="Founder reflecting on life after business exit"
               fill
               className="object-cover"
             />
@@ -82,13 +82,13 @@ export default function AboutComponent() {
           <div className="relative h-full rounded-md overflow-hidden">
             <Image
               src="/images/home-page/52a01a3dae19842c69313db7b59e4fe1424025fc.jpg"
-              alt=""
+              alt="Strategic advisory session for post-exit founders"
               fill
               className="object-cover"
             />
           </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }

@@ -1,0 +1,28 @@
+{
+  "homePage": {
+    "theHiddenCost": {
+      "staircase": [
+        { "title": "Loss of identity" },
+        {
+          "title": "Loss of community",
+          "bubble": "No longer surrounded by team"
+        },
+        { "title": "Loss of purpose" },
+        {
+          "title": "Reintegrate into family",
+          "bubble": "Rebuild neglected relationships"
+        },
+        { "title": "Emotions detached" },
+        {
+          "title": "Frustration",
+          "bubble": "Now reporting to acquirers/\ninvestors"
+        },
+        { "title": "Misaligned" },
+        {
+          "title": "Pressure to perform",
+          "bubble": "Proving that success wasn’t luck"
+        }
+      ]
+    }
+  }
+}
