@@ -12,6 +12,7 @@ const FooterComponent = () => {
             alt="EXOS logo"
             width={72}
             height={58}
+            className="rounded-none"
           />
         </div>
         <p className="text-[16px] flex flex-col gap-1 text-center font-thin">

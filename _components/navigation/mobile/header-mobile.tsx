@@ -40,7 +40,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
               alt="EXOS Logo"
               width={32}
               height={32}
-              className="min-[360px]:hidden w-auto h-8"
+              className="min-[360px]:hidden w-auto h-8 rounded-none"
             />
             <p className="font-nudista leading-[0.9] text-charcoal text-[32px] min-[360px]:text-[44px]">
               EXOS
@@ -52,7 +52,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
               alt="EXOS Logo"
               width={20}
               height={20}
-              className="w-auto h-5"
+              className="w-auto h-5 rounded-none"
             />
             <p className="text-[18px] font-extralight text-charcoal">
               The Exit Operating System
@@ -70,7 +70,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
 
       <div
         className={classNames(
-          "fixed inset-0 z-50 transform bg-charcoal/99 transition-transform duration-300 ease-in-out px-5 pt-7 flex flex-col gap-10 min-[360px]:pt-16",
+          "fixed inset-0 z-50 transform bg-charcoal/97 transition-transform duration-300 ease-in-out px-7 pt-7 flex flex-col gap-10 min-[360px]:pt-16",
           {
             "translate-x-full": !isOpen,
           },
@@ -79,7 +79,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
         <button
           onClick={() => setIsOpen(false)}
           aria-label="Close menu"
-          className="p-2 -m-2 self-end"
+          className="p-2 -m-2 self-end translate-x-2.5 translate-y-0.5"
         >
           <X size={32} color="#FFFFFF" />
         </button>

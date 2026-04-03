@@ -16,9 +16,9 @@ const HeaderDesktop = ({ cssClasses }: DesktopHeaderProps) => {
             <Image
               src="/logo/exos-logo-gradient.png"
               alt="EXOS Logo"
-              width={32}
-              height={32}
-              className="w-auto h-8"
+              width={40}
+              height={40}
+              className="w-auto h-10 rounded-none"
             />
             <p className="font-nudista leading-[0.9] text-charcoal text-[32px] min-[360px]:text-[44px]">
               EXOS
@@ -29,7 +29,7 @@ const HeaderDesktop = ({ cssClasses }: DesktopHeaderProps) => {
           {navData.map((item) => (
             <Link
               key={item.title}
-              className="text-charcoal font-light desktop:hover:text-blue"
+              className="text-charcoal font-thin desktop:hover:text-blue"
               href={item.url}
             >
               {item.title}

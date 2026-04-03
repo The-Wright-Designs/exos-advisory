@@ -20,13 +20,13 @@ export default function LossOfComponent() {
       )}
     >
       <div className={classNames("w-[45px] min-h-[240px] relative")}>
-        <p
+        <h4
           className={classNames(
-            "text-lustre text-heading font-normal font-nudista uppercase -rotate-90 whitespace-nowrap absolute bottom-[87px] -left-[94px]",
+            "text-lustre text-heading font-normal font-nudista uppercase -rotate-90 whitespace-nowrap absolute bottom-[87px] -left-[90px]",
           )}
         >
           Loss of...
-        </p>
+        </h4>
       </div>
       <div
         className={classNames(

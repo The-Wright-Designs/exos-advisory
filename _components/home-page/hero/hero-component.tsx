@@ -9,7 +9,7 @@ export default function HeroComponent() {
             src="/images/home-page/51dc1c10d4f2d7d231839209f5eab5d67437d6bd.jpg"
             alt="Exos Advisory - The Exit operating system"
             fill
-            className="object-cover"
+            className="object-cover rounded-none"
           />
         </div>
         <div className="absolute bottom-2 grid place-items-center w-full px-5 desktop:relative desktop:bottom-0 desktop:bg-citrine desktop:place-items-start desktop:p-15 overflow-hidden">
@@ -18,7 +18,7 @@ export default function HeroComponent() {
             alt="EXOS Advisory logo"
             width={1246}
             height={1005}
-            className="hidden desktop:block absolute top-0 -left-[220px] min-w-[1246px] h-auto opacity-[2.5%]"
+            className="hidden desktop:block absolute rounded-none top-0 -left-[220px] min-w-[1246px] h-auto opacity-[2.5%]"
           />
           <div className="bg-citrine max-w-[310px] h-[260px] rounded-[6px] drop-shadow-md p-5 grid place-items-center tablet:max-w-[620px] tablet:h-auto tablet:p-10 desktop:drop-shadow-none desktop:p-0 desktop:block desktop:max-w-max desktop:bg-transparent desktop:z-10">
             <div className="text-center flex flex-col tablet:gap-2 desktop:text-left desktop:gap-5">
@@ -46,7 +46,7 @@ export default function HeroComponent() {
             alt="EXOS Advisory logo"
             width={295}
             height={238}
-            className="hidden desktop:block absolute top-15 right-15 z-10"
+            className="hidden desktop:block rounded-none absolute top-15 right-15 z-10"
           />
         </div>
       </div>

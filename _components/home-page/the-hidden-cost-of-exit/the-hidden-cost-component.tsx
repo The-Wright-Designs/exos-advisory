@@ -1,13 +1,16 @@
 import SectionHeadingComponent from "@/_components/ui/section-heading-component";
 import StaircaseComponent from "./staircase-component";
 import TheLinkBetweenComponent from "./the-link-between-component";
-import Image from "next/image";
+import TheInvestmentTrapComponent from "./the-investment-trap-component";
 
 const TheHiddenCostComponent = () => {
   return (
-    <section className="flex flex-col gap-15">
+    <section className="grid gap-15 tablet:grid-cols-[334px_1fr]">
+      <SectionHeadingComponent cssClasses="hidden col-span-2 tablet:block">
+        The Hidden Cost of Exit
+      </SectionHeadingComponent>
       <div className="flex flex-col gap-10">
-        <SectionHeadingComponent>
+        <SectionHeadingComponent cssClasses="tablet:hidden">
           The Hidden Cost of Exit
         </SectionHeadingComponent>
         <p className="text-[26px] flex flex-col leading-[1.25]">
@@ -20,15 +23,12 @@ const TheHiddenCostComponent = () => {
         </p>
         <StaircaseComponent />
       </div>
-      <div className="aspect-square relative">
-        <Image
-          src="/images/home-page/6a67108f3174d8156d40662dc9bc96c91be76997.jpg"
-          alt="Exos"
-          fill
-          className="object-cover"
-        />
+      <div className="flex flex-col gap-15 desktop:border-t desktop:border-charcoal/50 desktop:pt-10 desktop:border-none desktop:bg-mist desktop:p-15 desktop:rounded-md desktop:gap-10">
+        <TheLinkBetweenComponent />
+        <hr className="block text-charcoal/50 tablet:hidden desktop:block" />
+        <TheInvestmentTrapComponent cssClasses="tablet:hidden desktop:flex" />
       </div>
-      <TheLinkBetweenComponent />
+      <TheInvestmentTrapComponent cssClasses="hidden col-span-2 tablet:flex desktop:hidden" />
     </section>
   );
 };

@@ -34,11 +34,11 @@
   --text-heading--font-weight: 700;
   --text-heading--line-height: 1;
   --text-paragraph: 1.125rem;
-  --text-paragraph--font-weight: 300;
-  --text-paragraph--line-height: 22px;
+  --text-paragraph--font-weight: 200;
+  --text-paragraph--line-height: 1.25;
   --text-subheading: 1.5rem;
   --text-subheading--font-weight: 300;
-  --text-subheading--line-height: 1;
+  --text-subheading--line-height: 1.25;
 
   --breakpoint-*: initial;
   --breakpoint-phone: 425px;
