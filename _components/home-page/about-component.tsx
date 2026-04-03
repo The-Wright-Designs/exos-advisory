@@ -5,7 +5,7 @@ import MessageTemplate from "@/_components/ui/message-template";
 export default function AboutComponent() {
   return (
     <main className="w-full desktop:bg-slate">
-      <div className="max-w-[1280px] mx-auto px-5 pb-15 flex flex-col gap-10 desktop:px-15 desktop:py-15 ">
+      <div className="max-w-[1280px] mx-auto px-5 flex flex-col gap-10 desktop:px-15 desktop:py-15 ">
         <div className="flex flex-col gap-10 desktop:grid desktop:grid-cols-[1fr_354px] desktop:gap-10">
           <div className="flex flex-col gap-10 tablet:items-start">
             <div className="flex flex-col gap-5">

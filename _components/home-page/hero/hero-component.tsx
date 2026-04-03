@@ -20,7 +20,7 @@ export default function HeroComponent() {
             height={1005}
             className="hidden desktop:block absolute rounded-none top-0 -left-[220px] min-w-[1246px] h-auto opacity-[2.5%]"
           />
-          <div className="bg-citrine max-w-[310px] h-[260px] rounded-[6px] drop-shadow-md p-5 grid place-items-center tablet:max-w-[620px] tablet:h-auto tablet:p-10 desktop:drop-shadow-none desktop:p-0 desktop:block desktop:max-w-max desktop:bg-transparent desktop:z-10">
+          <div className="bg-citrine max-w-[310px] rounded-[6px] drop-shadow-md p-5 grid place-items-center tablet:max-w-[620px] tablet:h-auto tablet:p-10 desktop:drop-shadow-none desktop:p-0 desktop:block desktop:max-w-max desktop:bg-transparent desktop:z-10">
             <div className="text-center flex flex-col tablet:gap-2 desktop:text-left desktop:gap-5">
               <h3 className="leading-[175%] desktop:grid desktop:leading-normal">
                 <span className="text-[40px] font-bold desktop:text-[108px] desktop:font-light desktop:leading-[110%]">

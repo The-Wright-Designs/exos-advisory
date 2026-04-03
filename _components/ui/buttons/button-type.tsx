@@ -45,7 +45,7 @@ const ButtonType = ({
             viewBox="0 0 24 24"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
-            className="hidden min-[325px]:block"
+            className="hidden min-[375px]:block"
           >
             <path
               fillRule="evenodd"

@@ -22,7 +22,7 @@ export default function LossOfComponent() {
       <div className={classNames("w-[45px] min-h-[240px] relative")}>
         <h4
           className={classNames(
-            "text-lustre text-heading font-normal font-nudista uppercase -rotate-90 whitespace-nowrap absolute bottom-[87px] -left-[90px]",
+            "text-lustre text-heading font-normal font-nudista uppercase -rotate-90 whitespace-nowrap absolute bottom-[87px] -left-[84px]",
           )}
         >
           Loss of...
