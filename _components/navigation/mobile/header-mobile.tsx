@@ -14,12 +14,14 @@ interface MobileHeaderProps {
 
 export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
   const [isOpen, setIsOpen] = useState(false);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "auto";
+      setOpenIndex(null);
     }
 
     return () => {
@@ -70,7 +72,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
 
       <div
         className={classNames(
-          "fixed inset-0 z-50 transform bg-charcoal/97 transition-transform duration-300 ease-in-out px-7 pt-7 flex flex-col gap-10 min-[360px]:pt-16",
+          "fixed inset-0 z-50 transform bg-charcoal/97 transition-transform duration-300 ease-in-out px-7 pt-7 flex flex-col gap-7 min-[360px]:pt-16 min-[360px]:gap-5",
           {
             "translate-x-full": !isOpen,
           },
@@ -84,17 +86,56 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
           <X size={32} color="#FFFFFF" />
         </button>
         <nav>
-          <ul className="grid gap-5">
-            {navData.map(({ title, url }, id) => {
+          <ul className="grid">
+            {navData.map(({ title, url, submenu }, id) => {
               return (
-                <li key={id}>
-                  <Link
-                    href={url}
-                    onClick={() => setIsOpen(false)}
-                    className="text-paragraph text-white font-thin p-3 -m-3"
-                  >
-                    {title}
-                  </Link>
+                <li
+                  key={id}
+                  className={classNames("py-3", {
+                    "border-b border-white": id !== navData.length - 1,
+                  })}
+                >
+                  {submenu ? (
+                    <>
+                      <button
+                        className="text-paragraph text-white font-thin w-full flex justify-between items-center desktop:hover:cursor-pointer"
+                        onClick={() =>
+                          setOpenIndex(openIndex === id ? null : id)
+                        }
+                      >
+                        {title}
+                        <span className="text-white">
+                          {openIndex === id ? "−" : "+"}
+                        </span>
+                      </button>
+                      <ul
+                        className={classNames(
+                          "flex flex-col items-start gap-1 pl-4 overflow-hidden transition-all delay-75 duration-300 ease-in-out",
+                          openIndex === id ? "max-h-[500px] mt-2" : "max-h-0",
+                        )}
+                      >
+                        {submenu.map((item, i) => (
+                          <li key={i}>
+                            <Link
+                              href={item.url}
+                              className="text-[1rem] text-white font-thin block py-1"
+                              onClick={() => setIsOpen(false)}
+                            >
+                              {item.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </>
+                  ) : (
+                    <Link
+                      href={url}
+                      onClick={() => setIsOpen(false)}
+                      className="text-paragraph text-white font-thin p-3 -m-3"
+                    >
+                      {title}
+                    </Link>
+                  )}
                 </li>
               );
             })}

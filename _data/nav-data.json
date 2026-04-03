@@ -5,11 +5,29 @@
   },
   {
     "title": "About",
-    "url": "/#about"
+    "url": "/#about",
+    "submenu": [
+      {
+        "title": "The Hidden Cost of Exit",
+        "url": "#"
+      },
+      {
+        "title": "The Result",
+        "url": "#"
+      },
+      {
+        "title": "Bio - Brett Fleming",
+        "url": "#"
+      }
+    ]
   },
   {
-    "title": "Services",
-    "url": "/#services"
+    "title": "What Is EXOS?",
+    "url": "/about#what-is-exos"
+  },
+  {
+    "title": "One-on-One Advisory",
+    "url": "/advisory"
   },
   {
     "title": "Contact",

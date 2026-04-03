@@ -26,15 +26,36 @@ const HeaderDesktop = ({ cssClasses }: DesktopHeaderProps) => {
           </div>
         </Link>
         <nav className="flex gap-3 items-end">
-          {navData.map((item) => (
-            <Link
-              key={item.title}
-              className="text-charcoal font-thin desktop:hover:text-blue"
-              href={item.url}
-            >
-              {item.title}
-            </Link>
-          ))}
+          <ul className="flex gap-3 items-end">
+            {navData.map((item) => (
+              <li key={item.title} className="relative group">
+                <Link
+                  className="text-charcoal font-thin tablet:hover:opacity-90 ease-in-out duration-300"
+                  href={item.url}
+                >
+                  {item.title}
+                </Link>
+                {"submenu" in item && item.submenu && (
+                  <ul className="absolute top-13 -left-[62px] min-w-max bg-lustre border-x border-b border-charcoal/25 rounded-b-md shadow-md p-3 flex flex-col gap-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 delay-75">
+                    <div className="w-[80px] h-7 bg-lustre absolute -top-7 left-10" />
+                    {item.submenu.map((sub) => (
+                      <li
+                        key={sub.title}
+                        className="border-b border-charcoal/25 pb-2 last:pb-0 last:border-0 "
+                      >
+                        <Link
+                          href={sub.url}
+                          className="block text-[14px] font-thin text-charcoal text-center tablet:hover:opacity-90 ease-in-out duration-300"
+                        >
+                          {sub.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
         </nav>
       </div>
     </div>
