@@ -81,7 +81,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
         <button
           onClick={() => setIsOpen(false)}
           aria-label="Close menu"
-          className="p-2 -m-2 self-end translate-x-2.5 translate-y-0.5"
+          className="p-2 -m-2 self-end -translate-y-2"
         >
           <X size={32} color="#FFFFFF" />
         </button>
