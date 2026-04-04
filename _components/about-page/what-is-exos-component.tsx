@@ -11,7 +11,7 @@ const stages = [
 
 const WhatIsExos = () => {
   return (
-    <section className="flex flex-col gap-10">
+    <main className="flex flex-col gap-10">
       <SectionHeadingComponent>What is EXOS?</SectionHeadingComponent>
 
       <div className="flex flex-col gap-4">
@@ -50,7 +50,7 @@ const WhatIsExos = () => {
               </div>
               {index < stages.length - 1 && (
                 <div className="flex items-center justify-center relative h-15">
-                  <span className="bg-lustre border-[2px] border-citrine rounded-[6px] px-2 pt-[3px] pb-0.5 text-[12px] text-charcoal z-10 -translate-y-1">
+                  <span className="bg-lustre border-[2px] border-citrine rounded-[6px] px-2 pt-[3px] pb-0.5 text-[12px] text-charcoal z-10 -translate-y-1.5">
                     Unlocks
                   </span>
                   <Image
@@ -75,7 +75,7 @@ const WhatIsExos = () => {
           />
         </div>
       </div>
-    </section>
+    </main>
   );
 };
 

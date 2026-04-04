@@ -20,9 +20,9 @@ const HeaderDesktop = ({ cssClasses }: DesktopHeaderProps) => {
               height={40}
               className="w-auto h-10 rounded-none"
             />
-            <p className="font-nudista leading-[0.9] text-charcoal text-[32px] min-[360px]:text-[44px]">
+            <h1 className="font-nudista leading-[0.9] text-charcoal text-[32px] min-[360px]:text-[44px]">
               EXOS
-            </p>
+            </h1>
           </div>
         </Link>
         <nav className="flex gap-3 items-end">

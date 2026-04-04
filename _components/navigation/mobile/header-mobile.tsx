@@ -44,9 +44,9 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
               height={32}
               className="min-[360px]:hidden w-auto h-8 rounded-none"
             />
-            <p className="font-nudista leading-[0.9] text-charcoal text-[32px] min-[360px]:text-[44px]">
+            <h1 className="font-nudista leading-[0.9] text-charcoal text-[32px] min-[360px]:text-[44px]">
               EXOS
-            </p>
+            </h1>
           </div>
           <div className="hidden min-[360px]:flex items-center gap-2">
             <Image
@@ -56,9 +56,9 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
               height={20}
               className="w-auto h-5 rounded-none"
             />
-            <p className="text-[18px] font-extralight text-charcoal">
+            <h2 className="text-[18px] font-extralight text-charcoal">
               The Exit Operating System
-            </p>
+            </h2>
           </div>
         </Link>
         <button

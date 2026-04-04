@@ -14,17 +14,9 @@ const items = [
 
 export default function LossOfComponent() {
   return (
-    <article
-      className={classNames(
-        "bg-charcoal rounded-[6px] grid grid-cols-[45px_1fr] gap-5 px-5 py-10 overflow-hidden",
-      )}
-    >
-      <div className={classNames("w-[45px] min-h-[240px] relative")}>
-        <h4
-          className={classNames(
-            "text-lustre text-heading font-normal font-nudista uppercase -rotate-90 whitespace-nowrap absolute bottom-[87px] -left-[84px]",
-          )}
-        >
+    <article className="bg-charcoal rounded-[6px] grid grid-cols-[45px_1fr] gap-5 px-5 py-10 overflow-hidden">
+      <div className="w-[45px] min-h-[240px] relative">
+        <h4 className="text-lustre text-heading font-normal font-nudista uppercase -rotate-90 whitespace-nowrap absolute bottom-[87px] -left-[84px]">
           Loss of...
         </h4>
       </div>
