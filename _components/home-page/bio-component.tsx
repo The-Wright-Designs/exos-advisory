@@ -33,7 +33,7 @@ const BioComponent = () => {
         <div className="flex flex-col gap-10">
           <div className="relative w-full aspect-square tablet:aspect-auto tablet:h-full desktop:aspect-square">
             <Image
-              src="/images/home-page/brett-fleming-exos"
+              src="/images/home-page/brett-fleming-exos.jpg"
               alt="Brett Fleming"
               fill
               className="object-cover"
@@ -106,7 +106,7 @@ const BioComponent = () => {
         </ButtonLink>
       </div>
 
-      <div className="relative w-full h-[340px] tablet:hidden">
+      <div className="relative w-full h-[340px] tablet:h-[400px] min-[1000px]:hidden">
         <Image
           src="/images/home-page/46689bad6df6e5c1b9cffee8ff5499522c6e8f99.jpg"
           alt="EXOS"

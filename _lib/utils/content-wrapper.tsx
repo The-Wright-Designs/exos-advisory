@@ -5,7 +5,7 @@ interface PageWrapperProps {
   cssClasses?: string;
 }
 
-const PageWrapper = ({ children, cssClasses }: PageWrapperProps) => {
+const ContentWrapper = ({ children, cssClasses }: PageWrapperProps) => {
   return (
     <div className="max-w-[1280px] mx-auto">
       <div
@@ -20,4 +20,4 @@ const PageWrapper = ({ children, cssClasses }: PageWrapperProps) => {
   );
 };
 
-export default PageWrapper;
+export default ContentWrapper;
