@@ -21,7 +21,10 @@ const BioComponent = () => {
   const [expanded, setExpanded] = useState(false);
 
   return (
-    <section className="border-t border-charcoal/50 pt-15 mt-15 flex flex-col gap-10 tablet:border-none tablet:mt-0 tablet:pt-[100px]">
+    <section
+      className="border-t border-charcoal/50 pt-15 mt-15 flex flex-col gap-10 scroll-mt-0 tablet:border-none tablet:mt-0 tablet:pt-[100px] desktop:scroll-mt-10"
+      id="brett-fleming"
+    >
       <SectionHeadingComponent cssClasses="[&_h2]:flex [&_h2]:flex-col [&_h2]:gap-2">
         Brett Fleming
         <span className="text-[26px] font-light text-charcoal">

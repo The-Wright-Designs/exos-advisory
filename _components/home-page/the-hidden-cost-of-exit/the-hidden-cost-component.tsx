@@ -5,7 +5,10 @@ import TheInvestmentTrapComponent from "./the-investment-trap-component";
 
 const TheHiddenCostComponent = () => {
   return (
-    <section className="grid gap-15 tablet:grid-cols-[334px_1fr]">
+    <section
+      className="grid gap-15 scroll-mt-10 tablet:grid-cols-[334px_1fr] desktop:scroll-mt-40"
+      id="the-hidden-cost"
+    >
       <SectionHeadingComponent cssClasses="hidden col-span-2 tablet:block">
         The Hidden Cost of Exit
       </SectionHeadingComponent>

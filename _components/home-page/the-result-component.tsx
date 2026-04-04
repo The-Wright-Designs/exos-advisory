@@ -37,7 +37,10 @@ const items = [
 
 export default function TheResultComponent() {
   return (
-    <section className="max-w-[1280px] mx-auto flex flex-col gap-10 mt-15 px-7 w-full tablet:bg-slate tablet:p-15">
+    <section
+      className="max-w-[1280px] mx-auto flex flex-col gap-10 mt-15 px-7 w-full scroll-mt-10 tablet:bg-slate tablet:p-15 desktop:scroll-mt-40"
+      id="the-result"
+    >
       <SectionHeadingComponent cssClasses="tablet:text-white">
         The Result?
       </SectionHeadingComponent>
