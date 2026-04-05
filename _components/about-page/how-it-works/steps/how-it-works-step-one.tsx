@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function HowItWorksStepOne() {
   return (
-    <div className="grid gap-10 w-full h-full tablet:grid-cols-2 desktop:grid-cols-[1fr_857px]">
+    <section className="grid gap-10 w-full h-full tablet:grid-cols-2 desktop:grid-cols-[1fr_857px]">
       <div className="flex flex-col gap-5 w-full">
         <p className="text-subheading font-light">Step One: EXOS Discovery</p>
         <p>
@@ -20,6 +20,6 @@ export default function HowItWorksStepOne() {
           className="object-cover"
         />
       </div>
-    </div>
+    </section>
   );
 }

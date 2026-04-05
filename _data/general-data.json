@@ -72,6 +72,14 @@
           "Shareable with chosen specialist service providers, ensuring every advisor enters from the same position of alignment.",
           "Optional matching with mentors, coaches, counsellors, and financial advisors who understand founder psychology and post-exit dynamics."
         ]
+      },
+      "stepFour": {
+        "bulletPoints": [
+          "1–2 priority unlocks per 30-day cycle",
+          "Monthly governance review of what moved, what stalled, what changes",
+          "Progress tracking against the Transition Plan",
+          "Course correction before distortion compounds"
+        ]
       }
     }
   }

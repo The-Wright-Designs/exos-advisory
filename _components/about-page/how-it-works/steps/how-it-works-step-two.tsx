@@ -3,7 +3,7 @@ import ThePathfinderPlaybookComponent from "./step-two/the-pathfinder-playbook-c
 
 export default function HowItWorksStepTwo() {
   return (
-    <div className="flex flex-col gap-10 w-full h-full">
+    <section className="flex flex-col gap-10 w-full h-full">
       <div className="flex flex-col gap-5">
         <p className="text-subheading font-light">
           Step Two: Pathfinder Playbook
@@ -50,6 +50,6 @@ export default function HowItWorksStepTwo() {
         </div>
       </div>
       <ThePathfinderPlaybookComponent />
-    </div>
+    </section>
   );
 }

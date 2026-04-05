@@ -6,7 +6,7 @@ export default function HowItWorksStepThree() {
   const { transitionPlan } = generalData.aboutPage.howItWorks.stepThree;
 
   return (
-    <div className="flex flex-col gap-10 w-full h-full">
+    <section className="flex flex-col gap-10 w-full h-full">
       <div className="flex flex-col gap-5">
         <p className="text-subheading font-light">
           Step Three: Transition Plan
@@ -72,6 +72,6 @@ export default function HowItWorksStepThree() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

@@ -2,6 +2,7 @@ import ContentWrapper from "@/_lib/utils/content-wrapper";
 import HowItWorksStepOne from "./steps/how-it-works-step-one";
 import HowItWorksStepTwo from "./steps/how-it-works-step-two";
 import HowItWorksStepThree from "./steps/how-it-works-step-three";
+import HowItWorksStepFour from "./steps/how-it-works-step-four";
 
 const StepsComponent = () => {
   return (
@@ -17,6 +18,11 @@ const StepsComponent = () => {
       <ContentWrapper>
         <HowItWorksStepThree />
       </ContentWrapper>
+      <div className="desktop:bg-charcoal desktop:p-15">
+        <div className="max-w-[1280px] mx-auto px-7 desktop:px-15">
+          <HowItWorksStepFour />
+        </div>
+      </div>
     </section>
   );
 };
