@@ -26,9 +26,7 @@ const HowItWorksComponent = () => {
           </div>
         </div>
       </section>
-      <section>
-        <StepsComponent />
-      </section>
+      <StepsComponent />
     </div>
   );
 };

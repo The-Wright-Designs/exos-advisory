@@ -1,6 +1,7 @@
 import ContentWrapper from "@/_lib/utils/content-wrapper";
 import HowItWorksStepOne from "./steps/how-it-works-step-one";
 import HowItWorksStepTwo from "./steps/how-it-works-step-two";
+import HowItWorksStepThree from "./steps/how-it-works-step-three";
 
 const StepsComponent = () => {
   return (
@@ -13,6 +14,9 @@ const StepsComponent = () => {
           <HowItWorksStepTwo />
         </div>
       </div>
+      <ContentWrapper>
+        <HowItWorksStepThree />
+      </ContentWrapper>
     </section>
   );
 };

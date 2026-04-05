@@ -8,6 +8,7 @@ interface Props {
   notDelivered?: boolean;
   containerClasses?: string;
   messageClasses?: string;
+  isReply?: boolean;
 }
 
 export default function MessageTemplate({
@@ -17,6 +18,7 @@ export default function MessageTemplate({
   notDelivered,
   containerClasses,
   messageClasses,
+  isReply,
 }: Props) {
   const icon = notDelivered
     ? "/icons/single-check.png"
@@ -27,14 +29,21 @@ export default function MessageTemplate({
   const iconWidth = notDelivered ? 12 : 17;
 
   return (
-    <div className={classNames("flex justify-end", containerClasses)}>
+    <div
+      className={classNames(
+        "flex",
+        !isReply && "justify-end",
+        containerClasses,
+      )}
+    >
       <div
         className={classNames(
-          "relative bg-charcoal/80 rounded-tl-md rounded-bl-md rounded-br-md px-3 pt-3 pb-7 min-w-[208px]",
+          "relative bg-charcoal/80 rounded-bl-md rounded-br-md px-4 pt-3 pb-7 min-w-[208px]",
+          isReply ? "rounded-tr-md" : "rounded-tl-md",
           messageClasses,
         )}
       >
-        <p className="text-white font-light">{children}</p>
+        <div className="text-white text-[18px] font-light">{children}</div>
         <div className="absolute bottom-2 right-3 flex items-center gap-1 opacity-85">
           <span className="text-[12px] font-light text-white">{sentTime}</span>
           <Image src={icon} alt="" width={iconWidth} height={11} />
