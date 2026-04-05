@@ -1,4 +1,4 @@
-import EvolvingEntrepreteurComponent from "./evolving-entrepreteur-component";
+import EvolvingEntrepreteurComponent from "./evolving-entrepreneur-component";
 
 export default function HowItWorksStepTwo() {
   return (

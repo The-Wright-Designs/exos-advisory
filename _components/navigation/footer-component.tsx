@@ -10,9 +10,8 @@ const FooterComponent = () => {
       <div className="px-5 py-10 grid gap-5 items-center desktop:max-w-[1280px] desktop:mx-auto desktop:pt-15 desktop:pb-7 desktop:grid-cols-2 desktop:px-15">
         <ul className="hidden desktop:flex flex-col">
           {navData.map(({ title, url }, index) => (
-            <li className={classNames("items-start", index !== 0 && "-mt-1")}>
+            <li key={index} className={classNames("items-start", index !== 0 && "-mt-1")}>
               <Link
-                key={index}
                 href={url}
                 className="text-charcoal text-[14px] font-extralight hover:opacity-80 ease-in-out duration-300"
               >

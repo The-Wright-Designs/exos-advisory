@@ -46,6 +46,18 @@
   --breakpoint-desktop: 1280px;
 }
 
+@keyframes pulse-scale {
+
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.06);
+  }
+}
+
 @layer components {
   html {
     scroll-behavior: smooth;
