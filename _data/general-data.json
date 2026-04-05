@@ -42,5 +42,37 @@
         }
       ]
     }
+  },
+  "aboutPage": {
+    "howItWorks": {
+      "stepTwo": {
+        "thePathfinderPlaybook": [
+          {
+            "title": "Learning Briefs",
+            "paragraph": "Distilled knowledge drawn from research and the hard-won experience of founders who have navigated this exact kind of challenge. This is not theory, it is insight earned by people who got it wrong and understood what it cost them.\n\nEvery component builds on the last, creating clarity through structure."
+          },
+          {
+            "title": "Pillar Questionnaires",
+            "paragraph": "A structured reflection built on the Learning Briefs where context comes first. This results in a richer insight and more candid response. This surfaces 1-2 priority constraints which are distorting decision quality the most."
+          },
+          {
+            "title": "Pillar Briefs",
+            "paragraph": "Personalised, advisory-ready documents synthesising your position, themes, and priority actions across all five pillars shareable with every specialist advisor from day one, so they enter from the same position of understanding."
+          },
+          {
+            "title": "Golden Thread Mapping",
+            "paragraph": "The unifying themes connecting identity, capital, and direction into a coherent thesis for what comes next. This determines what must stabilise before major financial or directional moves are made."
+          }
+        ]
+      },
+      "stepThree": {
+        "transitionPlan": [
+          "A personalised, integrated plan built across all five pillars, grounded in the Discovery diagnostic and shaped by the Pathfinder Playbook.",
+          "Includes: clear objectives, engagement briefs for each support area, sequenced goals, timelines, progress markers, and governance milestones.",
+          "Shareable with chosen specialist service providers, ensuring every advisor enters from the same position of alignment.",
+          "Optional matching with mentors, coaches, counsellors, and financial advisors who understand founder psychology and post-exit dynamics."
+        ]
+      }
+    }
   }
 }
