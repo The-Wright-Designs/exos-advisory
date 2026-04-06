@@ -20,7 +20,7 @@ const TheProcessComponent = () => {
           />
         </div>
         <div className="relative">
-          <p className="place-self-center tablet:text-white">Normalisation</p>
+          <p className="text-center tablet:text-white">Normalisation</p>
           <Image
             src="/graphics/about-page/arrow-2.svg"
             alt="Arrow graphic"
@@ -30,7 +30,7 @@ const TheProcessComponent = () => {
           />
         </div>
         <div className="relative">
-          <p className="place-self-end tablet:text-white">Authority</p>
+          <p className="text-right tablet:text-white">Authority</p>
           <Image
             src="/graphics/about-page/arrow-3.svg"
             alt="Arrow graphic"
@@ -40,7 +40,7 @@ const TheProcessComponent = () => {
           />
         </div>
         <div className="relative">
-          <p className="place-self-center tablet:text-white">Solution</p>
+          <p className="text-center tablet:text-white">Solution</p>
           <Image
             src="/graphics/about-page/arrow-4.svg"
             alt="Arrow graphic"

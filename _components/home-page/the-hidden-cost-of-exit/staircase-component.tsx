@@ -20,9 +20,9 @@ const StaircaseComponent = () => {
           <div
             key={index}
             className={classNames("relative", {
-              "col-span-3 place-items-start": (index + 1) % 5 === 0,
-              "col-span-3 place-items-center": index % 2 !== 0,
-              "col-span-3 place-items-end": index % 2 === 0 && index !== 0,
+              "col-span-3 justify-self-start": (index + 1) % 5 === 0,
+              "col-span-3 justify-self-center": index % 2 !== 0,
+              "col-span-3 justify-self-end": index % 2 === 0 && index !== 0,
             })}
           >
             <SingleStairComponent
@@ -36,10 +36,10 @@ const StaircaseComponent = () => {
             {bubble && (
               <BubbleComponent
                 cssClasses={classNames("absolute hidden min-[388px]:block", {
-                  "right-8 -top-20 max-w-20": index === 1,
-                  "right-3 -top-17 max-w-[103px]": index === 5,
-                  "left-3 -top-12 max-w-[88px]": index === 3,
-                  "left-0 -top-12 max-w-[102px]": index === 7,
+                  "-right-18 -top-20 max-w-20": index === 1,
+                  "-right-24 -top-17 max-w-[103px]": index === 5,
+                  "-left-25 -top-12 max-w-[88px]": index === 3,
+                  "-left-26 -top-12 max-w-[102px]": index === 7,
                 })}
                 backgroundSlate={Math.floor(index / 2) % 2 !== 0}
                 slateArrow={Math.floor(index / 2) % 2 === 0}

@@ -131,7 +131,7 @@ const EvolvingEntrepreneurComponent = ({
                     "text-center ease-in-out duration-150 delay-150",
                     isOpen
                       ? "text-white text-subheading"
-                      : "text-[10px] font-medium",
+                      : "text-[10px] font-medium text-white",
                   )}
                 >
                   {node.label}
