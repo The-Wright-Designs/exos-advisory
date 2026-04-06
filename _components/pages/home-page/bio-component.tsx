@@ -5,7 +5,7 @@ import Image from "next/image";
 import classNames from "classnames";
 
 import ButtonLink from "@/_components/ui/buttons/button-link";
-import SectionHeadingComponent from "../ui/section-heading-component";
+import SectionHeadingComponent from "../../ui/section-heading-component";
 
 const BIO = [
   "I am a multi-exit entrepreneur and founder who built EXOS after navigating the transition of exit twice myself.",
@@ -22,7 +22,7 @@ const BioComponent = () => {
 
   return (
     <section
-      className="border-t border-charcoal/50 pt-15 mt-15 flex flex-col gap-10 scroll-mt-0 tablet:border-none tablet:mt-0 tablet:pt-[100px] desktop:scroll-mt-10"
+      className="border-t border-charcoal/50 pt-15 mt-15 flex flex-col gap-10 -scroll-mt-5 tablet:border-none tablet:mt-0 tablet:pt-[100px] desktop:scroll-mt-10"
       id="brett-fleming"
     >
       <SectionHeadingComponent cssClasses="[&_h2]:flex [&_h2]:flex-col [&_h2]:gap-2">

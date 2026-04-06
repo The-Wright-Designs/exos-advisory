@@ -1,15 +1,8 @@
 "use server";
 
 import nodemailer from "nodemailer";
-import { contactEmailTemplate } from "@/_lib/utils/email-templates/contact-email-template";
+import { emailTemplate } from "@/_lib/utils/email-templates/email-template";
 import { verifyRecaptchaToken } from "@/_lib/verify-recaptcha";
-
-interface EmailTemplateData {
-  name: string;
-  email: string;
-  phone: string;
-  message: string;
-}
 
 interface MailOptions {
   from: string;
@@ -19,8 +12,14 @@ interface MailOptions {
   html: string;
 }
 
+const subjects: Record<string, string> = {
+  advisory: "Website form submission - EXOS (One-on-One Advisory enquiry)",
+  contact: "Website form submission - EXOS (Contact enquiry)",
+};
+
 export async function sendEmail(
   formData: FormData,
+  formType: "advisory" | "contact",
 ): Promise<{ success: boolean; error?: string }> {
   const honey = formData.get("_honey");
   const recaptchaToken = formData.get("recaptchaToken") as string;
@@ -41,7 +40,6 @@ export async function sendEmail(
 
       const name = formData.get("name")?.toString() || "";
       const email = formData.get("email")?.toString() || "";
-      const phone = formData.get("phone")?.toString() || "";
       const message = formData.get("message")?.toString() || "";
 
       if (!name.trim() || !email.trim() || !message.trim()) {
@@ -51,12 +49,12 @@ export async function sendEmail(
         };
       }
 
-      const emailHtmlContent = contactEmailTemplate({
+      const emailHtmlContent = emailTemplate({
         name,
         email,
-        phone,
         message,
-      } as EmailTemplateData);
+        formType,
+      });
 
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST as string,
@@ -72,7 +70,7 @@ export async function sendEmail(
       const mailOptions: MailOptions = {
         from: process.env.SMTP_USER as string,
         to: process.env.SMTP_SEND_TO as string,
-        subject: "Website form submission - 1",
+        subject: subjects[formType],
         replyTo: email,
         html: emailHtmlContent,
       };
@@ -80,9 +78,7 @@ export async function sendEmail(
       await transporter.sendMail(mailOptions);
       return { success: true };
     } else {
-      console.error(
-        "Invalid form submission due to non-empty honeypot field",
-      );
+      console.error("Invalid form submission due to non-empty honeypot field");
       return { success: false, error: "Spam detected" };
     }
   } catch (error) {

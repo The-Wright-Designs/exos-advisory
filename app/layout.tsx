@@ -14,14 +14,14 @@ import FooterComponent from "@/_components/navigation/footer-component";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://exos.global"),
-  title: "1",
-  description: "2",
+  title: "EXOS Advisory",
+  description: "Clarity for founders after exit. EXOS Advisory helps founders navigate life after selling their company.",
   keywords: "",
   openGraph: {
-    description: "2",
+    description: "Clarity for founders after exit. EXOS Advisory helps founders navigate life after selling their company.",
     type: "website",
     locale: "en_ZA",
-    siteName: "1",
+    siteName: "EXOS Advisory",
     images: [
       {
         url: "/open-graph-image.webp",
@@ -38,8 +38,8 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    name: "1",
-    url: "3",
+    name: "EXOS Advisory",
+    url: "https://exos.global",
   };
   return (
     <html lang="en" data-scroll-behavior="smooth">

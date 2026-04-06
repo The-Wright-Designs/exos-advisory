@@ -1,5 +1,5 @@
 import Image from "next/image";
-import SectionHeadingComponent from "../ui/section-heading-component";
+import SectionHeadingComponent from "../../ui/section-heading-component";
 
 export default function ExosComponent() {
   return (
