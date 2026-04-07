@@ -31,7 +31,7 @@ export default function AboutComponent() {
               </p>
             </div>
             <ButtonLink
-              href="#"
+              href="/about"
               background="charcoal"
               border="citrine"
               cssClasses="hidden desktop:flex"
@@ -63,7 +63,7 @@ export default function AboutComponent() {
           </div>
         </div>
         <ButtonLink
-          href="#"
+          href="/about"
           background="charcoal"
           border="citrine"
           cssClasses="desktop:hidden min-[600px]:self-start"
