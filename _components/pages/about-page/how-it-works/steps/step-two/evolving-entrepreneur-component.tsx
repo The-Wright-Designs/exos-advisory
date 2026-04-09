@@ -2,7 +2,7 @@
 
 import classNames from "classnames";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 
 interface EvolvingEntrepreneurComponentProps {
   cssClasses?: string;
@@ -67,6 +67,22 @@ const EvolvingEntrepreneurComponent = ({
 }: EvolvingEntrepreneurComponentProps) => {
   const [openNodeIndex, setOpenNodeIndex] = useState<number | null>(null);
   const [zElevatedIndex, setZElevatedIndex] = useState<number | null>(null);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleOutsideClick = (e: MouseEvent) => {
+      if (
+        openNodeIndex !== null &&
+        wrapperRef.current &&
+        !wrapperRef.current.contains(e.target as Node)
+      ) {
+        setOpenNodeIndex(null);
+        setTimeout(() => setZElevatedIndex(null), 500);
+      }
+    };
+    document.addEventListener("mousedown", handleOutsideClick);
+    return () => document.removeEventListener("mousedown", handleOutsideClick);
+  }, [openNodeIndex]);
 
   const handleClick = (index: number) => {
     if (openNodeIndex === index) {
@@ -79,7 +95,7 @@ const EvolvingEntrepreneurComponent = ({
   };
 
   return (
-    <div className={classNames("relative", cssClasses)}>
+    <div ref={wrapperRef} className={classNames("relative", cssClasses)}>
       <Image
         src="/graphics/about-page/8907f2ce0df650b1978b8f747eab9bcbac35f248.png"
         alt="Evolving entrepreneur graphic"
@@ -112,11 +128,12 @@ const EvolvingEntrepreneurComponent = ({
             <div key={i} className={node.wrapperClasses}>
               <div
                 className={classNames(
-                  "absolute rounded-full flex flex-col items-center justify-center ease-in-out duration-500 desktop:hover:cursor-pointer",
+                  "absolute rounded-full flex flex-col items-center justify-center ease-in-out duration-500 tablet:hover:cursor-pointer",
                   isOpen
                     ? `size-[344px] ${node.openPosition} gap-2 p-10`
                     : `size-[72px] ${node.closedPosition}`,
                   isElevated ? "z-10" : "",
+                  !isOpen && "tablet:hover:opacity-90",
                 )}
                 style={{
                   backgroundColor: node.color,
@@ -152,6 +169,12 @@ const EvolvingEntrepreneurComponent = ({
           );
         })}
       </div>
+      <p className="absolute top-[3px] left-1/2 -translate-x-1/2 text-[11px] text-white">
+        Community
+      </p>
+      <p className="absolute bottom-[3px] left-1/2 -translate-x-1/2 text-[11px] text-white">
+        Community
+      </p>
     </div>
   );
 };
