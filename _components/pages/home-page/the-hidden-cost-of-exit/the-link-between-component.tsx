@@ -58,8 +58,8 @@ const TheLinkBetweenComponent = ({
       </div>
       <div className="flex flex-col gap-10 desktop:row-start-2">
         <LossOfComponent />
-        <ButtonLink background="citrine" border="charcoal">
-          Whats is EXOS?
+        <ButtonLink href="/about" background="citrine" border="charcoal">
+          What is EXOS?
         </ButtonLink>
       </div>
       <div className="aspect-video relative tablet:aspect-auto tablet:h-[500px] min-[900px]:h-[580px] desktop:hidden">

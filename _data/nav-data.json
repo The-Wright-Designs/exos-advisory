@@ -32,5 +32,9 @@
   {
     "title": "Contact",
     "url": "/contact"
+  },
+  {
+    "title": "Book A Discovery Call",
+    "url": "/discovery-call"
   }
 ]

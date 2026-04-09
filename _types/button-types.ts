@@ -6,8 +6,10 @@ export interface ButtonProps {
   type?: "button" | "submit" | "reset";
   disabled?: boolean;
   ariaLabel?: string;
-  background?: "charcoal" | "citrine";
-  border?: "charcoal" | "citrine";
+  background?: "charcoal" | "citrine" | "mist";
+  border?: "charcoal" | "citrine" | "mist";
   target?: "_self" | "_blank";
   title?: string;
+  backButton?: boolean;
+  formButton?: boolean;
 }

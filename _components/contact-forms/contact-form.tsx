@@ -21,10 +21,7 @@ interface ContactFormProps {
   formType: "advisory" | "contact";
 }
 
-const ContactFormInner = ({
-  heading,
-  formType,
-}: ContactFormProps) => {
+const ContactFormInner = ({ heading, formType }: ContactFormProps) => {
   const { executeRecaptcha } = useGoogleReCaptcha();
   const formRef = useRef<HTMLFormElement>(null);
   const [state, setState] = useState<FormState>({ success: false });
@@ -66,7 +63,7 @@ const ContactFormInner = ({
   };
 
   return (
-    <div className="bg-charcoal p-10 rounded-[6px]">
+    <div className="bg-charcoal p-10 -mx-7 desktop:rounded-[6px] tablet:-mx-10 desktop:mx-0">
       <p className="text-[26px] font-normal text-white">{heading}</p>
       <form
         ref={formRef}
@@ -114,7 +111,7 @@ const ContactFormInner = ({
         <ButtonType
           type="submit"
           border="citrine"
-          cssClasses="w-full h-[56px] text-[16px]"
+          cssClasses="w-full tablet:w-auto tablet:self-start"
           ariaLabel="Submit contact form"
           disabled={isSubmitting}
         >

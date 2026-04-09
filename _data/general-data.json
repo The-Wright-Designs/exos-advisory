@@ -82,5 +82,163 @@
         ]
       }
     }
-  }
+  },
+  "bookADiscoveryMeetingForm": [
+    {
+      "step": 1,
+      "title": "Background",
+      "fields": [
+        {
+          "label": "Name",
+          "type": "text",
+          "placeholder": "Full name"
+        },
+        {
+          "label": "Country of Residence",
+          "type": "select",
+          "options": [
+            "South Africa",
+            "United Kingdom",
+            "United States",
+            "Australia",
+            "Canada",
+            "Mauritius",
+            "United Arab Emirates",
+            "Singapore",
+            "Switzerland",
+            "Germany",
+            "France",
+            "Netherlands",
+            "New Zealand",
+            "Ireland",
+            "India",
+            "Other"
+          ]
+        },
+        {
+          "label": "Email",
+          "type": "email",
+          "placeholder": "Email address"
+        },
+        {
+          "label": "Primary Industry of Most Recent Business",
+          "type": "text",
+          "placeholder": "e.g. Construction, Technology, Healthcare"
+        }
+      ]
+    },
+    {
+      "step": 2,
+      "title": "Exit context",
+      "hasConditionalFields": true,
+      "fields": [
+        {
+          "label": "Have you exited a business?",
+          "type": "radio",
+          "options": ["Yes", "No, preparing for exit"]
+        },
+        {
+          "label": "How many exits?",
+          "type": "radio",
+          "options": ["One", "Two", "Three or more"],
+          "showWhen": {
+            "field": "have-you-exited-a-business",
+            "value": "Yes"
+          }
+        },
+        {
+          "label": "Timing of most recent exit",
+          "type": "radio",
+          "options": [
+            "Within 12 months",
+            "1 to 3 years",
+            "3 to 7 years",
+            "7+ years"
+          ],
+          "showWhen": {
+            "field": "have-you-exited-a-business",
+            "value": "Yes"
+          }
+        }
+      ]
+    },
+    {
+      "step": 3,
+      "title": "Current position",
+      "fields": [
+        {
+          "label": "Which best describes your current phase?",
+          "type": "radio",
+          "options": [
+            "In earn-out",
+            "Recently exited and in transition",
+            "Preparing for a sale",
+            "Retired from operating role",
+            "Building again",
+            "Allocating capital"
+          ]
+        }
+      ]
+    },
+    {
+      "step": 4,
+      "title": "Decision readiness",
+      "fields": [
+        {
+          "label": "Which best reflects your current state? (select up to three)",
+          "type": "checkboxes",
+          "options": [
+            "Lack of clarity on what is next",
+            "Decision fatigue",
+            "Too many unstructured options",
+            "Misalignment across advisors",
+            "Loss of momentum",
+            "Transitioning identity",
+            "Capital allocation uncertainty"
+          ],
+          "maxSelections": 3
+        }
+      ]
+    },
+    {
+      "step": 5,
+      "title": "Trigger & support",
+      "fields": [
+        {
+          "label": "What prompted you to explore EXOS now?",
+          "type": "textarea",
+          "placeholder": "Share what is on your mind"
+        },
+        {
+          "label": "Are you part of any founder or investor networks? If so, which ones?",
+          "type": "text",
+          "placeholder": "e.g. YPO, EO, Tiger 21",
+          "optional": true
+        }
+      ]
+    },
+    {
+      "step": 6,
+      "title": "Core constraint",
+      "fields": [
+        {
+          "label": "In one sentence, what is the most pressing issue you want resolved?",
+          "type": "textarea",
+          "placeholder": "The single thing that, if addressed, would make the most difference right now"
+        }
+      ]
+    },
+    {
+      "step": 7,
+      "title": "Confirmation",
+      "introText": "EXOS is a structured advisory process, not coaching or casual conversation. Does this align with what you are looking for?",
+      "fields": [
+        {
+          "label": "Does this align with what you are looking for?",
+          "type": "radio",
+          "options": ["Yes", "No", "Unsure"]
+        }
+      ]
+    }
+  ]
 }

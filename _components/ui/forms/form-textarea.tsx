@@ -5,6 +5,7 @@ interface FormTextareaProps {
   name: string;
   placeholder?: string;
   required?: boolean;
+  defaultValue?: string;
   cssClasses?: string;
 }
 
@@ -13,6 +14,7 @@ const FormTextarea = ({
   name,
   placeholder,
   required,
+  defaultValue,
   cssClasses,
 }: FormTextareaProps) => {
   return (
@@ -25,6 +27,7 @@ const FormTextarea = ({
         name={name}
         placeholder={placeholder}
         required={required}
+        defaultValue={defaultValue}
         className="bg-white border border-[rgba(45,44,51,0.2)] p-[12px] rounded-[6px] h-[157px] resize-none placeholder:text-slate/50"
       />
     </div>
