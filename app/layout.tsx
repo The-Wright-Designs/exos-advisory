@@ -43,7 +43,7 @@ export default function RootLayout({
   };
   return (
     <html lang="en" data-scroll-behavior="smooth">
-      <body>
+<body>
         <HeaderComponent />
         <script
           type="application/ld+json"

@@ -269,26 +269,6 @@ const EnquiryFormInner = ({ cssClasses }: EnquiryFormProps) => {
     );
   };
 
-  const CalendlyWidget = () => {
-    useEffect(() => {
-      const script = document.createElement("script");
-      script.src = "https://assets.calendly.com/assets/external/widget.js";
-      script.async = true;
-      document.head.appendChild(script);
-      return () => {
-        document.head.removeChild(script);
-      };
-    }, []);
-
-    return (
-      <div
-        className="calendly-inline-widget"
-        data-url="https://calendly.com/exos-info/30min"
-        style={{ minWidth: "320px", height: "700px" }}
-      />
-    );
-  };
-
   return (
     <div
       className={classNames(
@@ -297,12 +277,9 @@ const EnquiryFormInner = ({ cssClasses }: EnquiryFormProps) => {
       )}
     >
       {submitState.success ? (
-        <div>
-          <p className="text-citrine text-center text-subheading py-15">
-            Your enquiry has been submitted. We will be in touch soon.
-          </p>
-          {/* <CalendlyWidget /> */}
-        </div>
+        <p className="text-citrine text-center text-subheading py-15">
+          Your enquiry has been submitted. We will be in touch soon.
+        </p>
       ) : (
         <>
           <ProgressTrackerComponent
