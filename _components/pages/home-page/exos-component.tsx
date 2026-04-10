@@ -20,10 +20,10 @@ export default function ExosComponent() {
               <span className="font-bold">{` someone who's lived it`}</span>.
             </p>
             <p>
-              EXOS is an Exit Operating System for post-exit founders, providing
-              a structured framework to sequence decisions across identity,
-              structure, capital and support to navigate the question of
-              what&apos;s next.
+              EXOS is an Exit Operating System for pre- and post-exit founders.
+              At its core is the Pathfinder Playbook, a structured framework
+              that sequences decisions across identity, structure, capital, and
+              support to navigate the question of what is next.
             </p>
           </div>
         </div>

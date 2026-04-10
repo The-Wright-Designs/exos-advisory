@@ -36,7 +36,7 @@ const ButtonType = ({
       title={title}
     >
       {pending && type === "submit" ? (
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center py-0.5">
           <div className="spinner"></div>
         </div>
       ) : (

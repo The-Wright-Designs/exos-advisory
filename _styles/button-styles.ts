@@ -28,12 +28,8 @@ export const buttonStyles = (
       "tablet:hover:bg-charcoal tablet:hover:border-citrine":
         !(disabled || pending) &&
         background === "citrine" &&
-        border === "charcoal",
-      "tablet:hover:bg-charcoal tablet:hover:border-charcoal":
-        !(disabled || pending) &&
-        background === "citrine" &&
-        border === "citrine",
-      "tablet:hover:bg-charcoal tablet:hover:border-mist tablet:hover:!text-white":
+        (border === "charcoal" || border === "citrine"),
+      "tablet:hover:bg-charcoal tablet:hover:border-citrine tablet:hover:!text-white":
         !(disabled || pending) && background === "mist" && border === "mist",
       "tablet:hover:bg-citrine":
         !(disabled || pending) &&

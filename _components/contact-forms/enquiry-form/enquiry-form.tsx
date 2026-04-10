@@ -2,7 +2,12 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import classNames from "classnames";
+import {
+  GoogleReCaptchaProvider,
+  useGoogleReCaptcha,
+} from "react-google-recaptcha-v3";
 
+import { sendDiscoveryCallEmail } from "@/_actions/discovery-call-email-actions";
 import generalData from "@/_data/general-data.json";
 import ProgressTrackerComponent from "./progress-tracker-component";
 import ButtonType from "@/_components/ui/buttons/button-type";
@@ -11,6 +16,11 @@ import FormSelect from "@/_components/ui/forms/form-select";
 import FormCheckboxes from "@/_components/ui/forms/form-checkboxes";
 import FormRadioGroup from "@/_components/ui/forms/form-radio-group";
 import FormTextarea from "@/_components/ui/forms/form-textarea";
+
+interface FormState {
+  success: boolean;
+  error?: string;
+}
 
 interface EnquiryFormProps {
   cssClasses?: string;
@@ -25,10 +35,13 @@ const slugify = (label: string) =>
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)/g, "");
 
-const EnquiryForm = ({ cssClasses }: EnquiryFormProps) => {
+const EnquiryFormInner = ({ cssClasses }: EnquiryFormProps) => {
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [currentStep, setCurrentStep] = useState(1);
   const [fieldAnswers, setFieldAnswers] = useState<Record<string, string>>({});
   const [isStepComplete, setIsStepComplete] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitState, setSubmitState] = useState<FormState>({ success: false });
   const formRef = useRef<HTMLFormElement>(null);
   const collectedData = useRef<Record<string, string | string[]>>({});
 
@@ -106,7 +119,40 @@ const EnquiryForm = ({ cssClasses }: EnquiryFormProps) => {
 
   const handleSubmit = async () => {
     captureCurrentFields();
-    console.log("Enquiry form data:", collectedData.current);
+
+    try {
+      setIsSubmitting(true);
+      setSubmitState({ success: false });
+
+      if (!executeRecaptcha) {
+        setSubmitState({
+          success: false,
+          error:
+            "Security verification unavailable. Please refresh and try again.",
+        });
+        return;
+      }
+
+      const recaptchaToken = await executeRecaptcha("discovery_call_form");
+      const honeypot = formRef.current
+        ? (new FormData(formRef.current).get("_honey")?.toString() ?? "")
+        : "";
+
+      const result = await sendDiscoveryCallEmail(
+        collectedData.current,
+        recaptchaToken,
+        honeypot,
+      );
+
+      setSubmitState(result);
+    } catch {
+      setSubmitState({
+        success: false,
+        error: "An unexpected error occurred. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const isFieldVisible = (field: (typeof currentStepData.fields)[number]) => {
@@ -223,6 +269,26 @@ const EnquiryForm = ({ cssClasses }: EnquiryFormProps) => {
     );
   };
 
+  const CalendlyWidget = () => {
+    useEffect(() => {
+      const script = document.createElement("script");
+      script.src = "https://assets.calendly.com/assets/external/widget.js";
+      script.async = true;
+      document.head.appendChild(script);
+      return () => {
+        document.head.removeChild(script);
+      };
+    }, []);
+
+    return (
+      <div
+        className="calendly-inline-widget"
+        data-url="https://calendly.com/exos-info/30min"
+        style={{ minWidth: "320px", height: "700px" }}
+      />
+    );
+  };
+
   return (
     <div
       className={classNames(
@@ -230,103 +296,131 @@ const EnquiryForm = ({ cssClasses }: EnquiryFormProps) => {
         cssClasses,
       )}
     >
-      <ProgressTrackerComponent
-        currentStep={currentStep}
-        totalSteps={totalSteps}
-        cssClasses="mb-10 desktop:mb-0"
-      />
-      <div className="flex-1">
-        <p className="text-[26px] font-normal text-white">
-          {currentStepData.title}
-        </p>
-        <form
-          ref={formRef}
-          action={handleSubmit}
-          className="flex flex-col gap-10 mt-5"
-          key={currentStep}
-          onChange={() =>
-            setTimeout(() => setIsStepComplete(checkStepComplete()), 0)
-          }
-          onInput={() =>
-            setTimeout(() => setIsStepComplete(checkStepComplete()), 0)
-          }
-        >
-          {"introText" in currentStepData && currentStepData.introText && (
-            <p className="text-paragraph font-extralight text-slate">
-              {currentStepData.introText as string}
-            </p>
-          )}
-          <div
-            className={classNames("grid gap-5", {
-              "tablet:grid-cols-2": currentStep === 1,
-            })}
-          >
-            {currentStepData.fields.map((field) => {
-              if (!isFieldVisible(field)) return null;
-              return renderField(field);
-            })}
-          </div>
-          <input
-            type="text"
-            name="_honey"
-            className="hidden"
-            tabIndex={-1}
-            autoComplete="off"
+      {submitState.success ? (
+        <div>
+          <p className="text-citrine text-center text-subheading py-15">
+            Your enquiry has been submitted. We will be in touch soon.
+          </p>
+          {/* <CalendlyWidget /> */}
+        </div>
+      ) : (
+        <>
+          <ProgressTrackerComponent
+            currentStep={currentStep}
+            totalSteps={totalSteps}
+            cssClasses="mb-10 desktop:mb-0"
           />
-          <div
-            className={classNames(
-              "flex flex-col gap-5 min-[600px]:gap-10 tablet:justify-between",
-              currentStep !== 1
-                ? "min-[600px]:flex-row-reverse"
-                : "min-[600px]:flex-row",
-            )}
-          >
-            {isLastStep ? (
-              <ButtonType
-                type="submit"
-                background="charcoal"
-                border="citrine"
-                cssClasses="w-full tablet:w-auto"
-                ariaLabel="Submit enquiry form"
-                disabled={!isStepComplete}
-                formButton
+          <div className="flex-1">
+            <p className="text-[26px] font-normal text-white">
+              {currentStepData.title}
+            </p>
+            <form
+              ref={formRef}
+              action={handleSubmit}
+              className="flex flex-col gap-10 mt-5"
+              key={currentStep}
+              onChange={() =>
+                setTimeout(() => setIsStepComplete(checkStepComplete()), 0)
+              }
+              onInput={() =>
+                setTimeout(() => setIsStepComplete(checkStepComplete()), 0)
+              }
+            >
+              {"introText" in currentStepData && currentStepData.introText && (
+                <p className="text-paragraph font-extralight text-slate">
+                  {currentStepData.introText as string}
+                </p>
+              )}
+              <div
+                className={classNames("grid gap-5", {
+                  "tablet:grid-cols-2": currentStep === 1,
+                })}
               >
-                Request Discovery Conversation
-              </ButtonType>
-            ) : (
-              <ButtonType
-                type="button"
-                onClick={handleNext}
-                border="citrine"
-                background="charcoal"
-                cssClasses={classNames(
-                  "w-full tablet:w-auto",
-                  currentStep === 1 ? "tablet:self-start" : "tablet:self-end",
+                {currentStepData.fields.map((field) => {
+                  if (!isFieldVisible(field)) return null;
+                  return renderField(field);
+                })}
+              </div>
+              <input
+                type="text"
+                name="_honey"
+                className="hidden"
+                tabIndex={-1}
+                autoComplete="off"
+              />
+              {submitState.error && (
+                <p className="text-[#ff6b6b] text-center">
+                  {submitState.error}
+                </p>
+              )}
+              <div
+                className={classNames(
+                  "flex flex-col gap-5 min-[600px]:gap-10 tablet:justify-between",
+                  currentStep !== 1
+                    ? "min-[600px]:flex-row-reverse"
+                    : "min-[600px]:flex-row",
                 )}
-                ariaLabel="Go to next step"
-                disabled={!isStepComplete}
-                formButton
               >
-                Next
-              </ButtonType>
-            )}
-            {showBack && (
-              <ButtonType
-                type="button"
-                onClick={handleBack}
-                border="mist"
-                background="mist"
-                cssClasses="w-full tablet:w-auto tablet:self-center"
-                ariaLabel="Go to previous step"
-                backButton
-              >
-                Back
-              </ButtonType>
-            )}
+                {isLastStep ? (
+                  <ButtonType
+                    type="submit"
+                    background="charcoal"
+                    border="citrine"
+                    cssClasses="w-full tablet:w-auto"
+                    ariaLabel="Submit enquiry form"
+                    disabled={!isStepComplete || isSubmitting}
+                    formButton
+                  >
+                    Request Discovery Conversation
+                  </ButtonType>
+                ) : (
+                  <ButtonType
+                    type="button"
+                    onClick={handleNext}
+                    border="citrine"
+                    background="charcoal"
+                    cssClasses={classNames(
+                      "w-full tablet:w-auto",
+                      currentStep === 1
+                        ? "tablet:self-start"
+                        : "tablet:self-end",
+                    )}
+                    ariaLabel="Go to next step"
+                    disabled={!isStepComplete}
+                    formButton
+                  >
+                    Next
+                  </ButtonType>
+                )}
+                {showBack && (
+                  <ButtonType
+                    type="button"
+                    onClick={handleBack}
+                    border="mist"
+                    background="mist"
+                    cssClasses="w-full tablet:w-auto tablet:self-center"
+                    ariaLabel="Go to previous step"
+                    backButton
+                  >
+                    Back
+                  </ButtonType>
+                )}
+              </div>
+            </form>
           </div>
-        </form>
-      </div>
+        </>
+      )}
     </div>
+  );
+};
+
+const EnquiryForm = ({ cssClasses }: EnquiryFormProps) => {
+  return (
+    <GoogleReCaptchaProvider
+      reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+    >
+      <EnquiryFormInner cssClasses={cssClasses} />
+    </GoogleReCaptchaProvider>
   );
 };
 

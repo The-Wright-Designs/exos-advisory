@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import {
   GoogleReCaptchaProvider,
   useGoogleReCaptcha,
@@ -26,12 +26,6 @@ const ContactFormInner = ({ heading, formType }: ContactFormProps) => {
   const formRef = useRef<HTMLFormElement>(null);
   const [state, setState] = useState<FormState>({ success: false });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  useEffect(() => {
-    if (state.success) {
-      formRef.current?.reset();
-    }
-  }, [state.success]);
 
   const handleSubmit = async (formData: FormData) => {
     try {
@@ -64,60 +58,63 @@ const ContactFormInner = ({ heading, formType }: ContactFormProps) => {
 
   return (
     <div className="bg-charcoal p-10 -mx-7 desktop:rounded-[6px] tablet:-mx-10 desktop:mx-0">
-      <p className="text-[26px] font-normal text-white">{heading}</p>
-      <form
-        ref={formRef}
-        action={handleSubmit}
-        className="flex flex-col gap-10 mt-5"
-      >
-        <div className="flex flex-col gap-5">
-          <FormInput
-            label="Name:"
-            name="name"
-            placeholder="Full name"
-            required
-            autoComplete="name"
-          />
-          <FormInput
-            label="Email:"
-            name="email"
-            type="email"
-            placeholder="Email address"
-            required
-            autoComplete="email"
-          />
-          <FormTextarea
-            label="Message:"
-            name="message"
-            placeholder="Type your message here"
-            required
-          />
-        </div>
-        <input
-          type="text"
-          name="_honey"
-          className="hidden"
-          tabIndex={-1}
-          autoComplete="off"
-        />
-        {state.success && (
-          <p className="text-citrine text-center">
-            Your message has been sent. We will be in touch soon.
-          </p>
-        )}
-        {state.error && (
-          <p className="text-[#ff6b6b] text-center">{state.error}</p>
-        )}
-        <ButtonType
-          type="submit"
-          border="citrine"
-          cssClasses="w-full tablet:w-auto tablet:self-start"
-          ariaLabel="Submit contact form"
-          disabled={isSubmitting}
-        >
-          Submit
-        </ButtonType>
-      </form>
+      {state.success ? (
+        <p className="text-citrine text-center text-subheading py-15">
+          Your message has been sent. We will be in touch soon.
+        </p>
+      ) : (
+        <>
+          <p className="text-[26px] font-normal text-white">{heading}</p>
+          <form
+            ref={formRef}
+            action={handleSubmit}
+            className="flex flex-col gap-10 mt-5"
+          >
+            <div className="flex flex-col gap-5">
+              <FormInput
+                label="Name:"
+                name="name"
+                placeholder="Full name"
+                required
+                autoComplete="name"
+              />
+              <FormInput
+                label="Email:"
+                name="email"
+                type="email"
+                placeholder="Email address"
+                required
+                autoComplete="email"
+              />
+              <FormTextarea
+                label="Message:"
+                name="message"
+                placeholder="Type your message here"
+                required
+              />
+            </div>
+            <input
+              type="text"
+              name="_honey"
+              className="hidden"
+              tabIndex={-1}
+              autoComplete="off"
+            />
+            {state.error && (
+              <p className="text-[#ff6b6b] text-center">{state.error}</p>
+            )}
+            <ButtonType
+              type="submit"
+              border="citrine"
+              cssClasses="w-full tablet:w-auto tablet:self-start"
+              ariaLabel="Submit contact form"
+              disabled={isSubmitting}
+            >
+              Submit
+            </ButtonType>
+          </form>
+        </>
+      )}
     </div>
   );
 };

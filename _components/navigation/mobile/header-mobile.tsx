@@ -136,7 +136,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
                       className={classNames(
                         "text-paragraph text-white font-thin",
                         title === "Book A Discovery Call"
-                          ? "bg-citrine px-2 py-2 rounded-md"
+                          ? "bg-citrine px-2.5 py-2 rounded-md"
                           : "py-0.5 block",
                       )}
                     >

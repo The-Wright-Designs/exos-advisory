@@ -29,6 +29,12 @@ const WhatIsExos = () => {
           landscape of the transition, surface what matters most, and bring
           coherence to decisions that would otherwise remain fragmented.
         </p>
+        <p>
+          EXOS is an Exit Operating System for pre- and post-exit founders. At
+          its core is the Pathfinder Playbook, a structured framework that
+          sequences decisions across identity, structure, capital, and support
+          to navigate the question of what is next.
+        </p>
       </div>
 
       <div className="grid gap-10 tablet:grid-cols-2">
