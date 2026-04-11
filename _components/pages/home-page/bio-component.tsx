@@ -48,7 +48,7 @@ const BioComponent = () => {
               alone.
             </p>
             <ButtonLink
-              href="#contact-form"
+              href="/discovery-call"
               background="charcoal"
               border="citrine"
               ariaLabel="Book a Discovery Meeting"
@@ -99,7 +99,7 @@ const BioComponent = () => {
           alone.
         </p>
         <ButtonLink
-          href="#contact-form"
+          href="/discovery-call"
           background="charcoal"
           border="citrine"
           ariaLabel="Book a Discovery Meeting"

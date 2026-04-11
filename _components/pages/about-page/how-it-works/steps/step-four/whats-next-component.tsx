@@ -9,7 +9,7 @@ export default function WhatsNextComponent() {
         carries.
       </p>
       <ButtonLink
-        href="#"
+        href="/discovery-call"
         ariaLabel="Book a Discovery Meeting"
         border="citrine"
         background="citrine"

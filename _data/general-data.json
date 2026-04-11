@@ -171,11 +171,10 @@
           "type": "radio",
           "options": [
             "In earn-out",
-            "Recently exited and in transition",
+            "Exited and exploring my next chapter",
             "Preparing for a sale",
             "Retired from operating role",
-            "Building again",
-            "Allocating capital"
+            "Building again"
           ]
         }
       ]
@@ -212,7 +211,7 @@
         {
           "label": "Are you part of any founder or investor networks? If so, which ones?",
           "type": "text",
-          "placeholder": "e.g. YPO, EO, Tiger 21",
+          "placeholder": "e.g. YPO (Young Presidents' Organisation), EO, Tiger 21",
           "optional": true
         }
       ]
