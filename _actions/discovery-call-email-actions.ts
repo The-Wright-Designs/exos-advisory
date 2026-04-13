@@ -1,9 +1,11 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import generalData from "@/_data/general-data.json";
 import { discoveryCallEmailTemplate } from "@/_lib/utils/email-templates/discovery-call-email-template";
 import { clientConfirmationEmailTemplate } from "@/_lib/utils/email-templates/client-confirmation-email-template";
 import { verifyRecaptchaToken } from "@/_lib/verify-recaptcha";
+import { slugify } from "@/_lib/utils/slugify";
 
 interface MailOptions {
   from: string;
@@ -12,6 +14,8 @@ interface MailOptions {
   replyTo: string;
   html: string;
 }
+
+const formSteps = generalData.bookADiscoveryMeetingForm;
 
 export async function sendDiscoveryCallEmail(
   formData: Record<string, string | string[]>,
@@ -28,7 +32,54 @@ export async function sendDiscoveryCallEmail(
       return { success: false, error: "reCAPTCHA verification required" };
     }
 
-    const recaptchaResult = await verifyRecaptchaToken(recaptchaToken);
+    const recaptchaPromise = verifyRecaptchaToken(recaptchaToken);
+
+    const isFieldVisible = (field: { showWhen?: { field: string; value: string } }) => {
+      if (!field.showWhen) return true;
+      const gatingValue = formData[field.showWhen.field];
+      return gatingValue === field.showWhen.value;
+    };
+
+    const emailSteps = formSteps.map((step) => {
+      const questions: { label: string; value: string }[] = [];
+      for (const field of step.fields) {
+        const showWhen = "showWhen" in field ? field.showWhen : undefined;
+        if (!isFieldVisible({ showWhen })) continue;
+
+        const key = slugify(field.label);
+        const raw = formData[key];
+        const value =
+          field.type === "checkboxes"
+            ? Array.isArray(raw)
+              ? raw.join(", ")
+              : ""
+            : typeof raw === "string"
+              ? raw.trim()
+              : "";
+
+        const optional = "optional" in field && field.optional;
+        if (!value && !optional) {
+          return { title: step.title, missing: true, questions };
+        }
+        if (!value) continue;
+
+        questions.push({ label: field.label, value });
+      }
+      return { title: step.title, missing: false, questions };
+    });
+
+    if (emailSteps.some((step) => step.missing)) {
+      return { success: false, error: "All required fields must be filled" };
+    }
+
+    const name = (formData[slugify("Name")] as string) || "";
+    const email = (formData[slugify("Email")] as string) || "";
+
+    const emailHtmlContent = discoveryCallEmailTemplate({
+      steps: emailSteps.map(({ title, questions }) => ({ title, questions })),
+    });
+
+    const recaptchaResult = await recaptchaPromise;
     if (!recaptchaResult.success) {
       return {
         success: false,
@@ -36,69 +87,12 @@ export async function sendDiscoveryCallEmail(
       };
     }
 
-    const name = (formData["name"] as string) || "";
-    const email = (formData["email"] as string) || "";
-    const countryOfResidence =
-      (formData["country-of-residence"] as string) || "";
-    const primaryIndustry =
-      (formData["primary-industry-of-most-recent-business"] as string) || "";
-    const haveYouExitedABusiness =
-      (formData["have-you-exited-a-business"] as string) || "";
-    const currentPhase =
-      (formData["which-best-describes-your-current-phase"] as string) || "";
-    const currentState =
-      (formData[
-        "which-best-reflects-your-current-state-select-up-to-three"
-      ] as string[]) || [];
-    const whatPromptedYou =
-      (formData["what-prompted-you-to-explore-exos-now"] as string) || "";
-    const mostPressingIssue =
-      (formData[
-        "what-feels-most-unresolved-for-you-as-you-think-about-what-comes-next"
-      ] as string) || "";
-    const doesThisAlign =
-      (formData["does-this-align-with-what-you-are-looking-for"] as string) ||
-      "";
-
-    if (
-      !name.trim() ||
-      !email.trim() ||
-      !countryOfResidence.trim() ||
-      !primaryIndustry.trim() ||
-      !haveYouExitedABusiness.trim() ||
-      !currentPhase.trim() ||
-      currentState.length === 0 ||
-      !whatPromptedYou.trim() ||
-      !mostPressingIssue.trim() ||
-      !doesThisAlign.trim()
-    ) {
-      return { success: false, error: "All required fields must be filled" };
-    }
-
-    const emailHtmlContent = discoveryCallEmailTemplate({
-      name,
-      email,
-      countryOfResidence,
-      primaryIndustry,
-      haveYouExitedABusiness,
-      howManyExits: (formData["how-many-exits"] as string) || undefined,
-      timingOfMostRecentExit:
-        (formData["timing-of-most-recent-exit"] as string) || undefined,
-      currentPhase,
-      currentState,
-      whatPromptedYou,
-      founderInvestorNetworks:
-        (formData[
-          "are-you-part-of-any-executive-founder-or-peer-networks"
-        ] as string) || undefined,
-      mostPressingIssue,
-      doesThisAlign,
-    });
-
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST as string,
       port: 465,
       secure: true,
+      pool: true,
+      maxConnections: 2,
       auth: {
         user: process.env.SMTP_USER as string,
         pass: process.env.SMTP_PASS as string,
@@ -113,8 +107,6 @@ export async function sendDiscoveryCallEmail(
       html: emailHtmlContent,
     };
 
-    await transporter.sendMail(mailOptions);
-
     const clientMailOptions: MailOptions = {
       from: `EXOS Advisory <${process.env.SMTP_USER}>`,
       to: email,
@@ -125,7 +117,13 @@ export async function sendDiscoveryCallEmail(
         calendlyUrl: process.env.CALENDLY_URL || "",
       }),
     };
-    await transporter.sendMail(clientMailOptions);
+
+    await Promise.all([
+      transporter.sendMail(mailOptions),
+      transporter.sendMail(clientMailOptions),
+    ]);
+
+    transporter.close();
 
     return { success: true };
   } catch (error) {

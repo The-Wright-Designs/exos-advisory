@@ -1,34 +1,34 @@
+interface DiscoveryCallEmailStep {
+  title: string;
+  questions: { label: string; value: string }[];
+}
+
 interface DiscoveryCallEmailTemplateProps {
-  name: string;
-  email: string;
-  countryOfResidence: string;
-  primaryIndustry: string;
-  haveYouExitedABusiness: string;
-  howManyExits?: string;
-  timingOfMostRecentExit?: string;
-  currentPhase: string;
-  currentState: string[];
-  whatPromptedYou: string;
-  founderInvestorNetworks?: string;
-  mostPressingIssue: string;
-  doesThisAlign: string;
+  steps: DiscoveryCallEmailStep[];
 }
 
 export const discoveryCallEmailTemplate = ({
-  name,
-  email,
-  countryOfResidence,
-  primaryIndustry,
-  haveYouExitedABusiness,
-  howManyExits,
-  timingOfMostRecentExit,
-  currentPhase,
-  currentState,
-  whatPromptedYou,
-  founderInvestorNetworks,
-  mostPressingIssue,
-  doesThisAlign,
+  steps,
 }: DiscoveryCallEmailTemplateProps) => {
+  const stepsHtml = steps
+    .filter((step) => step.questions.length > 0)
+    .map(
+      (step) => `
+        <p class="section-title">${step.title}</p>
+        ${step.questions
+          .map(
+            (q) => `
+        <div class="field">
+          <span class="label">${q.label}</span>
+          <br />
+          <span class="value">${q.value}</span>
+        </div>`,
+          )
+          .join("")}
+      `,
+    )
+    .join("");
+
   return `<!DOCTYPE html>
 <html lang="en">
   <head>
@@ -54,99 +54,7 @@ export const discoveryCallEmailTemplate = ({
 
       <div class="content">
         <h2>Discovery Call Enquiry</h2>
-
-        <p class="section-title">Background</p>
-
-        <div class="field">
-          <span class="label">Name:</span>
-          <span class="value">${name}</span>
-        </div>
-
-        <div class="field">
-          <span class="label">Email:</span>
-          <span class="value">${email}</span>
-        </div>
-
-        <div class="field">
-          <span class="label">Country of Residence:</span>
-          <span class="value">${countryOfResidence}</span>
-        </div>
-
-        <div class="field">
-          <span class="label">Primary Industry of Most Recent Business:</span>
-          <span class="value">${primaryIndustry}</span>
-        </div>
-
-        <p class="section-title">Exit Context</p>
-
-        <div class="field">
-          <span class="label">Have you exited a business?</span>
-          <span class="value">${haveYouExitedABusiness}</span>
-        </div>
-
-        ${
-          howManyExits
-            ? `<div class="field">
-          <span class="label">How many exits?</span>
-          <span class="value">${howManyExits}</span>
-        </div>`
-            : ""
-        }
-
-        ${
-          timingOfMostRecentExit
-            ? `<div class="field">
-          <span class="label">Timing of most recent exit:</span>
-          <span class="value">${timingOfMostRecentExit}</span>
-        </div>`
-            : ""
-        }
-
-        <p class="section-title">Current Position</p>
-
-        <div class="field">
-          <span class="label">Which best describes your current phase?</span>
-          <span class="value">${currentPhase}</span>
-        </div>
-
-        <p class="section-title">Decision Readiness</p>
-
-        <div class="field">
-          <span class="label">Which best reflects your current state?</span>
-          <span class="value">${currentState.join(", ")}</span>
-        </div>
-
-        <p class="section-title">Trigger & Support</p>
-
-        <div class="field">
-          <span class="label">What prompted you to explore EXOS now?</span>
-          <br />
-          <span class="value">${whatPromptedYou}</span>
-        </div>
-
-        ${
-          founderInvestorNetworks
-            ? `<div class="field">
-          <span class="label">Founder or investor networks:</span>
-          <span class="value">${founderInvestorNetworks}</span>
-        </div>`
-            : ""
-        }
-
-        <p class="section-title">Core Constraint</p>
-
-        <div class="field">
-          <span class="label">Most pressing issue:</span>
-          <br />
-          <span class="value">${mostPressingIssue}</span>
-        </div>
-
-        <p class="section-title">Confirmation</p>
-
-        <div class="field">
-          <span class="label">Does this align with what you are looking for?</span>
-          <span class="value">${doesThisAlign}</span>
-        </div>
+        ${stepsHtml}
       </div>
     </div>
   </body>

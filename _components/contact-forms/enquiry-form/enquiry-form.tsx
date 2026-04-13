@@ -9,6 +9,7 @@ import {
 
 import { sendDiscoveryCallEmail } from "@/_actions/discovery-call-email-actions";
 import generalData from "@/_data/general-data.json";
+import { slugify } from "@/_lib/utils/slugify";
 import ProgressTrackerComponent from "./progress-tracker-component";
 import ButtonType from "@/_components/ui/buttons/button-type";
 import FormInput from "@/_components/ui/forms/form-input";
@@ -28,12 +29,6 @@ interface EnquiryFormProps {
 
 const steps = generalData.bookADiscoveryMeetingForm;
 const totalSteps = steps.length;
-
-const slugify = (label: string) =>
-  label
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/(^-|-$)/g, "");
 
 const EnquiryFormInner = ({ cssClasses }: EnquiryFormProps) => {
   const { executeRecaptcha } = useGoogleReCaptcha();
