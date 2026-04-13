@@ -5,6 +5,7 @@ import TheHiddenCostComponent from "@/_components/pages/home-page/the-hidden-cos
 import TheResultComponent from "@/_components/pages/home-page/the-result-component";
 import BioComponent from "@/_components/pages/home-page/bio-component";
 import ExosComponent from "@/_components/pages/home-page/exos-component";
+import TestimonialsComponent from "@/_components/pages/home-page/testimonials-component";
 
 export default function HomePage() {
   return (
@@ -19,6 +20,9 @@ export default function HomePage() {
         <BioComponent />
       </ContentWrapper>
       <ExosComponent />
+      <ContentWrapper>
+        <TestimonialsComponent />
+      </ContentWrapper>
     </div>
   );
 }
