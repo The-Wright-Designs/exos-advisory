@@ -41,7 +41,13 @@
           "paragraph": "admit to at least one financial decision made too early"
         }
       ]
-    }
+    },
+    "testimonials": [
+      {
+        "quote": "Working with Brett Fleming through the EXOS system was both insightful and timely. It helped me gain the clarity to rethink a significant investment decision, ultimately leading me to a more conservative, and better, outcome. If I could do it again, I'd have started the process much sooner after my exit; the value would have been even greater.",
+        "name": "Ed O'Reilly"
+      }
+    ]
   },
   "aboutPage": {
     "howItWorks": {
@@ -209,7 +215,7 @@
           "placeholder": "Share what is on your mind"
         },
         {
-          "label": "Are you part of any founder or investor networks? If so, which ones?",
+          "label": "Are you part of any executive, founder, or peer networks?",
           "type": "text",
           "placeholder": "e.g. YPO (Young Presidents' Organisation), EO, Tiger 21",
           "optional": true
@@ -218,10 +224,10 @@
     },
     {
       "step": 6,
-      "title": "Core constraint",
+      "title": "What's on your mind",
       "fields": [
         {
-          "label": "In one sentence, what is the most pressing issue you want resolved?",
+          "label": "What feels most unresolved for you as you think about what comes next?",
           "type": "textarea",
           "placeholder": "The single thing that, if addressed, would make the most difference right now"
         }
