@@ -26,9 +26,8 @@ const items = [
     width: "w-full min-[375px]:w-[85%] tablet:w-[92%]",
   },
   {
-    title: "Poor delegation",
-    description:
-      "to financial advisors with hidden fees and misaligned incentives.",
+    title: "Premature capital allocation",
+    description: "before objectives and strategy are fully aligned.",
     bg: "bg-charcoal",
     text: "text-white",
     width: "w-full",

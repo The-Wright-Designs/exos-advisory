@@ -22,7 +22,7 @@ export default function AboutComponent() {
                 <span className="font-bold text-[26px] desktop:text-white desktop:text-[22px]">
                   EXOS
                 </span>{" "}
-                is a strategic advisory for pre- and post-exited founders,{" "}
+                is a strategic advisory for pre- and post-exited entrepreneurs,{" "}
                 <span className="font-bold text-[26px] desktop:text-white desktop:text-[22px]">
                   helping you shape what comes next
                 </span>{" "}

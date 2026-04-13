@@ -5,7 +5,7 @@ export default function ExosComponent() {
   return (
     <section className="tablet:bg-mist px-7 tablet:px-0">
       <div className="grid gap-10 max-w-[1280px] border-t border-charcoal/50 pt-15 mt-15 tablet:border-none tablet:p-15 min-[1000px]:grid-cols-2 desktop:mx-auto desktop:mt-[100px]">
-        <div className="flex flex-col gap-10 w-full tablet:gap-15">
+        <div className="flex flex-col gap-10 w-full">
           <SectionHeadingComponent cssClasses="[&_h2]:flex [&_h2]:flex-col [&_h2]:gap-1">
             EXOS:
             <span className="text-[26px] font-extralight">
@@ -20,10 +20,11 @@ export default function ExosComponent() {
               <span className="font-bold">{` someone who's lived it`}</span>.
             </p>
             <p>
-              EXOS is an Exit Operating System for pre- and post-exit founders.
-              At its core is the Pathfinder Playbook, a structured framework
-              that sequences decisions across identity, structure, capital, and
-              support to navigate the question of what is next.
+              EXOS is an Exit Operating System for pre- and post-exit
+              entrepreneurs. At its core is the Pathfinder Playbook, a
+              structured framework that sequences decisions across identity,
+              structure, capital, and support to navigate the question of what
+              is next.
             </p>
           </div>
         </div>

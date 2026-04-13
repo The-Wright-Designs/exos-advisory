@@ -73,6 +73,9 @@ const StaircaseComponent = () => {
           </div>
         ))}
       </div>
+      <p className="mt-5 text-charcoal/75 text-[14px] font-extralight">
+        Source: UBS, Yale SOM,Anastasia Koroleva Media.Columbia Business School.
+      </p>
     </div>
   );
 };
