@@ -17,6 +17,7 @@ export default function HowItWorksStepOne() {
           src="/images/about-page/f3d3251e42c402d39d7274696abc44732b168fd0.jpg"
           alt="Insight"
           fill
+          sizes="(max-width: 800px) 100vw, 857px"
           className="object-cover"
         />
       </div>

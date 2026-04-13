@@ -67,6 +67,7 @@ export default function HowItWorksStepThree() {
               src="/images/about-page/119987e70f5205a830d94add7edd0a1306aa9b83.jpg"
               alt="Transition Plan"
               fill
+              sizes="(max-width: 800px) 100vw, 50vw"
               className="object-cover"
             />
           </div>

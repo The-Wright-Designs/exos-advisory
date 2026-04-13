@@ -67,6 +67,7 @@ export default function TheResultComponent() {
                 src="/images/home-page/c80fd5e8ba68b01a260a9f35254d23499d59a405.jpg"
                 alt="Person jumping into water from a dock"
                 fill
+                sizes="(max-width: 1280px) 100vw, 70vw"
                 className="object-cover"
               />
             </div>

@@ -23,6 +23,7 @@ const TheLinkBetweenComponent = ({
             src="/images/home-page/6a67108f3174d8156d40662dc9bc96c91be76997.jpg"
             alt="Exos"
             fill
+            sizes="(max-width: 1280px) 100vw, 33vw"
             className="object-cover"
           />
         </div>
@@ -31,6 +32,7 @@ const TheLinkBetweenComponent = ({
             src="/images/home-page/05c1a91bd7859dc855fe59a1d1d8d193906a1659.jpg"
             alt="Exos"
             fill
+            sizes="33vw"
             className="object-cover"
           />
         </div>
@@ -67,6 +69,7 @@ const TheLinkBetweenComponent = ({
           src="/images/home-page/05c1a91bd7859dc855fe59a1d1d8d193906a1659.jpg"
           alt="Exos"
           fill
+          sizes="100vw"
           className="object-cover tablet:object-right desktop:object-center"
         />
       </div>

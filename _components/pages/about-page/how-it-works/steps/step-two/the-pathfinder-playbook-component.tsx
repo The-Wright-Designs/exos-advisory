@@ -60,6 +60,7 @@ export default function ThePathfinderPlaybookComponent() {
             src="/images/about-page/988128d3f9ff5311ff10e3a6847be39f11d0611b.jpg"
             alt="The Pathfinder Playbook"
             fill
+            sizes="100vw"
             className="w-full object-cover"
           />
         </div>
@@ -74,6 +75,7 @@ export default function ThePathfinderPlaybookComponent() {
             src="/images/about-page/988128d3f9ff5311ff10e3a6847be39f11d0611b.jpg"
             alt="The Pathfinder Playbook"
             fill
+            sizes="100vw"
             className="object-cover scale-x-[-1]"
           />
           <div

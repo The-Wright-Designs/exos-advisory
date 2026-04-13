@@ -33,6 +33,7 @@ export default function ExosComponent() {
             src="/images/home-page/46689bad6df6e5c1b9cffee8ff5499522c6e8f99.jpg"
             alt="EXOS"
             fill
+            sizes="50vw"
             className="object-cover"
           />
         </div>

@@ -9,6 +9,7 @@ export default function HeroComponent() {
             src="/images/home-page/51dc1c10d4f2d7d231839209f5eab5d67437d6bd.jpg"
             alt="Exos Advisory - The Exit operating system"
             fill
+            sizes="(max-width: 1280px) 100vw, 452px"
             className="object-cover rounded-none"
           />
         </div>

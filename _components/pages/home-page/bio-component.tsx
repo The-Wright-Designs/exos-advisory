@@ -38,6 +38,7 @@ const BioComponent = () => {
               src="/images/home-page/brett-fleming-exos.jpg"
               alt="Brett Fleming"
               fill
+              sizes="(max-width: 800px) 100vw, (max-width: 1280px) 400px, 50vw"
               className="object-cover"
             />
           </div>
@@ -113,6 +114,7 @@ const BioComponent = () => {
           src="/images/home-page/46689bad6df6e5c1b9cffee8ff5499522c6e8f99.jpg"
           alt="EXOS"
           fill
+          sizes="100vw"
           className="object-cover"
         />
       </div>

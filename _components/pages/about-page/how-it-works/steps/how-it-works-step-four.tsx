@@ -35,6 +35,7 @@ export default function HowItWorksStepFour() {
             src="/images/about-page/bd911f2e4614ea9c2b3b6b442c97a64f0170ae92.jpg"
             alt="Scorecard & Navigational Support"
             fill
+            sizes="50vw"
             className="object-cover"
           />
         </div>
@@ -45,6 +46,7 @@ export default function HowItWorksStepFour() {
             src="/images/about-page/bd911f2e4614ea9c2b3b6b442c97a64f0170ae92.jpg"
             alt="Scorecard & Navigational Support"
             fill
+            sizes="(max-width: 1000px) 100vw, 50vw"
             className="object-cover"
           />
         </div>

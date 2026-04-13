@@ -54,7 +54,7 @@ export async function sendDiscoveryCallEmail(
       (formData["what-prompted-you-to-explore-exos-now"] as string) || "";
     const mostPressingIssue =
       (formData[
-        "in-one-sentence-what-is-the-most-pressing-issue-you-want-resolved"
+        "what-feels-most-unresolved-for-you-as-you-think-about-what-comes-next"
       ] as string) || "";
     const doesThisAlign =
       (formData["does-this-align-with-what-you-are-looking-for"] as string) ||
@@ -89,7 +89,7 @@ export async function sendDiscoveryCallEmail(
       whatPromptedYou,
       founderInvestorNetworks:
         (formData[
-          "are-you-part-of-any-founder-or-investor-networks-if-so-which-ones"
+          "are-you-part-of-any-executive-founder-or-peer-networks"
         ] as string) || undefined,
       mostPressingIssue,
       doesThisAlign,

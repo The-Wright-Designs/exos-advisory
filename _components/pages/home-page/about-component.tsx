@@ -57,6 +57,7 @@ export default function AboutComponent() {
                 src="/images/home-page/9715528619e46abd6bf83d3001bd5f94820584ac.jpg"
                 alt="Founder reflecting on life after business exit"
                 fill
+                sizes="(max-width: 600px) 100vw, 50wv"
                 className="object-cover"
               />
             </div>
@@ -76,6 +77,7 @@ export default function AboutComponent() {
               src="/images/home-page/9715528619e46abd6bf83d3001bd5f94820584ac.jpg"
               alt="Founder reflecting on life after business exit"
               fill
+              sizes="50wv"
               className="object-cover"
             />
           </div>
@@ -84,6 +86,7 @@ export default function AboutComponent() {
               src="/images/home-page/52a01a3dae19842c69313db7b59e4fe1424025fc.jpg"
               alt="Strategic advisory session for post-exit founders"
               fill
+              sizes="50vw"
               className="object-cover"
             />
           </div>

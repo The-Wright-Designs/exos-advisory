@@ -13,10 +13,10 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
           <h4 className="text-[26px]">The investment trap</h4>
           <p>
             Entrepreneurs are well supported throughout the growth of their
-            business and throughout a private equity or acquisition deal,
-            but far less so during the transition that follows. Without that
-            support, decisions can become reactive, investments misaligned,
-            and long-term clarity begins to erode.
+            business and throughout a private equity or acquisition deal, but
+            far less so during the transition that follows. Without that
+            support, decisions can become reactive, investments misaligned, and
+            long-term clarity begins to erode.
           </p>
         </div>
         <div className="flex flex-col gap-5">
@@ -26,8 +26,8 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
           <p>
             After exit most founders begin with what feels most familiar:
             capital. But without first resolving questions of identity and
-            direction, financial decisions can move ahead of intent, leading
-            to outcomes that feel active, yet ultimately misaligned.
+            direction, financial decisions can move ahead of intent, leading to
+            outcomes that feel active, yet ultimately misaligned.
           </p>
         </div>
       </div>
@@ -38,14 +38,14 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
             <li>
               <p>
                 While you&apos;re building a company, you operate inside
-                structures for capital allocation, leadership,
-                accountability, and decision-making.
+                structures for capital allocation, leadership, accountability,
+                and decision-making.
               </p>
             </li>
             <li>
               <p>
-                Your calendar, board, investors, and operating cadence
-                create a framework that shapes how decisions are made.
+                Your calendar, board, investors, and operating cadence create a
+                framework that shapes how decisions are made.
               </p>
             </li>
             <li>
@@ -66,16 +66,16 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
             </li>
             <li>
               <p>
-                Decisions about capital are influenced by deeper questions
-                about identity, purpose, and the kind of second chapter you
-                want to build.
+                Decisions about capital are influenced by deeper questions about
+                identity, purpose, and the kind of second chapter you want to
+                build.
               </p>
             </li>
             <li>
               <p>
-                When those questions remain unresolved, capital often moves
-                too quickly into opportunities that look compelling but
-                ultimately lead in the wrong direction.
+                When those questions remain unresolved, capital often moves too
+                quickly into opportunities that look compelling but ultimately
+                lead in the wrong direction.
               </p>
             </li>
           </ul>
@@ -86,6 +86,7 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
           src="/images/home-page/79735027f7a49b5ecd6a36da2ee49f0ed03c9ff0.jpg"
           alt="Exos"
           fill
+          sizes="(max-width: 1280px) 100vw, 50vw"
           className="object-cover"
         />
       </div>

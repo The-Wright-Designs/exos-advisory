@@ -77,6 +77,7 @@ const WhatIsExos = () => {
             src="/images/about-page/a57eb49ed6bffa93ed64c608e7ff1c8315ad3fc8.jpg"
             alt="EXOS"
             fill
+            sizes="(max-width: 800px) 100vw, 50vw"
             className="object-cover"
           />
         </div>
