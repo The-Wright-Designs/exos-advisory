@@ -133,7 +133,7 @@ const EvolvingEntrepreneurComponent = ({
                     ? `size-[344px] ${node.openPosition} gap-2 p-10`
                     : `size-[72px] ${node.closedPosition}`,
                   isElevated ? "z-10" : "",
-                  !isOpen && "tablet:hover:opacity-90",
+                  !isOpen && "tablet:hover:opacity-70",
                 )}
                 style={{
                   backgroundColor: node.color,
