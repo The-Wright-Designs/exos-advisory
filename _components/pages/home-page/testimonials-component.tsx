@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
@@ -18,6 +19,53 @@ interface Props {
 const {
   homePage: { testimonials },
 } = generalData;
+
+const TestimonialSlide = ({
+  quote,
+  name,
+}: {
+  quote: string[];
+  name: string;
+}) => {
+  const [expanded, setExpanded] = useState(false);
+  const [overflows, setOverflows] = useState(false);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (contentRef.current) {
+      setOverflows(contentRef.current.scrollHeight > 100);
+    }
+  }, []);
+
+  return (
+    <div className="flex flex-col gap-4 items-center text-center px-5 desktop:px-15">
+      <div
+        ref={contentRef}
+        className={classNames("relative overflow-hidden flex flex-col gap-3", {
+          "max-h-[100px]": !expanded,
+        })}
+      >
+        {quote.map((paragraph, i) => (
+          <blockquote key={i} className="text-paragraph">
+            {paragraph}
+          </blockquote>
+        ))}
+        {!expanded && overflows && (
+          <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-lustre to-transparent pointer-events-none" />
+        )}
+      </div>
+      {!expanded && overflows && (
+        <button
+          onClick={() => setExpanded(true)}
+          className="text-white text-[14px] px-2 py-1 bg-citrine rounded-md font-light desktop:hover:opacity-80 desktop:hover:cursor-pointer ease-in-out duration-300"
+        >
+          Read more +
+        </button>
+      )}
+      <cite className="text-paragraph not-italic font-bold">- {name}</cite>
+    </div>
+  );
+};
 
 const TestimonialsComponent = ({ cssClasses }: Props) => {
   return (
@@ -48,14 +96,10 @@ const TestimonialsComponent = ({ cssClasses }: Props) => {
           >
             {testimonials.map((testimonial, index) => (
               <SwiperSlide key={index} className="pb-10">
-                <div className="flex flex-col gap-3 items-center text-center px-5 desktop:px-15">
-                  <blockquote className="text-paragraph">
-                    {testimonial.quote}
-                  </blockquote>
-                  <cite className="text-paragraph not-italic font-bold">
-                    - {testimonial.name}
-                  </cite>
-                </div>
+                <TestimonialSlide
+                  quote={testimonial.quote}
+                  name={testimonial.name}
+                />
               </SwiperSlide>
             ))}
           </Swiper>

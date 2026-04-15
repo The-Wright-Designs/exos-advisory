@@ -44,8 +44,20 @@
     },
     "testimonials": [
       {
-        "quote": "Working with Brett Fleming through the EXOS system was both insightful and timely. It helped me gain the clarity to rethink a significant investment decision, ultimately leading me to a more conservative and better outcome. If I could do it again, I would have started the process much sooner after my exit. The value would have been even greater.",
+        "quote": [
+          "Working with Brett Fleming through the EXOS system was both insightful and timely. It helped me gain the clarity to rethink a significant investment decision, ultimately leading me to a more conservative and better outcome. If I could do it again, I would have started the process much sooner after my exit. The value would have been even greater."
+        ],
         "name": "Ed O'Reilly"
+      },
+      {
+        "quote": [
+          "I was resistant. I am someone who has always been self-sufficient, in control, and capable. The idea that I needed this felt unnecessary. Almost insulting.",
+          "What I did not see coming was how much of me had been quietly living inside my business. Relief gave way to a strange emptiness where certainty used to be. What did success look like without a business to point to? What would push me, stretch me, bring me contentment? These were not questions I had answers to. They were questions I had not even admitted I needed to ask.",
+          "And then there was the financial piece, the area where I was most sure I did not need help. Brett showed me I had become sloppy. I was making investment decisions based on relationships, ego, and social dynamics. Not clear goals, not structure, not discipline. The losses were real, and significant. Left unchecked, they would have eroded the very wealth I had worked to build for my family.",
+          "What makes Brett different is not that he has studied this transition. It is that he has lived it. When he speaks, it is not opinion. It is experience. And the conversations cut through in a way that advice rarely does.",
+          "I am still in the process. I am only beginning to appreciate how much further this journey goes. But I am already building structures and mental models that are serving me and my family. The version of me who walked in that door, certain, armoured, and self-contained, was exactly the person who needed it most."
+        ],
+        "name": "Rob H"
       }
     ]
   },
