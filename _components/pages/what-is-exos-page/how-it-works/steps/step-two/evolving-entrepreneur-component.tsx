@@ -10,26 +10,6 @@ interface EvolvingEntrepreneurComponentProps {
 
 const nodes = [
   {
-    label: "Structure & Purpose",
-    description:
-      "1. Rebuilding the operational framework for daily life, decision-making, values, and purpose",
-    color: "#2c4b2d",
-    pulseSpeed: "2.9s",
-    closedPosition: "bottom-5",
-    openPosition: "bottom-0",
-    wrapperClasses: "flex items-end justify-center",
-  },
-  {
-    label: "Financial",
-    description:
-      "2. Wealth preservation, capital strategy, and alignment between financial decisions and personal direction",
-    color: "#562428",
-    pulseSpeed: "3.6s",
-    closedPosition: "right-5",
-    openPosition: "right-0",
-    wrapperClasses: "flex items-center justify-end",
-  },
-  {
     label: "Mentor",
     description:
       "3. Developmental focus — Reintroducing constructive challenge and lived perspective from those who have navigated this transition",
@@ -48,6 +28,26 @@ const nodes = [
     closedPosition: "left-5",
     openPosition: "left-0",
     wrapperClasses: "flex items-center justify-start",
+  },
+  {
+    label: "Financial",
+    description:
+      "2. Wealth preservation, capital strategy, and alignment between financial decisions and personal direction",
+    color: "#562428",
+    pulseSpeed: "3.6s",
+    closedPosition: "right-5",
+    openPosition: "right-0",
+    wrapperClasses: "flex items-center justify-end",
+  },
+  {
+    label: "Structure & Purpose",
+    description:
+      "1. Rebuilding the operational framework for daily life, decision-making, values, and purpose",
+    color: "#2c4b2d",
+    pulseSpeed: "2.9s",
+    closedPosition: "bottom-5",
+    openPosition: "bottom-0",
+    wrapperClasses: "flex items-end justify-center",
   },
 ];
 
