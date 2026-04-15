@@ -7,7 +7,6 @@ import {
   useGoogleReCaptcha,
 } from "react-google-recaptcha-v3";
 
-import { sendDiscoveryCallEmail } from "@/_actions/discovery-call-email-actions";
 import generalData from "@/_data/general-data.json";
 import { slugify } from "@/_lib/utils/slugify";
 import ProgressTrackerComponent from "./progress-tracker-component";
@@ -17,6 +16,7 @@ import FormSelect from "@/_components/ui/forms/form-select";
 import FormCheckboxes from "@/_components/ui/forms/form-checkboxes";
 import FormRadioGroup from "@/_components/ui/forms/form-radio-group";
 import FormTextarea from "@/_components/ui/forms/form-textarea";
+import { sendDiscoverMeetingEmail } from "@/_actions/discovery-meeting-email-actions";
 
 interface FormState {
   success: boolean;
@@ -133,7 +133,7 @@ const EnquiryFormInner = ({ cssClasses }: EnquiryFormProps) => {
         ? (new FormData(formRef.current).get("_honey")?.toString() ?? "")
         : "";
 
-      const result = await sendDiscoveryCallEmail(
+      const result = await sendDiscoverMeetingEmail(
         collectedData.current,
         recaptchaToken,
         honeypot,

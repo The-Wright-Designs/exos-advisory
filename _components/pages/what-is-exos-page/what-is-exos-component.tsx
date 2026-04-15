@@ -25,15 +25,15 @@ const WhatIsExos = () => {
         <p>
           EXOS replaces that context with a more deliberate one. At its centre
           is the Pathfinder Playbook, a structured approach that combines lived
-          founder experience with institutional research to map the full
+          entrepreneur experience with institutional research to map the full
           landscape of the transition, surface what matters most, and bring
           coherence to decisions that would otherwise remain fragmented.
         </p>
         <p>
-          EXOS is an Exit Operating System for pre- and post-exit entrepreneurs.
-          At its core is the Pathfinder Playbook, a structured framework that
-          sequences decisions across identity, structure, capital, and support
-          to navigate the question of what is next.
+          At the core of EXOS is the Pathfinder Playbook, a structured framework
+          for pre and post exit entrepreneurs that sequences decisions across
+          identity, structure, capital, and support to bring clarity to what
+          comes next.
         </p>
       </div>
 

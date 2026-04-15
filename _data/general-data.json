@@ -20,17 +20,17 @@
         { "title": "Misaligned" },
         {
           "title": "Pressure to perform",
-          "bubble": "Proving that success wasn’t luck"
+          "bubble": "Proving that success was not luck"
         }
       ],
       "infoCards": [
         {
           "percentage": "30%",
-          "paragraph": "Only 30% of founders replicate prior performance"
+          "paragraph": "Only 30% of entrepreneurs replicate prior performance"
         },
         {
           "percentage": "50%",
-          "paragraph": "Many exited founders lose up to 50% of post-exit wealth within 5–7 years of exit"
+          "paragraph": "Many exited entrepreneurs lose up to 50% of post-exit wealth within 5–7 years of exit"
         },
         {
           "percentage": "55%",
@@ -44,22 +44,22 @@
     },
     "testimonials": [
       {
-        "quote": "Working with Brett Fleming through the EXOS system was both insightful and timely. It helped me gain the clarity to rethink a significant investment decision ultimately leading me to a more conservative and better outcome. If I could do it again, I would have started the process much sooner after my exit. The value would have been even greater.",
+        "quote": "Working with Brett Fleming through the EXOS system was both insightful and timely. It helped me gain the clarity to rethink a significant investment decision, ultimately leading me to a more conservative and better outcome. If I could do it again, I would have started the process much sooner after my exit. The value would have been even greater.",
         "name": "Ed O'Reilly"
       }
     ]
   },
-  "aboutPage": {
+  "whatIsExosPage": {
     "howItWorks": {
       "stepTwo": {
         "thePathfinderPlaybook": [
           {
             "title": "Learning Briefs",
-            "paragraph": "Distilled knowledge drawn from research and the hard-won experience of founders who have navigated this exact kind of challenge. This is not theory, it is insight earned by people who got it wrong and understood what it cost them.\n\nEvery component builds on the last, creating clarity through structure."
+            "paragraph": "Distilled knowledge drawn from research and the hard-won experience of entrepreneurs who have navigated this exact kind of challenge. This is not a theory. It is insight earned by people who got it wrong and understood what it cost them.\n\nEvery component builds on the last, creating clarity through structure."
           },
           {
             "title": "Pillar Questionnaires",
-            "paragraph": "A structured reflection built on the Learning Briefs where context comes first. This results in a richer insight and more candid response. This surfaces 1-2 priority constraints which are distorting decision quality the most."
+            "paragraph": "A structured reflection built on the Learning Briefs where context comes first. This results in a richer insight and more candid response. This surfaces one to two priority constraints that are most distorting decision quality."
           },
           {
             "title": "Pillar Briefs",
@@ -76,7 +76,7 @@
           "A personalised, integrated plan built across all five pillars, grounded in the Discovery diagnostic and shaped by the Pathfinder Playbook.",
           "Includes: clear objectives, engagement briefs for each support area, sequenced goals, timelines, progress markers, and governance milestones.",
           "Shareable with chosen specialist service providers, ensuring every advisor enters from the same position of alignment.",
-          "Optional matching with mentors, coaches, counsellors, and financial advisors who understand founder psychology and post-exit dynamics."
+          "Optional matching with mentors, coaches, counsellors, and financial advisors who understand entrepreneur psychology and post-exit dynamics."
         ]
       },
       "stepFour": {
@@ -215,7 +215,7 @@
           "placeholder": "Share what is on your mind"
         },
         {
-          "label": "Are you part of any executive, founder, or peer networks?",
+          "label": "Are you part of any executive, entrepreneur, or peer networks?",
           "type": "text",
           "placeholder": "e.g. YPO (Young Presidents' Organisation), EO, Tiger 21",
           "optional": true

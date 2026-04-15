@@ -3,7 +3,7 @@ import generalData from "@/_data/general-data.json";
 import WhatsNextComponent from "./step-four/whats-next-component";
 
 export default function HowItWorksStepFour() {
-  const { bulletPoints } = generalData.aboutPage.howItWorks.stepFour;
+  const { bulletPoints } = generalData.whatIsExosPage.howItWorks.stepFour;
 
   return (
     <section className="grid gap-15 w-full h-full">
@@ -15,11 +15,11 @@ export default function HowItWorksStepFour() {
             </h4>
             <p className="desktop:text-white">
               This forms the accountability architecture. It is not a
-              performance review, but rather a navigating instrument. This is
-              where EXOS operates as your accountability partner, not a sounding
-              board you check in with, but an active governance structure that
-              holds the full picture, asks the honest question each month, and
-              ensures that what needs to move actually moves.
+              performance review. It is a navigational instrument. This is where
+              EXOS operates as your accountability partner, not a sounding board
+              you check in with, but an active governance structure that holds
+              the full picture, asks the honest question each month, and ensures
+              that what needs to move actually moves.
             </p>
           </div>
           <ul className="flex flex-col gap-3 list-disc pl-5">

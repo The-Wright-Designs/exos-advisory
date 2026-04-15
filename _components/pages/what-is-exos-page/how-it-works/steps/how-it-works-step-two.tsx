@@ -11,7 +11,7 @@ export default function HowItWorksStepTwo() {
         <p>
           {`This is where we introduce you to `}
           <span className="font-bold">the Pathfinder Playbook</span>
-          {` — the strategic framework that sits at the heart of the EXOS system. The Playbook maps the five interconnected pillars that shape a founder's transition: Structure and Purpose, Financial, Mentorship, Identity, and Community. At the centre is the Evolving Entrepreneur — a recognition that transition is not a single event but an ongoing process of growth and recalibration.`}
+          {` — the strategic framework that sits at the heart of the EXOS system. The Playbook maps the five interconnected pillars that shape a entrepreneur's transition: Structure and Purpose, Financial, Mentorship, Identity, and Community. At the centre is the Evolving Entrepreneur — a recognition that transition is not a single event but an ongoing process of growth and recalibration.`}
         </p>
       </div>
       <div className="grid gap-10 desktop:bg-white desktop:p-10 desktop:rounded-md desktop:grid-cols-[334px_1fr]">
@@ -29,7 +29,9 @@ export default function HowItWorksStepTwo() {
             </p>
             <ul className="list-disc pl-7 flex flex-col gap-1">
               <li>
-                <p>Without Guidance, risk appetite changes silently</p>
+                <p>
+                  Without structured guidance, risk appetite changes silently.
+                </p>
               </li>
               <li>
                 <p>Without Structure, optionality becomes reactivity</p>

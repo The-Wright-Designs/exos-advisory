@@ -3,7 +3,7 @@ import generalData from "@/_data/general-data.json";
 import MessageTemplate from "@/_components/ui/message-template";
 
 export default function HowItWorksStepThree() {
-  const { transitionPlan } = generalData.aboutPage.howItWorks.stepThree;
+  const { transitionPlan } = generalData.whatIsExosPage.howItWorks.stepThree;
 
   return (
     <section className="flex flex-col gap-10 w-full h-full">

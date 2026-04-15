@@ -10,8 +10,7 @@ const ContactPage = () => {
         <div className="flex flex-col gap-5">
           <p>
             If you have any questions regarding EXOS, or would like to
-            understand how EXOS works in practice, please feel free to get in
-            touch.
+            understand how EXOS works in practice, please get in touch.
           </p>
           <p>
             This may relate to pre-exit planning, post-exit transition, or

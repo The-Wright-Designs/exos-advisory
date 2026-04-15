@@ -13,7 +13,7 @@ const items = [
   },
   {
     title: "Saying yes too often",
-    description: "due to guilt, pressure or ego.",
+    description: "due to guilt, pressure, or ego.",
     bg: "bg-citrine",
     text: "text-white",
     width: "w-full min-w-[240px] min-[375px]:w-[72.5%] tablet:w-[84%]",

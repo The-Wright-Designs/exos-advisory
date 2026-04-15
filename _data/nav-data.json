@@ -5,7 +5,7 @@
   },
   {
     "title": "About",
-    "url": "/#about",
+    "url": "/#the-hidden-cost",
     "submenu": [
       {
         "title": "The Hidden Cost of Exit",
@@ -23,7 +23,7 @@
   },
   {
     "title": "What Is EXOS?",
-    "url": "/about"
+    "url": "/what-is-exos"
   },
   {
     "title": "One-on-One Advisory",
@@ -34,7 +34,7 @@
     "url": "/contact"
   },
   {
-    "title": "Book A Discovery Call",
-    "url": "/discovery-call"
+    "title": "Book A Discovery Meeting",
+    "url": "/discovery-meeting"
   }
 ]

@@ -2,7 +2,7 @@
 
 import nodemailer from "nodemailer";
 import generalData from "@/_data/general-data.json";
-import { discoveryCallEmailTemplate } from "@/_lib/utils/email-templates/discovery-call-email-template";
+import { discoveryMeetingEmailTemplate } from "@/_lib/utils/email-templates/discovery-meeting-email-template";
 import { clientConfirmationEmailTemplate } from "@/_lib/utils/email-templates/client-confirmation-email-template";
 import { verifyRecaptchaToken } from "@/_lib/verify-recaptcha";
 import { slugify } from "@/_lib/utils/slugify";
@@ -17,7 +17,7 @@ interface MailOptions {
 
 const formSteps = generalData.bookADiscoveryMeetingForm;
 
-export async function sendDiscoveryCallEmail(
+export async function sendDiscoverMeetingEmail(
   formData: Record<string, string | string[]>,
   recaptchaToken: string,
   honeypot: string,
@@ -34,7 +34,9 @@ export async function sendDiscoveryCallEmail(
 
     const recaptchaPromise = verifyRecaptchaToken(recaptchaToken);
 
-    const isFieldVisible = (field: { showWhen?: { field: string; value: string } }) => {
+    const isFieldVisible = (field: {
+      showWhen?: { field: string; value: string };
+    }) => {
       if (!field.showWhen) return true;
       const gatingValue = formData[field.showWhen.field];
       return gatingValue === field.showWhen.value;
@@ -75,7 +77,7 @@ export async function sendDiscoveryCallEmail(
     const name = (formData[slugify("Name")] as string) || "";
     const email = (formData[slugify("Email")] as string) || "";
 
-    const emailHtmlContent = discoveryCallEmailTemplate({
+    const emailHtmlContent = discoveryMeetingEmailTemplate({
       steps: emailSteps.map(({ title, questions }) => ({ title, questions })),
     });
 
@@ -102,7 +104,7 @@ export async function sendDiscoveryCallEmail(
     const mailOptions: MailOptions = {
       from: `EXOS Advisory <${process.env.SMTP_USER}>`,
       to: process.env.SMTP_SEND_TO as string,
-      subject: "Website form submission - EXOS (Discovery call enquiry)",
+      subject: "Website form submission - EXOS (Discovery meeting enquiry)",
       replyTo: email,
       html: emailHtmlContent,
     };

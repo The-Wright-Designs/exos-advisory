@@ -15,10 +15,12 @@ import FooterComponent from "@/_components/navigation/footer-component";
 export const metadata: Metadata = {
   metadataBase: new URL("https://exos.global"),
   title: "EXOS Advisory",
-  description: "Clarity for founders after exit. EXOS Advisory helps founders navigate life after selling their company.",
+  description:
+    "Clarity for entrepreneurs after exit. EXOS Advisory helps entrepreneurs navigate life after selling their company.",
   keywords: "",
   openGraph: {
-    description: "Clarity for founders after exit. EXOS Advisory helps founders navigate life after selling their company.",
+    description:
+      "Clarity for entrepreneurs after exit. EXOS Advisory helps entrepreneurs navigate life after selling their company.",
     type: "website",
     locale: "en_ZA",
     siteName: "EXOS Advisory",
@@ -43,7 +45,7 @@ export default function RootLayout({
   };
   return (
     <html lang="en" data-scroll-behavior="smooth">
-<body>
+      <body>
         <HeaderComponent />
         <script
           type="application/ld+json"

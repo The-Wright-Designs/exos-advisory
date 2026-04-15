@@ -45,7 +45,7 @@ export const clientConfirmationEmailTemplate = ({
           <tr>
             <td style="background-color:#FBFBFB;padding:48px 40px;">
               <p style="margin:0 0 8px 0;font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#9097AA;">
-                Discovery Call Request
+                Discovery Meeting Request
               </p>
               <h1 style="margin:0 0 24px 0;font-size:28px;font-weight:700;line-height:1.2;color:#1A1B1C;">
                 Thank you, ${firstName}.
@@ -73,7 +73,7 @@ export const clientConfirmationEmailTemplate = ({
                 EXOS Advisory &middot; A strategic advisory for pre- and post-exited entrepreneurs
               </p>
               <p style="margin:0;font-size:11px;color:#C3C6C8;line-height:1.5;">
-                You're receiving this email because you submitted a discovery call enquiry on the EXOS Advisory website. This is an automated confirmation — please do not reply to this email.
+                You're receiving this email because you submitted a discovery meeting enquiry on the EXOS Advisory website. This is an automated confirmation — please do not reply to this email.
               </p>
             </td>
           </tr>
@@ -95,7 +95,7 @@ export const clientConfirmationEmailTemplate = ({
                       href="${calendlyUrl}"
                       style="display:inline-block;padding:14px 32px;font-size:13px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:#1A1B1C;text-decoration:none;"
                     >
-                      Book a Discovery Call
+                      Book a Discovery Meeting
                     </a>
                   </td>
                 </tr>

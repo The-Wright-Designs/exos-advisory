@@ -94,7 +94,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
                   key={id}
                   className={classNames("py-3", {
                     "border-b border-white": id !== navData.length - 1,
-                    "mt-3": title === "Book A Discovery Call",
+                    "mt-3": title === "Book A Discovery Meeting",
                   })}
                 >
                   {submenu ? (
@@ -135,7 +135,7 @@ export function HeaderMobile({ cssClasses }: MobileHeaderProps) {
                       onClick={() => setIsOpen(false)}
                       className={classNames(
                         "text-paragraph text-white font-thin",
-                        title === "Book A Discovery Call"
+                        title === "Book A Discovery Meeting"
                           ? "bg-citrine px-2.5 py-2 rounded-md"
                           : "py-0.5 block",
                       )}

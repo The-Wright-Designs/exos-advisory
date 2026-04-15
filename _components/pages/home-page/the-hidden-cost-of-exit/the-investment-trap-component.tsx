@@ -24,7 +24,7 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
             Starting with capital, but missing context
           </h4>
           <p>
-            After exit most founders begin with what feels most familiar:
+            After exit most, entrepreneurs begin with what feels most familiar:
             capital. But without first resolving questions of identity and
             direction, financial decisions can move ahead of intent, leading to
             outcomes that feel active, yet ultimately misaligned.
@@ -37,9 +37,9 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
           <ul className="list-disc flex flex-col pl-7">
             <li>
               <p>
-                While you&apos;re building a company, you operate inside
-                structures for capital allocation, leadership, accountability,
-                and decision-making.
+                While you are building a company, you operate inside structures
+                for capital allocation, leadership, accountability, and
+                decision-making.
               </p>
             </li>
             <li>
@@ -59,8 +59,8 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
           <ul className="list-disc flex flex-col pl-7">
             <li>
               <p>
-                Most founders begin the transition on the financial side. It
-                feels logical because capital is tangible, measurable, and
+                Most entrepreneurs begin the transition on the financial side.
+                It feels logical because capital is tangible, measurable, and
                 familiar. But the sequence is often wrong.
               </p>
             </li>

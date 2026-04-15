@@ -31,7 +31,7 @@ const HeaderDesktop = ({ cssClasses }: DesktopHeaderProps) => {
               <li key={item.title} className="relative group">
                 <Link
                   className={classNames(
-                    item.title === "Book A Discovery Call"
+                    item.title === "Book A Discovery Meeting"
                       ? "bg-citrine border-[3px] border-citrine p-1.5 rounded-md text-white font-extralight tablet:hover:bg-transparent tablet:hover:text-charcoal ease-in-out duration-500"
                       : "text-charcoal font-thin tablet:hover:opacity-90 ease-in-out duration-300",
                   )}

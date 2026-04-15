@@ -7,7 +7,7 @@ interface DiscoveryCallEmailTemplateProps {
   steps: DiscoveryCallEmailStep[];
 }
 
-export const discoveryCallEmailTemplate = ({
+export const discoveryMeetingEmailTemplate = ({
   steps,
 }: DiscoveryCallEmailTemplateProps) => {
   const stepsHtml = steps
@@ -34,7 +34,7 @@ export const discoveryCallEmailTemplate = ({
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EXOS Advisory - Discovery Call Enquiry</title>
+    <title>EXOS Advisory - Discovery Meeting Enquiry</title>
     <style>
       .container { max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; }
       .header { background-color: #E3A04B; color: white; padding: 1rem; }
@@ -53,7 +53,7 @@ export const discoveryCallEmailTemplate = ({
       </div>
 
       <div class="content">
-        <h2>Discovery Call Enquiry</h2>
+        <h2>Discovery Meeting Enquiry</h2>
         ${stepsHtml}
       </div>
     </div>

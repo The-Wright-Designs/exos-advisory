@@ -15,9 +15,9 @@ export default function ExosComponent() {
           <div className="grid gap-10">
             <p className="text-[26px] [&_span]:text-[26px]">
               <span className="font-bold">Not a theory</span>
-              {`, a proven framework `}
-              <span className="font-normal">from</span>
-              <span className="font-bold">{` someone who's lived it`}</span>.
+              {`. A proven framework`}
+              <span className="font-bold">{` from someone who has lived it`}</span>
+              .
             </p>
             <p>
               EXOS is an Exit Operating System for pre- and post-exit

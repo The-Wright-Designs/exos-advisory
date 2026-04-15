@@ -8,12 +8,12 @@ import ButtonLink from "@/_components/ui/buttons/button-link";
 import SectionHeadingComponent from "../../ui/section-heading-component";
 
 const BIO = [
-  "Brett Fleming is a multi-exit entrepreneur who built EXOS after navigating the transition of exit twice himself. He has experienced firsthand the shift from owner to manager, from operator to investor and the unexpected loss of identity, structure and clarity that can follow a liquidity event.",
-  "After his own exits, Brett made the mistake many founders make: committing capital to a new venture before fully processing the transition. It was not a failure of intelligence, but of timing and perspective. That experience, combined with years of reflection and research into post-exit outcomes, shaped the foundation of EXOS.",
-  "He understands that exit is not an endpoint, but a shift in context. What follows is a period where decisions carry greater consequence, and the order in which they are made matters. EXOS is built on this insight, helping founders approach the transition with clarity, sequence decisions with intent, and align capital with a more considered second chapter.",
+  "Brett Fleming is a multi-exit entrepreneur who built EXOS after navigating the transition of exit twice himself. He has experienced firsthand the shift from owner to manager, from operator to investor, and the unexpected loss of identity, structure and clarity that can follow a liquidity event.",
+  "After his own exits, Brett made the mistake many entrepreneurs make: committing capital to a new venture before fully processing the transition. It was not a failure of intelligence, but of timing and perspective. That experience, combined with years of reflection and research into post-exit outcomes, shaped the foundation of EXOS.",
+  "He understands that exit is not an endpoint, but a shift in context. What follows is a period where decisions carry greater consequence, and the order in which they are made matters. EXOS is built on this insight, helping entrepreneurs approach the transition with clarity, sequence decisions with intent, and align capital with a more considered second chapter.",
   "What he had initially understood as personal became recognisable as shared.",
-  "This perspective was reinforced through deeper exploration of the research. Studies from institutions like Harvard, Yale, and UBS consistently point to the same underlying dynamic: The questions around identity, the search for renewed purpose, and the sense of disorientation were not isolated events, but recurring phases observed across founders in transition. Importantly, these experiences were not indicators of failure, but part of a broader, and largely unsupported, shift that follows liquidity.",
-  "EXOS was built in response to that gap, combining lived experience with evidence-based insight to guide founders through this next phase. It brings clarity to what follows, supports more deliberate decision-making, and ensures that capital, time, and identity are aligned with a more considered second chapter.",
+  "This perspective was reinforced through deeper exploration of the research. Studies from institutions like Harvard, Yale, and UBS consistently point to the same underlying dynamic: The questions around identity, the search for renewed purpose, and the sense of disorientation were not isolated events, but recurring phases observed across entrepreneurs in transition. Importantly, these experiences were not indicators of failure, but part of a broader, and largely unsupported, shift that follows liquidity.",
+  "EXOS was built in response to that gap, combining lived experience with evidence-based insight to guide entrepreneurs through this next phase. It brings clarity to what follows, supports more deliberate decision-making, and ensures that capital, time, and identity are aligned with a more considered second chapter.",
 ];
 
 const BioComponent = () => {
@@ -27,7 +27,7 @@ const BioComponent = () => {
       <SectionHeadingComponent cssClasses="[&_h2]:flex [&_h2]:flex-col [&_h2]:gap-2">
         Brett Fleming
         <span className="text-[26px] font-light text-charcoal">
-          built EXOS after living the founder exit (twice)
+          built EXOS after living the entrepreneur exit (twice)
         </span>
       </SectionHeadingComponent>
 
@@ -44,11 +44,11 @@ const BioComponent = () => {
           </div>
           <div className="hidden desktop:flex flex-col gap-5 items-start">
             <p className="text-[32px] font-extralight text-charcoal w-full">
-              EXOS was built so founders do not have to navigate that transition
-              alone.
+              EXOS was built so entrepreneurs do not have to navigate that
+              transition alone.
             </p>
             <ButtonLink
-              href="/discovery-call"
+              href="/discovery-meeting"
               background="charcoal"
               border="citrine"
               ariaLabel="Book a Discovery Meeting"
@@ -95,11 +95,11 @@ const BioComponent = () => {
 
       <div className="border-y-[3px] border-citrine py-10 flex flex-col gap-5 items-center desktop:hidden">
         <p className="text-[26px] font-normal text-charcoal w-full tablet:text-center">
-          EXOS was built so founders do not have to navigate that transition
-          alone.
+          EXOS was built so entrepreneurs do not have to navigate that
+          transition alone.
         </p>
         <ButtonLink
-          href="/discovery-call"
+          href="/discovery-meeting"
           background="charcoal"
           border="citrine"
           ariaLabel="Book a Discovery Meeting"

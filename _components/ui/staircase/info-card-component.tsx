@@ -23,7 +23,7 @@ export default function InfoCardComponent({
   mistBackground,
 }: Props) {
   const target = parseInt(percentage, 10);
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(target);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {

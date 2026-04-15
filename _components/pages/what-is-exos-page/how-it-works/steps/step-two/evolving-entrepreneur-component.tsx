@@ -2,7 +2,7 @@
 
 import classNames from "classnames";
 import Image from "next/image";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useCallback } from "react";
 
 interface EvolvingEntrepreneurComponentProps {
   cssClasses?: string;
@@ -10,9 +10,29 @@ interface EvolvingEntrepreneurComponentProps {
 
 const nodes = [
   {
+    label: "Structure & Purpose",
+    description:
+      "1. Rebuilding the operational framework for daily life, decision-making, values, and purpose",
+    color: "#2c4b2d",
+    pulseSpeed: "2.9s",
+    closedPosition: "bottom-5",
+    openPosition: "bottom-0",
+    wrapperClasses: "flex items-end justify-center",
+  },
+  {
+    label: "Financial",
+    description:
+      "2. Wealth preservation, capital strategy, and alignment between financial decisions and personal direction",
+    color: "#562428",
+    pulseSpeed: "3.6s",
+    closedPosition: "right-5",
+    openPosition: "right-0",
+    wrapperClasses: "flex items-center justify-end",
+  },
+  {
     label: "Mentor",
     description:
-      "3. Developmental focus — Reintroduces constructive challenge through lived reality through experience-sharing",
+      "3. Developmental focus — Reintroducing constructive challenge and lived perspective from those who have navigated this transition",
     color: "#b7b269",
     pulseSpeed: "3.2s",
     closedPosition: "top-5",
@@ -22,31 +42,12 @@ const nodes = [
   {
     label: "Identity",
     description:
-      "4. Support for mental health, Help with processing identity, legacy, loss, and emotional weight.",
+      "4. Support for mental health, help with processing identity, legacy, loss, and emotional weight.",
     color: "#99493e",
     pulseSpeed: "2.7s",
     closedPosition: "left-5",
     openPosition: "left-0",
     wrapperClasses: "flex items-center justify-start",
-  },
-  {
-    label: "Financial",
-    description: "2. Wealth preservation and growth: Financial strategy.",
-    color: "#562428",
-    pulseSpeed: "3.6s",
-    closedPosition: "right-5",
-    openPosition: "right-0",
-    wrapperClasses: "flex items-center justify-end",
-  },
-  {
-    label: "Structure & Purpose",
-    description:
-      "1. Personal and professional planning, values, purpose, structure",
-    color: "#2c4b2d",
-    pulseSpeed: "2.9s",
-    closedPosition: "bottom-5",
-    openPosition: "bottom-0",
-    wrapperClasses: "flex items-end justify-center",
   },
 ];
 
@@ -67,35 +68,53 @@ const EvolvingEntrepreneurComponent = ({
 }: EvolvingEntrepreneurComponentProps) => {
   const [openNodeIndex, setOpenNodeIndex] = useState<number | null>(null);
   const [zElevatedIndex, setZElevatedIndex] = useState<number | null>(null);
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const zTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isTouchRef = useRef(false);
 
-  useEffect(() => {
-    const handleOutsideClick = (e: MouseEvent) => {
-      if (
-        openNodeIndex !== null &&
-        wrapperRef.current &&
-        !wrapperRef.current.contains(e.target as Node)
-      ) {
-        setOpenNodeIndex(null);
-        setTimeout(() => setZElevatedIndex(null), 500);
-      }
-    };
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => document.removeEventListener("mousedown", handleOutsideClick);
-  }, [openNodeIndex]);
-
-  const handleClick = (index: number) => {
-    if (openNodeIndex === index) {
-      setOpenNodeIndex(null);
-      setTimeout(() => setZElevatedIndex(null), 500);
-    } else {
-      setOpenNodeIndex(index);
-      setZElevatedIndex(index);
+  const openNode = useCallback((index: number) => {
+    if (zTimeoutRef.current) {
+      clearTimeout(zTimeoutRef.current);
+      zTimeoutRef.current = null;
     }
-  };
+    setOpenNodeIndex(index);
+    setZElevatedIndex(index);
+  }, []);
+
+  const closeNode = useCallback(() => {
+    setOpenNodeIndex(null);
+    zTimeoutRef.current = setTimeout(() => {
+      setZElevatedIndex(null);
+      zTimeoutRef.current = null;
+    }, 500);
+  }, []);
+
+  const handleMouseEnter = useCallback(
+    (index: number) => {
+      if (isTouchRef.current) return;
+      openNode(index);
+    },
+    [openNode],
+  );
+
+  const handleMouseLeave = useCallback(() => {
+    if (isTouchRef.current) return;
+    closeNode();
+  }, [closeNode]);
+
+  const handleTouchStart = useCallback(
+    (index: number) => {
+      isTouchRef.current = true;
+      if (openNodeIndex === index) {
+        closeNode();
+      } else {
+        openNode(index);
+      }
+    },
+    [openNodeIndex, openNode, closeNode],
+  );
 
   return (
-    <div ref={wrapperRef} className={classNames("relative", cssClasses)}>
+    <div className={classNames("relative", cssClasses)}>
       <Image
         src="/graphics/about-page/8907f2ce0df650b1978b8f747eab9bcbac35f248.png"
         alt="Evolving entrepreneur graphic"
@@ -132,7 +151,7 @@ const EvolvingEntrepreneurComponent = ({
                   isOpen
                     ? `size-[344px] ${node.openPosition} gap-2 p-10`
                     : `size-[72px] ${node.closedPosition}`,
-                  isElevated ? "z-10" : "",
+                  isElevated && "z-10",
                   !isOpen && "tablet:hover:opacity-70",
                 )}
                 style={{
@@ -141,7 +160,9 @@ const EvolvingEntrepreneurComponent = ({
                     ? "none"
                     : `pulse-scale ${node.pulseSpeed} ease-in-out infinite`,
                 }}
-                onClick={() => handleClick(nodeIndex)}
+                onMouseEnter={() => handleMouseEnter(nodeIndex)}
+                onMouseLeave={handleMouseLeave}
+                onTouchStart={() => handleTouchStart(nodeIndex)}
               >
                 <h4
                   className={classNames(

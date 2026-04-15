@@ -2,7 +2,7 @@ import classNames from "classnames";
 import Image from "next/image";
 import generalData from "@/_data/general-data.json";
 
-const { thePathfinderPlaybook } = generalData.aboutPage.howItWorks.stepTwo;
+const { thePathfinderPlaybook } = generalData.whatIsExosPage.howItWorks.stepTwo;
 
 export default function ThePathfinderPlaybookComponent() {
   return (
@@ -75,7 +75,7 @@ export default function ThePathfinderPlaybookComponent() {
             src="/images/about-page/988128d3f9ff5311ff10e3a6847be39f11d0611b.jpg"
             alt="The Pathfinder Playbook"
             fill
-            sizes="100vw"
+            sizes="1280px"
             className="object-cover scale-x-[-1]"
           />
           <div

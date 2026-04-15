@@ -17,7 +17,7 @@ const HowItWorksComponent = () => {
               your decisions coherent. The board meeting. The team. The
               quarterly cadence. The integrated framework that connected
               urgency, identity, capital, and accountability: gone. Most
-              founders replace none of it.{" "}
+              entrepreneurs replace none of it.{" "}
               <strong>
                 The cost compounds quietly, for years, before it becomes
                 visible.

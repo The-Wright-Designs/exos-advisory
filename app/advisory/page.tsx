@@ -8,10 +8,10 @@ const AdvisoryPage = () => {
       <main className="flex flex-col gap-10">
         <SectionHeadingComponent>One-On-One Advisory</SectionHeadingComponent>
         <p>
-          I work one-on-one with founders and entrepreneurs on a confidential
-          advisory basis, focusing on the personal impact of pre and post exit
+          We work one-on-one with founders and entrepreneurs on a confidential
+          advisory basis, focusing on the personal impact of pre- and post-exit
           transition. If you are navigating that shift, or beginning to feel it
-          on the horizon, I would welcome the opportunity to talk.
+          on the horizon, we would welcome the opportunity to talk.
         </p>
       </main>
       <ContactForm heading="Book a Discussion" formType="advisory" />
