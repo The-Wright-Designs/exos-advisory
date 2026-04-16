@@ -16,17 +16,21 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://exos.global"),
   title: "EXOS Advisory",
   description:
-    "Clarity for entrepreneurs after exit. EXOS Advisory helps entrepreneurs navigate life after selling their company.",
-  keywords: "",
+    "At the core of EXOS is the Pathfinder Playbook, a structured framework for pre and post exit entrepreneurs that sequences decisions across identity, structure, capital, and support to bring clarity to what comes next.",
+  keywords:
+    "entrepreneur exit advisory, post-exit clarity, business exit transition, life after selling a business, exited entrepreneur support, entrepreneur identity after exit, post-exit wealth management, capital allocation after exit, entrepreneur advisory South Africa, EXOS Advisory, Brett Fleming, exit planning, entrepreneur next chapter, post-exit decision making, business sale transition",
   openGraph: {
     description:
-      "Clarity for entrepreneurs after exit. EXOS Advisory helps entrepreneurs navigate life after selling their company.",
+      "At the core of EXOS is the Pathfinder Playbook, a structured framework for pre and post exit entrepreneurs that sequences decisions across identity, structure, capital, and support to bring clarity to what comes next.",
     type: "website",
     locale: "en_ZA",
     siteName: "EXOS Advisory",
     images: [
       {
-        url: "/open-graph-image.webp",
+        url: "/images/open-graph-image.webp",
+        width: 1270,
+        height: 714,
+        alt: "EXOS Advisory",
       },
     ],
   },

@@ -38,6 +38,7 @@ const EnquiryFormInner = ({ cssClasses }: EnquiryFormProps) => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitState, setSubmitState] = useState<FormState>({ success: false });
   const formRef = useRef<HTMLFormElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const collectedData = useRef<Record<string, string | string[]>>({});
 
   const currentStepData = steps[currentStep - 1];
@@ -103,6 +104,7 @@ const EnquiryFormInner = ({ cssClasses }: EnquiryFormProps) => {
     const nextStep = currentStep - 1;
     initFieldAnswersFromCollected(nextStep - 1);
     setCurrentStep(nextStep);
+    containerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const handleNext = () => {
@@ -110,6 +112,7 @@ const EnquiryFormInner = ({ cssClasses }: EnquiryFormProps) => {
     const nextStep = currentStep + 1;
     initFieldAnswersFromCollected(nextStep - 1);
     setCurrentStep(nextStep);
+    containerRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const handleSubmit = async () => {
@@ -266,6 +269,7 @@ const EnquiryFormInner = ({ cssClasses }: EnquiryFormProps) => {
 
   return (
     <div
+      ref={containerRef}
       className={classNames(
         "bg-charcoal p-10 -mx-7 desktop:rounded-[6px] tablet:-mx-10 desktop:mx-0 desktop:flex desktop:gap-10",
         cssClasses,

@@ -1,6 +1,14 @@
+import type { Metadata } from "next";
+
 import ContentWrapper from "@/_lib/utils/content-wrapper";
 import SectionHeadingComponent from "@/_components/ui/section-heading-component";
 import ContactForm from "@/_components/contact-forms/contact-form";
+
+export const metadata: Metadata = {
+  title: "Contact | EXOS Advisory",
+  keywords:
+    "contact EXOS Advisory, entrepreneur exit enquiry, get in touch EXOS, post-exit support contact, pre-exit planning enquiry",
+};
 
 const ContactPage = () => {
   return (
