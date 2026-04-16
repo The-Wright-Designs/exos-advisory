@@ -1,6 +1,7 @@
 import Image from "next/image";
 import generalData from "@/_data/general-data.json";
 import WhatsNextComponent from "./step-four/whats-next-component";
+import HowWeWorkTogetherComponent from "../../how-we-work-together-component";
 
 export default function HowItWorksStepFour() {
   const { bulletPoints } = generalData.whatIsExosPage.howItWorks.stepFour;
@@ -40,7 +41,7 @@ export default function HowItWorksStepFour() {
           />
         </div>
       </div>
-      <div className="grid gap-15 min-[1000px]:gap-10 min-[1000px]:grid-cols-2">
+      <div className="grid gap-15 min-[1000px]:grid-cols-2">
         <div className="relative aspect-video w-full min-[1000px]:aspect-auto desktop:hidden">
           <Image
             src="/images/about-page/bd911f2e4614ea9c2b3b6b442c97a64f0170ae92.jpg"
@@ -50,6 +51,7 @@ export default function HowItWorksStepFour() {
             className="object-cover"
           />
         </div>
+        <HowWeWorkTogetherComponent cssClasses="min-[1000px]:p-10 min-[1000px]:bg-lustre min-[1000px]:rounded-md min-[1000px]:col-span-2" />
         <WhatsNextComponent />
       </div>
     </section>
