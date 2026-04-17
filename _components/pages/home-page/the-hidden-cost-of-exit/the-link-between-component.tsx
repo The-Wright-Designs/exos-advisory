@@ -60,7 +60,7 @@ const TheLinkBetweenComponent = ({
       </div>
       <div className="flex flex-col gap-10 desktop:row-start-2">
         <LossOfComponent />
-        <ButtonLink href="/about" background="citrine" border="charcoal">
+        <ButtonLink href="/what-is-exos" background="citrine" border="charcoal">
           What is EXOS?
         </ButtonLink>
       </div>

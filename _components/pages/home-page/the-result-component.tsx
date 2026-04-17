@@ -74,7 +74,7 @@ export default function TheResultComponent() {
           </div>
           <div className="grid gap-10 tablet:grid-cols-[1fr_245px] tablet:items-start tablet:p-10 tablet:border-y-[2px] tablet:border-white">
             <ButtonLink
-              href="/about"
+              href="/what-is-exos"
               background="charcoal"
               border="citrine"
               cssClasses="tablet:order-last"
