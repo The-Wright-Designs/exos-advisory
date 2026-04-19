@@ -17,23 +17,20 @@ const WhatIsExos = () => {
       <div className="flex flex-col gap-4">
         <p>
           EXOS is an Exit Operating System for life after exit. During the years
-          of building a company, decisions are made within a defined context,
-          shaped by cadence, accountability, and interconnected priorities.
-          After exit, that context disappears, but the decisions do not become
-          any less consequential.
+          of building a company decisions are made within a defined context
+          shaped by cadence accountability and interconnected priorities. After
+          exit that context disappears but the decisions do not become any less
+          consequential.
         </p>
         <p>
-          EXOS replaces that context with a more deliberate one. At its centre
-          is the Pathfinder Playbook, a structured approach that combines lived
-          entrepreneur experience with institutional research to map the full
-          landscape of the transition, surface what matters most, and bring
-          coherence to decisions that would otherwise remain fragmented.
-        </p>
-        <p>
-          At the core of EXOS is the Pathfinder Playbook, a structured framework
-          for pre and post exit entrepreneurs that sequences decisions across
-          identity, structure, capital, and support to bring clarity to what
-          comes next.
+          EXOS replaces that context with a more deliberate one. At its core is
+          the Pathfinder Playbook a structured approach that combines lived
+          founder experience with institutional research to map the full
+          landscape of the transition surface what matters most and bring
+          coherence to decisions that would otherwise remain fragmented. It
+          provides a framework for pre and post exit entrepreneurs to sequence
+          decisions across identity structure capital and support and bring
+          clarity to what comes next.
         </p>
       </div>
 
