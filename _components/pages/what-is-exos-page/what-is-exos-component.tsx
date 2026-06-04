@@ -11,8 +11,10 @@ const stages = [
 
 const WhatIsExos = () => {
   return (
-    <main className="flex flex-col gap-10">
-      <SectionHeadingComponent>What is EXOS?</SectionHeadingComponent>
+    <main className="grid gap-10 min-[900px]:grid-cols-2">
+      <SectionHeadingComponent cssClasses="min-[900px]:col-span-2">
+        What is EXOS?
+      </SectionHeadingComponent>
 
       <div className="flex flex-col gap-4">
         <p>
@@ -34,50 +36,36 @@ const WhatIsExos = () => {
         </p>
       </div>
 
-      <div className="grid gap-10 tablet:grid-cols-2">
-        <div className="flex flex-col">
-          {stages.map((stage, index) => (
-            <div key={stage.label}>
-              <div
-                className={classNames(
-                  "flex flex-col gap-1.5 p-5 rounded-[6px] border border-white",
-                  stage.bg,
-                )}
-              >
-                <span className="text-[16px] font-extralight text-center text-white pb-1 border-b border-white/50">
-                  {stage.label}
-                </span>
-                <p className="text-white font-normal text-center">
-                  {stage.text}
-                </p>
-              </div>
-              {index < stages.length - 1 && (
-                <div className="flex items-center justify-center relative h-15">
-                  <span className="bg-lustre border-[2px] border-citrine rounded-[6px] px-2 pt-[3px] pb-0.5 text-[12px] text-charcoal z-10 -translate-y-1.5">
-                    Unlocks
-                  </span>
-                  <Image
-                    src="/graphics/about-page/arrow-down.svg"
-                    alt="down arrow"
-                    width={24.85}
-                    height={52}
-                    className="absolute h-[52px] top-0"
-                  />
-                </div>
+      <div className="flex flex-col">
+        {stages.map((stage, index) => (
+          <div key={stage.label}>
+            <div
+              className={classNames(
+                "flex flex-col gap-1.5 p-5 rounded-[6px] border border-white",
+                stage.bg,
               )}
+            >
+              <span className="text-[16px] font-extralight text-center text-white pb-1 border-b border-white/50">
+                {stage.label}
+              </span>
+              <p className="text-white font-normal text-center">{stage.text}</p>
             </div>
-          ))}
-        </div>
-
-        <div className="relative w-full aspect-square min-[600px]:h-[450px] tablet:aspect-auto tablet:h-full">
-          <Image
-            src="/images/about-page/a57eb49ed6bffa93ed64c608e7ff1c8315ad3fc8.jpg"
-            alt="EXOS"
-            fill
-            sizes="(max-width: 800px) 100vw, 50vw"
-            className="object-cover"
-          />
-        </div>
+            {index < stages.length - 1 && (
+              <div className="flex items-center justify-center relative h-15">
+                <span className="bg-lustre border-[2px] border-citrine rounded-[6px] px-2 pt-[3px] pb-0.5 text-[12px] text-charcoal z-10 -translate-y-1.5">
+                  Unlocks
+                </span>
+                <Image
+                  src="/graphics/about-page/arrow-down.svg"
+                  alt="down arrow"
+                  width={24.85}
+                  height={52}
+                  className="absolute h-[52px] top-0"
+                />
+              </div>
+            )}
+          </div>
+        ))}
       </div>
     </main>
   );

@@ -40,7 +40,7 @@ const HeaderDesktop = ({ cssClasses }: DesktopHeaderProps) => {
                   {item.title}
                 </Link>
                 {"submenu" in item && item.submenu && (
-                  <ul className="absolute top-13 -left-[62px] min-w-max bg-lustre border-x border-b border-charcoal/25 rounded-b-md shadow-md p-3 flex flex-col gap-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 delay-75">
+                  <ul className="absolute top-13 -left-[62px] min-w-max bg-lustre border-x border-b border-charcoal/25 rounded-b-md shadow-md px-3 pb-3 flex flex-col gap-2 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-opacity duration-200 delay-75">
                     <div className="w-[80px] h-7 bg-lustre absolute -top-7 left-10" />
                     {item.submenu.map((sub) => (
                       <li
