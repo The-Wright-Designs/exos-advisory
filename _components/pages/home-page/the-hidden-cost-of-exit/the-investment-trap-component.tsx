@@ -81,12 +81,12 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
           </ul>
         </div>
       </div>
-      <div className="aspect-video relative desktop:order-last">
+      <div className="aspect-video relative min-[925px]:aspect-auto min-[925px]:h-[70vw] desktop:h-[780px] desktop:order-last">
         <Image
           src="/images/home-page/79735027f7a49b5ecd6a36da2ee49f0ed03c9ff0.jpg"
           alt="Exos"
           fill
-          sizes="(max-width: 1280px) 100vw, 50vw"
+          sizes="(max-width: 925px) 100vw, 85vw"
           className="object-cover"
         />
       </div>

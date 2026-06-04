@@ -108,16 +108,6 @@ const BioComponent = () => {
           Book a Discovery Meeting
         </ButtonLink>
       </div>
-
-      <div className="relative w-full h-[340px] tablet:h-[400px] min-[1000px]:hidden">
-        <Image
-          src="/images/home-page/46689bad6df6e5c1b9cffee8ff5499522c6e8f99.jpg"
-          alt="EXOS"
-          fill
-          sizes="100vw"
-          className="object-cover"
-        />
-      </div>
     </section>
   );
 };

@@ -31,7 +31,7 @@ const TheHiddenCostComponent = () => {
         <hr className="block text-charcoal/50 tablet:hidden desktop:block" />
         <TheInvestmentTrapComponent cssClasses="tablet:hidden desktop:flex" />
       </div>
-      <TheInvestmentTrapComponent cssClasses="hidden col-span-2 tablet:flex desktop:hidden" />
+      <TheInvestmentTrapComponent cssClasses="hidden col-span-2 tablet:flex min-[850px]:hidden" />
     </section>
   );
 };

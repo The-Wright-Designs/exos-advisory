@@ -1,10 +1,9 @@
-import Image from "next/image";
 import SectionHeadingComponent from "../../ui/section-heading-component";
 
 export default function ExosComponent() {
   return (
-    <section className="tablet:bg-mist px-7 tablet:px-0">
-      <div className="grid gap-10 max-w-[1280px] border-t border-charcoal/50 pt-15 mt-15 tablet:border-none tablet:p-15 min-[1000px]:grid-cols-2 desktop:mx-auto desktop:mt-[100px]">
+    <section className="bg-mist px-7 tablet:px-0">
+      <div className="grid gap-10 max-w-[1280px] py-15 mt-15 tablet:p-15 desktop:mx-auto desktop:mt-[100px]">
         <div className="flex flex-col gap-10 w-full">
           <SectionHeadingComponent cssClasses="[&_h2]:flex [&_h2]:flex-col [&_h2]:gap-1">
             EXOS:
@@ -27,15 +26,6 @@ export default function ExosComponent() {
               is next.
             </p>
           </div>
-        </div>
-        <div className="hidden relative w-full h-full min-[1000px]:block">
-          <Image
-            src="/images/home-page/46689bad6df6e5c1b9cffee8ff5499522c6e8f99.jpg"
-            alt="EXOS"
-            fill
-            sizes="50vw"
-            className="object-cover"
-          />
         </div>
       </div>
     </section>

@@ -1,7 +1,6 @@
 import ButtonLink from "@/_components/ui/buttons/button-link";
-import LossOfComponent from "./loss-of-component";
-import Image from "next/image";
 import classNames from "classnames";
+import TheInvestmentTrapComponent from "./the-investment-trap-component";
 
 interface TheLinkBetweenComponentProps {
   cssClasses?: string;
@@ -11,32 +10,7 @@ const TheLinkBetweenComponent = ({
   cssClasses,
 }: TheLinkBetweenComponentProps) => {
   return (
-    <section
-      className={classNames(
-        "grid gap-15 desktop:grid-cols-2 desktop:gap-10",
-        cssClasses,
-      )}
-    >
-      <div className="grid gap-10 desktop:col-start-2">
-        <div className="aspect-square relative tablet:h-[500px] min-[900px]:h-[580px] tablet:aspect-auto desktop:h-auto">
-          <Image
-            src="/images/home-page/6a67108f3174d8156d40662dc9bc96c91be76997.jpg"
-            alt="Exos"
-            fill
-            sizes="(max-width: 1280px) 100vw, 33vw"
-            className="object-cover"
-          />
-        </div>
-        <div className="hidden desktop:block aspect-video relative desktop:aspect-auto">
-          <Image
-            src="/images/home-page/05c1a91bd7859dc855fe59a1d1d8d193906a1659.jpg"
-            alt="Exos"
-            fill
-            sizes="33vw"
-            className="object-cover"
-          />
-        </div>
-      </div>
+    <section className={classNames("grid gap-15 desktop:gap-10", cssClasses)}>
       <div className="flex flex-col gap-5 desktop:col-span-2 desktop:order-first">
         <h4 className="text-[26px] leading-[1.25]">
           The link between transition and wealth loss
@@ -58,21 +32,15 @@ const TheLinkBetweenComponent = ({
           </p>
         </div>
       </div>
-      <div className="flex flex-col gap-10 desktop:row-start-2">
-        <LossOfComponent />
-        <ButtonLink href="/what-is-exos" background="citrine" border="charcoal">
-          What is EXOS?
-        </ButtonLink>
-      </div>
-      <div className="aspect-video relative tablet:aspect-auto tablet:h-[500px] min-[900px]:h-[580px] desktop:hidden">
-        <Image
-          src="/images/home-page/05c1a91bd7859dc855fe59a1d1d8d193906a1659.jpg"
-          alt="Exos"
-          fill
-          sizes="100vw"
-          className="object-cover tablet:object-right desktop:object-center"
-        />
-      </div>
+      <ButtonLink
+        href="/what-is-exos"
+        background="citrine"
+        border="charcoal"
+        cssClasses="min-[600px]:mr-auto"
+      >
+        What is EXOS?
+      </ButtonLink>
+      <TheInvestmentTrapComponent cssClasses="hidden min-[850px]:flex desktop:hidden" />
     </section>
   );
 };
