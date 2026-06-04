@@ -73,9 +73,9 @@ const StaircaseComponent = () => {
           </div>
         ))}
       </div>
-      <p className="mt-5 text-charcoal/75 text-[14px] font-extralight">
-        Source: UBS, Yale SOM, Anastasia Koroleva Media. Columbia Business
-        School.
+      <p className="mt-10 text-charcoal text-[16px] font-extralight italic py-4 border-y-2 border-citrine">
+        <span className="font-bold not-italic">Source:</span>UBS, Yale SOM,
+        Anastasia Koroleva Media. Columbia Business School.
       </p>
     </div>
   );
