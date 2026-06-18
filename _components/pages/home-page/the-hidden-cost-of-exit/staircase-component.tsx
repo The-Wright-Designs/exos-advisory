@@ -1,14 +1,14 @@
 import classNames from "classnames";
 import BubbleComponent from "@/_components/ui/staircase/bubble-component";
-import InfoCardComponent from "@/_components/ui/staircase/info-card-component";
 import ReverseTriangleLine from "@/_components/ui/staircase/reverse-triangle-line";
 import SingleStairComponent from "@/_components/ui/staircase/single-stair-component";
+import InfoCardsComponent from "./info-cards-component";
 
 import staircaseData from "@/_data/general-data.json";
 
 const {
   homePage: {
-    theHiddenCost: { staircase, infoCards },
+    theHiddenCost: { staircase },
   },
 } = staircaseData;
 
@@ -53,27 +53,9 @@ const StaircaseComponent = () => {
       </div>
       <div className="relative flex flex-col pt-[100px]">
         <ReverseTriangleLine cssClasses="absolute top-0 left-[74px] min-[388px]:left-[103px]" />
-        {infoCards.map(({ percentage, paragraph }, index) => (
-          <div key={index}>
-            <InfoCardComponent
-              percentage={percentage}
-              percentagePositionRight={index % 2 !== 0}
-              cssClasses={classNames({
-                "self-start": index === 0,
-                "self-end": index === 1,
-                "self-center": index === 2,
-              })}
-              orangeBackground={index === 0 || index === 3}
-              charcoalBackground={index === 2}
-              mistBackground={index === 1}
-            >
-              {paragraph}
-            </InfoCardComponent>
-            {index < infoCards.length - 1 && <ReverseTriangleLine />}
-          </div>
-        ))}
+        <InfoCardsComponent cssClasses="desktop:hidden" />
       </div>
-      <p className="mt-10 text-charcoal text-[16px] font-extralight italic py-4 border-y-2 border-citrine">
+      <p className="mt-10 text-charcoal text-[16px] font-extralight italic py-4 border-y-2 border-citrine desktop:hidden">
         <span className="font-bold not-italic">Source:</span>UBS, Yale SOM,
         Anastasia Koroleva Media. Columbia Business School.
       </p>

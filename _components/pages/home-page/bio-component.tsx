@@ -27,86 +27,47 @@ const BioComponent = () => {
       <SectionHeadingComponent cssClasses="[&_h2]:flex [&_h2]:flex-col [&_h2]:gap-2">
         Brett Fleming
         <span className="text-[26px] font-light text-charcoal">
-          built EXOS after living the entrepreneur exit (twice)
+          built EXOS after living the founder exit (twice)
         </span>
       </SectionHeadingComponent>
 
-      <div className="grid gap-10 tablet:grid-cols-[400px_1fr] min-[900px]:grid-cols-[400px_1fr] min-[1000px]:grid-cols-[350px_1fr] desktop:grid-cols-2">
-        <div className="flex flex-col gap-10">
-          <div className="relative w-full aspect-square tablet:aspect-auto tablet:h-full desktop:aspect-square">
-            <Image
-              src="/images/home-page/brett-fleming-exos.jpg"
-              alt="Brett Fleming"
-              fill
-              sizes="(max-width: 800px) 100vw, (max-width: 1280px) 400px, 50vw"
-              className="object-cover"
-            />
-          </div>
-          <div className="hidden desktop:flex flex-col gap-5 items-start">
-            <p className="text-[32px] font-extralight text-charcoal w-full">
-              EXOS was built so entrepreneurs do not have to navigate that
-              transition alone.
-            </p>
-            <ButtonLink
-              href="/discovery-meeting"
-              background="charcoal"
-              border="citrine"
-              ariaLabel="Book a Discovery Meeting"
-            >
-              Book a Discovery Meeting
-            </ButtonLink>
-          </div>
+      <div className="flex flex-col gap-10 tablet:flex-row tablet:items-start tablet:gap-10">
+        <div className="relative w-full aspect-square tablet:h-[400px] desktop:w-[247px] desktop:h-[268px] desktop:shrink-0">
+          <Image
+            src="/images/home-page/brett-fleming-exos.jpg"
+            alt="Brett Fleming"
+            fill
+            sizes="(max-width: 800px) 100vw, (max-width: 1280px) 400px, 247px"
+            className="object-cover rounded-md"
+          />
         </div>
 
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 desktop:flex-1">
           <div
             className={classNames(
               "relative overflow-hidden flex flex-col gap-4",
               {
-                "max-h-[320px] tablet:max-h-none": !expanded,
+                "max-h-[320px] desktop:max-h-[230px]": !expanded,
               },
             )}
           >
             <p>{BIO[0]}</p>
             <p>{BIO[1]}</p>
             <p>{BIO[2]}</p>
-            <p className="tablet:hidden min-[900px]:block">{BIO[3]}</p>
-            <p className="tablet:hidden min-[1000px]:block">{BIO[4]}</p>
-            <p className="tablet:hidden desktop:block">{BIO[5]}</p>
-            <p className="tablet:hidden desktop:block">{BIO[6]}</p>
+            <p>{BIO[3]}</p>
+            <p>{BIO[4]}</p>
+            <p>{BIO[5]}</p>
             {!expanded && (
-              <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-lustre to-transparent pointer-events-none tablet:hidden" />
+              <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-lustre to-transparent pointer-events-none" />
             )}
           </div>
           <button
             onClick={() => setExpanded(!expanded)}
-            className="text-[#0000EE] text-paragraph font-light self-start tablet:hidden"
+            className="text-[#0000EE] text-paragraph font-light self-start desktop:hover:cursor-pointer"
           >
             {expanded ? "Read less -" : "Read more +"}
           </button>
         </div>
-      </div>
-      <div className="hidden tablet:flex flex-col gap-4 -mt-5 desktop:hidden">
-        <p className="min-[900px]:hidden">{BIO[3]}</p>
-        <p className="min-[1000px]:hidden">{BIO[4]}</p>
-        <p>{BIO[5]}</p>
-        <p>{BIO[6]}</p>
-      </div>
-
-      <div className="border-y-[3px] border-citrine py-10 flex flex-col gap-5 items-center desktop:hidden">
-        <p className="text-[26px] font-normal text-charcoal w-full tablet:text-center">
-          EXOS was built so entrepreneurs do not have to navigate that
-          transition alone.
-        </p>
-        <ButtonLink
-          href="/discovery-meeting"
-          background="charcoal"
-          border="citrine"
-          ariaLabel="Book a Discovery Meeting"
-          cssClasses="w-full tablet:w-auto"
-        >
-          Book a Discovery Meeting
-        </ButtonLink>
       </div>
     </section>
   );

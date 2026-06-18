@@ -69,7 +69,12 @@ const TestimonialSlide = ({
 
 const TestimonialsComponent = ({ cssClasses }: Props) => {
   return (
-    <section className={classNames("flex flex-col gap-10 pt-15", cssClasses)}>
+    <section
+      className={classNames(
+        "flex flex-col gap-10 pt-15 desktop:pt-[100px]",
+        cssClasses,
+      )}
+    >
       <SectionHeadingComponent>Testimonials</SectionHeadingComponent>
       <div className="relative pb-10 border-b-[3px] border-citrine">
         <div className="overflow-x-hidden">

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 
-import HowItWorksComponent from "@/_components/pages/what-is-exos-page/how-it-works/how-it-works-component";
-import WhatIsExosComponent from "@/_components/pages/what-is-exos-page/what-is-exos-component";
-import ContentWrapper from "@/_lib/utils/content-wrapper";
+import HowItWorksComponent from "@/_components/pages/pathfinder-playbook-page/how-it-works/how-it-works-component";
 
 export const metadata: Metadata = {
   title: "What is EXOS | EXOS Advisory",
@@ -13,9 +11,6 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <main className="pt-15">
-      <ContentWrapper>
-        <WhatIsExosComponent />
-      </ContentWrapper>
       <HowItWorksComponent />
     </main>
   );

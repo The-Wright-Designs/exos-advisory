@@ -30,12 +30,12 @@ export default function AboutComponent() {
               </p>
             </div>
             <ButtonLink
-              href="/what-is-exos"
+              href="/pathfinder-playbook"
               background="charcoal"
               border="citrine"
               cssClasses="hidden desktop:flex"
             >
-              What is EXOS?
+              Book a Discovery Meeting
             </ButtonLink>
           </div>
           <div className="flex flex-col gap-[20px] desktop:border-l-[3px] desktop:border-citrine desktop:pl-[20px]">
@@ -71,12 +71,12 @@ export default function AboutComponent() {
           second chapter defined by both meaning and enduring value.
         </p>
         <ButtonLink
-          href="/what-is-exos"
+          href="/pathfinder-playbook"
           background="charcoal"
           border="citrine"
           cssClasses="desktop:hidden min-[600px]:self-start"
         >
-          What is EXOS?
+          Book a Discovery Meeting
         </ButtonLink>
       </div>
     </main>

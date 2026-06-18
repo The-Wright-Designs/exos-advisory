@@ -60,8 +60,10 @@ export default function InfoCardComponent({
       className={classNames(
         "grid place-items-center gap-3 p-5 rounded-[6px] border-2 overflow-hidden",
         {
-          "grid-cols-[101.75px_1fr]": percentagePositionRight,
-          "grid-cols-[1fr_101.75px]": !percentagePositionRight,
+          "grid-cols-[101.75px_1fr] desktop:grid-cols-[1fr_1.25fr]":
+            percentagePositionRight,
+          "grid-cols-[1fr_101.75px] desktop:grid-cols-[1.25fr_1fr]":
+            !percentagePositionRight,
           "bg-citrine border-charcoal/50": orangeBackground,
           "bg-charcoal border-citrine/85": charcoalBackground,
           "bg-mist border-charcoal/50": mistBackground,

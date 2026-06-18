@@ -1,7 +1,6 @@
 import Image from "next/image";
 import classNames from "classnames";
 import SectionHeadingComponent from "@/_components/ui/section-heading-component";
-import ButtonLink from "@/_components/ui/buttons/button-link";
 
 const items = [
   {
@@ -13,7 +12,7 @@ const items = [
   },
   {
     title: "Saying yes too often",
-    description: "due to guilt, pressure, or ego.",
+    description: "due to guilt, pressure or ego.",
     bg: "bg-citrine",
     text: "text-white",
     width: "w-full min-w-[240px] min-[375px]:w-[72.5%] tablet:w-[84%]",
@@ -21,7 +20,7 @@ const items = [
   {
     title: "Emotional investing",
     description: "to prove relevance or fill a void.",
-    bg: "bg-white",
+    bg: "bg-lustre",
     text: "text-charcoal",
     width: "w-full min-[375px]:w-[85%] tablet:w-[92%]",
   },
@@ -37,7 +36,7 @@ const items = [
 export default function TheResultComponent() {
   return (
     <section
-      className="mt-15 w-full scroll-mt-10 tablet:bg-slate tablet:py-15 desktop:scroll-mt-40"
+      className="mt-15 w-full scroll-mt-10 tablet:bg-slate tablet:py-15 desktop:scroll-mt-40 desktop:mt-[100px]"
       id="the-result"
     >
       <div className="max-w-[1280px] mx-auto flex flex-col gap-10 px-7 tablet:px-10 desktop:px-15">
@@ -72,24 +71,14 @@ export default function TheResultComponent() {
               />
             </div>
           </div>
-          <div className="grid gap-10 tablet:grid-cols-[1fr_245px] tablet:items-start tablet:p-10 tablet:border-y-[2px] tablet:border-white">
-            <ButtonLink
-              href="/what-is-exos"
-              background="charcoal"
-              border="citrine"
-              cssClasses="tablet:order-last"
-            >
-              What is EXOS?
-            </ButtonLink>
-            <div className="flex flex-col gap-[10px] items-center text-center w-full tablet:items-start desktop:gap-1">
-              <p className="italic tablet:text-white tablet:text-left desktop:text-[26px] desktop:font-thin">
-                &ldquo;People have been here before. The problem is real and
-                normal. And you can learn from how they navigated it.&rdquo;
-              </p>
-              <p className="tablet:text-white tablet:text-left desktop:text-[26px]">
-                - EXOS client
-              </p>
-            </div>
+          <div className="flex flex-col gap-[10px] tablet:p-10 tablet:border-y-[2px] tablet:border-white desktop:gap-1">
+            <p className="italic text-center tablet:text-white tablet:text-left desktop:text-[26px] desktop:font-thin">
+              &ldquo;People have been here before. The problem is real and
+              normal. And you can learn from how they navigated it.&rdquo;
+            </p>
+            <p className="text-center tablet:text-white tablet:text-left desktop:text-[26px]">
+              - EXOS client
+            </p>
           </div>
         </div>
       </div>
