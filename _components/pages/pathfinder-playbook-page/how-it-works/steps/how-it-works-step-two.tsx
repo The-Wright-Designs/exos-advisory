@@ -1,4 +1,4 @@
-import EvolvingEntrepreteurComponent from "./step-two/evolving-entrepreneur-component";
+import EvolvingEntrepreteurComponent from "../../evolving-entrepreneur-component";
 import ThePathfinderPlaybookComponent from "./step-two/the-pathfinder-playbook-component";
 
 export default function HowItWorksStepTwo() {

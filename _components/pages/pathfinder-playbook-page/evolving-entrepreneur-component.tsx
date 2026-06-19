@@ -15,7 +15,7 @@ const nodes = [
       "3. Developmental focus — Reintroducing constructive challenge and lived perspective from those who have navigated this transition",
     color: "#b7b269",
     pulseSpeed: "3.2s",
-    closedPosition: "top-5",
+    closedPosition: "top-5 min-[600px]:top-7",
     openPosition: "top-0",
     wrapperClasses: "flex items-start justify-center",
   },
@@ -25,7 +25,7 @@ const nodes = [
       "4. Support for mental health, help with processing identity, legacy, loss, and emotional weight.",
     color: "#99493e",
     pulseSpeed: "2.7s",
-    closedPosition: "left-5",
+    closedPosition: "left-5 min-[600px]:left-7",
     openPosition: "left-0",
     wrapperClasses: "flex items-center justify-start",
   },
@@ -35,7 +35,7 @@ const nodes = [
       "2. Wealth preservation, capital strategy, and alignment between financial decisions and personal direction",
     color: "#562428",
     pulseSpeed: "3.6s",
-    closedPosition: "right-5",
+    closedPosition: "right-5 min-[600px]:right-7",
     openPosition: "right-0",
     wrapperClasses: "flex items-center justify-end",
   },
@@ -45,7 +45,7 @@ const nodes = [
       "1. Rebuilding the operational framework for daily life, decision-making, values, and purpose",
     color: "#2c4b2d",
     pulseSpeed: "2.9s",
-    closedPosition: "bottom-5",
+    closedPosition: "bottom-5 min-[600px]:bottom-7",
     openPosition: "bottom-0",
     wrapperClasses: "flex items-end justify-center",
   },
@@ -118,9 +118,9 @@ const EvolvingEntrepreneurComponent = ({
       <Image
         src="/graphics/about-page/8907f2ce0df650b1978b8f747eab9bcbac35f248.png"
         alt="Evolving entrepreneur graphic"
-        width={344}
-        height={344}
-        className="object-contain"
+        width={466}
+        height={466}
+        className="object-contain size-[344px] min-[600px]:size-[466px]"
       />
       <div className="absolute inset-0 grid grid-rows-3 grid-cols-3 p-[6%]">
         {gridOrder.map((cell, i) => {
@@ -129,8 +129,8 @@ const EvolvingEntrepreneurComponent = ({
           if (cell === "center") {
             return (
               <div key={i} className="flex items-center justify-center">
-                <div className="bg-[#562428] rounded-full size-[72px] flex items-center justify-center">
-                  <h4 className="text-[10px] font-medium text-white text-center">
+                <div className="bg-[#562428] rounded-full size-[72px] min-[600px]:size-[97px] flex items-center justify-center">
+                  <h4 className="text-[10px] min-[600px]:text-[14px] font-medium text-white text-center">
                     Evolving entrepreneur
                   </h4>
                 </div>
@@ -149,8 +149,14 @@ const EvolvingEntrepreneurComponent = ({
                 className={classNames(
                   "absolute rounded-full flex flex-col items-center justify-center ease-in-out duration-500 tablet:hover:cursor-pointer",
                   isOpen
-                    ? `size-[344px] ${node.openPosition} gap-2 p-10`
-                    : `size-[72px] ${node.closedPosition}`,
+                    ? [
+                        node.openPosition,
+                        "size-[344px] min-[600px]:size-[466px] gap-2 p-10",
+                      ]
+                    : [
+                        node.closedPosition,
+                        "size-[72px] min-[600px]:size-[97px]",
+                      ],
                   isElevated && "z-10",
                   !isOpen && "tablet:hover:opacity-70",
                 )}
@@ -169,7 +175,7 @@ const EvolvingEntrepreneurComponent = ({
                     "text-center ease-in-out duration-150 delay-150",
                     isOpen
                       ? "text-white text-subheading"
-                      : "text-[10px] font-medium text-white",
+                      : "text-[10px] min-[600px]:text-[14px] font-medium text-white",
                   )}
                 >
                   {node.label}
@@ -190,10 +196,10 @@ const EvolvingEntrepreneurComponent = ({
           );
         })}
       </div>
-      <p className="absolute top-[3px] left-1/2 -translate-x-1/2 text-[11px] text-white">
+      <p className="absolute top-[3px] left-1/2 -translate-x-1/2 text-[11px] min-[600px]:text-[15px] text-white">
         Community
       </p>
-      <p className="absolute bottom-[3px] left-1/2 -translate-x-1/2 text-[11px] text-white">
+      <p className="absolute bottom-[3px] left-1/2 -translate-x-1/2 text-[11px] min-[600px]:text-[15px] text-white">
         Community
       </p>
     </div>

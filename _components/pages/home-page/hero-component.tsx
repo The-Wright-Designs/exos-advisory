@@ -11,6 +11,7 @@ export default function HeroComponent() {
             fill
             sizes="(max-width: 1280px) 100vw, 452px"
             className="object-cover rounded-none"
+            priority
           />
         </div>
         <div className="absolute bottom-2 grid place-items-center w-full px-5 desktop:relative desktop:bottom-0 desktop:bg-citrine desktop:place-items-start desktop:p-15 overflow-hidden">
