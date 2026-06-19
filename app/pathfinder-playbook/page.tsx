@@ -6,6 +6,7 @@ import TheProcessComponent from "@/_components/pages/pathfinder-playbook-page/th
 import PlaybackLoopComponent from "@/_components/pages/pathfinder-playbook-page/playback-loop-component";
 import TransitionPlanComponent from "@/_components/pages/pathfinder-playbook-page/transition-plan-component";
 import ScorecardComponent from "@/_components/pages/pathfinder-playbook-page/scorecard-component";
+import WhatYouLeaveWithComponent from "@/_components/pages/pathfinder-playbook-page/what-you-leave-with-component";
 
 export const metadata: Metadata = {
   title: "What is EXOS | EXOS Advisory",
@@ -23,6 +24,7 @@ const AboutPage = () => {
         <TransitionPlanComponent />
         <ScorecardComponent />
       </ContentWrapper>
+      <WhatYouLeaveWithComponent />
     </main>
   );
 };

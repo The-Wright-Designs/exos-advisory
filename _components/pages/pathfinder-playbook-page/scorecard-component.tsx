@@ -11,7 +11,7 @@ const listItems = [
 
 const ScorecardComponent = () => {
   return (
-    <div className="flex flex-col gap-10">
+    <section className="flex flex-col gap-10">
       <SectionHeadingComponent cssClasses="[&_h2]:flex [&_h2]:flex-col [&_h2]:gap-1 desktop:col-span-2">
         The Scorecard
         <span className="text-[26px] font-light">and Navigational Support</span>
@@ -57,7 +57,7 @@ const ScorecardComponent = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

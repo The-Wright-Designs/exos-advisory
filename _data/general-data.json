@@ -86,6 +86,29 @@
         }
       ]
     },
+    "whatYouLeaveWith": [
+      {
+        "text": "A clear understanding of the themes shaping your transition",
+        "color": "citrine"
+      },
+      {
+        "text": "A focused Scorecard with two to four priority goals",
+        "color": "slate"
+      },
+      {
+        "text": "A practical set of actions for the next 30 to 60 days",
+        "color": "charcoal"
+      },
+      {
+        "text": "Personalised, advisory-ready Pillar Briefs",
+        "color": "citrine"
+      },
+      {
+        "text": "Structured insight across all five pillars",
+        "color": "slate"
+      },
+      { "text": "A fully integrated Transition Plan", "color": "charcoal" }
+    ],
     "playbackLoop": [
       {
         "label": "Learnings",
