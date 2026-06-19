@@ -5,6 +5,7 @@ import ContentWrapper from "@/_lib/utils/content-wrapper";
 import TheProcessComponent from "@/_components/pages/pathfinder-playbook-page/the-process/the-process-component";
 import PlaybackLoopComponent from "@/_components/pages/pathfinder-playbook-page/playback-loop-component";
 import TransitionPlanComponent from "@/_components/pages/pathfinder-playbook-page/transition-plan-component";
+import ScorecardComponent from "@/_components/pages/pathfinder-playbook-page/scorecard-component";
 
 export const metadata: Metadata = {
   title: "What is EXOS | EXOS Advisory",
@@ -20,6 +21,7 @@ const AboutPage = () => {
         <TheProcessComponent />
         <PlaybackLoopComponent />
         <TransitionPlanComponent />
+        <ScorecardComponent />
       </ContentWrapper>
     </main>
   );

@@ -110,7 +110,7 @@ const ProcessFlowComponent = () => {
         <div className="flex flex-col gap-1.5 tablet:items-center">
           <p className="text-white text-[26px]">Scorecard</p>
           <p className="text-white text-[16px] tablet:text-center">
-            Keeps the plan moving: One to two unlock each month, with EXOS as
+            Keeps the plan moving: One to two unlocks each month, with EXOS as
             your accountability partner
           </p>
         </div>
