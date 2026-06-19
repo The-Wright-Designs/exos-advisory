@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
-import HowItWorksComponent from "@/_components/pages/pathfinder-playbook-page/how-it-works/how-it-works-component";
 import PathfinderPlaybookComponent from "@/_components/pages/pathfinder-playbook-page/pathfinder-playbook/pathfinder-playbook-component";
 import ContentWrapper from "@/_lib/utils/content-wrapper";
 import TheProcessComponent from "@/_components/pages/pathfinder-playbook-page/the-process/the-process-component";
+import PlaybackLoopComponent from "@/_components/pages/pathfinder-playbook-page/playback-loop-component";
 
 export const metadata: Metadata = {
   title: "What is EXOS | EXOS Advisory",
@@ -17,8 +17,8 @@ const AboutPage = () => {
       <ContentWrapper>
         <PathfinderPlaybookComponent />
         <TheProcessComponent />
+        <PlaybackLoopComponent />
       </ContentWrapper>
-      <HowItWorksComponent />
     </main>
   );
 };

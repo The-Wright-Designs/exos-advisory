@@ -1,5 +1,5 @@
 import EvolvingEntrepreteurComponent from "../../evolving-entrepreneur-component";
-import ThePathfinderPlaybookComponent from "./step-two/the-pathfinder-playbook-component";
+import ThePathfinderPlaybookComponent from "../../playback-loop-component";
 
 export default function HowItWorksStepTwo() {
   return (

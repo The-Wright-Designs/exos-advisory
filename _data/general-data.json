@@ -61,45 +61,29 @@
       }
     ]
   },
-  "whatIsExosPage": {
-    "howItWorks": {
-      "stepTwo": {
-        "thePathfinderPlaybook": [
-          {
-            "title": "Learning Briefs",
-            "paragraph": "Distilled knowledge drawn from research and the hard-won experience of entrepreneurs who have navigated this exact kind of challenge. This is not a theory. It is insight earned by people who got it wrong and understood what it cost them.\n\nEvery component builds on the last, creating clarity through structure."
-          },
-          {
-            "title": "Pillar Questionnaires",
-            "paragraph": "A structured reflection built on the Learning Briefs where context comes first. This results in a richer insight and more candid response. This surfaces one to two priority constraints that are most distorting decision quality."
-          },
-          {
-            "title": "Pillar Briefs",
-            "paragraph": "Personalised, advisory-ready documents synthesising your position, themes, and priority actions across all five pillars shareable with every specialist advisor from day one, so they enter from the same position of understanding."
-          },
-          {
-            "title": "Golden Thread Mapping",
-            "paragraph": "The unifying themes connecting identity, capital, and direction into a coherent thesis for what comes next. This determines what must stabilise before major financial or directional moves are made."
-          }
-        ]
+  "thePathfinderPlaybookPage": {
+    "playbackLoop": [
+      {
+        "label": "Learnings",
+        "title": "Learn from those who walked the path (Learning Brief)",
+        "paragraph": "Distilled knowledge drawn from research and the hard-won experience of entrepreneurs who have navigated this exact challenge. This is not theory. It is insight earned by people who got it wrong and understood what it cost them.\n\nYou enter each pillar already aware of what others learned too late."
       },
-      "stepThree": {
-        "transitionPlan": [
-          "A personalised, integrated plan built across all five pillars, grounded in the Discovery diagnostic and shaped by the Pathfinder Playbook.",
-          "Includes: clear objectives, engagement briefs for each support area, sequenced goals, timelines, progress markers, and governance milestones.",
-          "Shareable with chosen specialist service providers, ensuring every advisor enters from the same position of alignment.",
-          "Optional matching with mentors, coaches, counsellors, and financial advisors who understand entrepreneur psychology and post-exit dynamics."
-        ]
+      {
+        "label": "Reflection",
+        "title": "Your candid reflection (Pillar Questionnaire)",
+        "paragraph": "A structured reflection built on the Learning Brief, where context comes first. This produces richer insight and a more candid response, and surfaces the one or two priority constraints most distorting your decision quality."
       },
-      "stepFour": {
-        "bulletPoints": [
-          "1–2 priority unlocks per 30-day cycle",
-          "Monthly governance review of what moved, what stalled, what changes",
-          "Progress tracking against the Transition Plan",
-          "Course correction before distortion compounds"
-        ]
+      {
+        "label": "Insight",
+        "title": "Your insight, made advisory-ready (Pillar Brief)",
+        "paragraph": "Your personalised, advisory-ready document, synthesising your position, themes, and priority actions. Shareable with every specialist advisor from day one, so they enter from the same position of understanding."
+      },
+      {
+        "label": "Action",
+        "title": "Insight converted into sequenced decisions (via Golden Thread Mapping)",
+        "paragraph": "Once all five pillars are complete: the unifying themes connecting identity, capital, and direction into a coherent thesis for what comes next. This determines what must stabilise before any major financial or directional move is made."
       }
-    }
+    ]
   },
   "bookADiscoveryMeetingForm": [
     {
