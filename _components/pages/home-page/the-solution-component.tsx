@@ -83,7 +83,7 @@ const TheSolutionComponent = () => {
                     Unlocks
                   </span>
                   <Image
-                    src="/graphics/about-page/arrow-down.svg"
+                    src="/graphics/pathfinder-playbook-page/arrow-down.svg"
                     alt="down arrow"
                     width={24.85}
                     height={52}

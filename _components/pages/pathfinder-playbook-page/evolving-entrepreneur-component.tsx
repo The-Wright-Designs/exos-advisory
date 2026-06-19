@@ -116,7 +116,7 @@ const EvolvingEntrepreneurComponent = ({
   return (
     <div className={classNames("relative", cssClasses)}>
       <Image
-        src="/graphics/about-page/8907f2ce0df650b1978b8f747eab9bcbac35f248.png"
+        src="/graphics/pathfinder-playbook-page/8907f2ce0df650b1978b8f747eab9bcbac35f248.png"
         alt="Evolving entrepreneur graphic"
         width={466}
         height={466}

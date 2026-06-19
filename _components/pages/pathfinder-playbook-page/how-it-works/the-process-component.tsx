@@ -12,7 +12,7 @@ const TheProcessComponent = () => {
         <div className="relative">
           <p className="tablet:text-white">Recognition</p>
           <Image
-            src="/graphics/about-page/arrow-1.svg"
+            src="/graphics/pathfinder-playbook-page/arrow-1.svg"
             alt="Arrow graphic"
             width={32}
             height={32}
@@ -22,7 +22,7 @@ const TheProcessComponent = () => {
         <div className="relative">
           <p className="text-center tablet:text-white">Normalisation</p>
           <Image
-            src="/graphics/about-page/arrow-2.svg"
+            src="/graphics/pathfinder-playbook-page/arrow-2.svg"
             alt="Arrow graphic"
             width={32}
             height={32}
@@ -32,7 +32,7 @@ const TheProcessComponent = () => {
         <div className="relative">
           <p className="text-right tablet:text-white">Authority</p>
           <Image
-            src="/graphics/about-page/arrow-3.svg"
+            src="/graphics/pathfinder-playbook-page/arrow-3.svg"
             alt="Arrow graphic"
             width={32}
             height={32}
@@ -42,7 +42,7 @@ const TheProcessComponent = () => {
         <div className="relative">
           <p className="text-center tablet:text-white">Solution</p>
           <Image
-            src="/graphics/about-page/arrow-4.svg"
+            src="/graphics/pathfinder-playbook-page/arrow-4.svg"
             alt="Arrow graphic"
             width={32}
             height={32}

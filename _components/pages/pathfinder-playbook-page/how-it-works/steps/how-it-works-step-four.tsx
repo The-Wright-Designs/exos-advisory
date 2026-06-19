@@ -33,7 +33,7 @@ export default function HowItWorksStepFour() {
         </div>
         <div className="relative hidden desktop:block">
           <Image
-            src="/images/about-page/bd911f2e4614ea9c2b3b6b442c97a64f0170ae92.jpg"
+            src="/images/pathfinder-playbook-page/bd911f2e4614ea9c2b3b6b442c97a64f0170ae92.jpg"
             alt="Scorecard & Navigational Support"
             fill
             sizes="50vw"
@@ -44,7 +44,7 @@ export default function HowItWorksStepFour() {
       <div className="grid gap-15 min-[1000px]:grid-cols-2">
         <div className="relative aspect-video w-full min-[1000px]:aspect-auto desktop:hidden">
           <Image
-            src="/images/about-page/bd911f2e4614ea9c2b3b6b442c97a64f0170ae92.jpg"
+            src="/images/pathfinder-playbook-page/bd911f2e4614ea9c2b3b6b442c97a64f0170ae92.jpg"
             alt="Scorecard & Navigational Support"
             fill
             sizes="(max-width: 1000px) 100vw, 50vw"

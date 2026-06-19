@@ -7,11 +7,8 @@ import InfoCardsComponent from "./info-cards-component";
 
 const TheHiddenCostComponent = () => {
   return (
-    <section className="scroll-mt-10 desktop:scroll-mt-40">
-      <div
-        className="grid gap-15 tablet:grid-cols-[334px_1fr]"
-        id="the-hidden-cost"
-      >
+    <section className="scroll-mt-10 desktop:scroll-mt-40" id="the-hidden-cost">
+      <div className="grid gap-15 tablet:grid-cols-[334px_1fr]">
         <SectionHeadingComponent cssClasses="hidden col-span-2 tablet:block">
           The Hidden Cost of Exit
         </SectionHeadingComponent>

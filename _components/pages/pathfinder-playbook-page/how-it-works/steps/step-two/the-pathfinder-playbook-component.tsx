@@ -63,7 +63,7 @@ export default function ThePathfinderPlaybookComponent() {
         </h4>
         <div className="relative rounded-md overflow-hidden p-15">
           <Image
-            src="/images/about-page/988128d3f9ff5311ff10e3a6847be39f11d0611b.jpg"
+            src="/images/pathfinder-playbook-page/988128d3f9ff5311ff10e3a6847be39f11d0611b.jpg"
             alt="The Pathfinder Playbook"
             fill
             sizes="1280px"
