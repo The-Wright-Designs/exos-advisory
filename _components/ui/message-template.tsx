@@ -9,6 +9,7 @@ interface Props {
   containerClasses?: string;
   messageClasses?: string;
   isReply?: boolean;
+  hideIcon?: boolean;
 }
 
 export default function MessageTemplate({
@@ -19,6 +20,7 @@ export default function MessageTemplate({
   containerClasses,
   messageClasses,
   isReply,
+  hideIcon,
 }: Props) {
   const icon = notDelivered
     ? "/icons/single-check.png"
@@ -46,7 +48,7 @@ export default function MessageTemplate({
         <div className="text-white text-[18px] font-light">{children}</div>
         <div className="absolute bottom-2 right-3 flex items-center gap-1 opacity-85">
           <span className="text-[12px] font-light text-white">{sentTime}</span>
-          <Image src={icon} alt="" width={iconWidth} height={11} />
+          {!hideIcon && <Image src={icon} alt="" width={iconWidth} height={11} />}
         </div>
       </div>
     </div>

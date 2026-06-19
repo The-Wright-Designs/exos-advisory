@@ -1,7 +1,7 @@
 import ContentWrapper from "@/_lib/utils/content-wrapper";
 import HowItWorksStepOne from "./steps/how-it-works-step-one";
 import HowItWorksStepTwo from "./steps/how-it-works-step-two";
-import HowItWorksStepThree from "./steps/how-it-works-step-three";
+import HowItWorksStepThree from "../transition-plan-component";
 import HowItWorksStepFour from "./steps/how-it-works-step-four";
 
 const StepsComponent = () => {

@@ -62,6 +62,30 @@
     ]
   },
   "thePathfinderPlaybookPage": {
+    "transitionPlan": {
+      "checklist": [
+        {
+          "bold": "Bespoke, not a template:",
+          "text": " built from your own briefs and the breakthrough insight at the centre of your transition."
+        },
+        {
+          "bold": "Sequenced:",
+          "text": " it orders the decisions of the transition across all five pillars, so each is made in the correct sequence to unlock the next."
+        },
+        {
+          "bold": "Clear objectives",
+          "text": ", engagement briefs for each support area, sequenced goals, timelines, progress markers, and governance milestones."
+        },
+        {
+          "bold": "Optional matching with mentors",
+          "text": ", coaches, counsellors, and financial advisors who understand entrepreneur psychology and post-exit dynamics."
+        },
+        {
+          "bold": "A living document",
+          "text": ", reviewed and adapted monthly, always reflecting where the transition actually is."
+        }
+      ]
+    },
     "playbackLoop": [
       {
         "label": "Learnings",
