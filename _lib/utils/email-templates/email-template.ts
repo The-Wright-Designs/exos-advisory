@@ -1,27 +1,17 @@
 interface EmailTemplateProps {
   name: string;
   email: string;
+  country: string;
   message: string;
-  formType: "advisory" | "contact";
 }
 
-const titles: Record<string, string> = {
-  advisory: "One-on-One Advisory Form Submission",
-  contact: "General Contact Form Submission",
-};
-
-export const emailTemplate = ({
-  name,
-  email,
-  message,
-  formType,
-}: EmailTemplateProps) => {
+export const emailTemplate = ({ name, email, country, message }: EmailTemplateProps) => {
   return `<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EXOS Advisory - ${titles[formType]}</title>
+    <title>EXOS Advisory - Contact Form Submission</title>
     <style>
       .container { max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif; }
       .header { background-color: #E3A04B; color: white; padding: 1rem; }
@@ -40,7 +30,7 @@ export const emailTemplate = ({
       </div>
 
       <div class="content">
-        <h2>${titles[formType]}</h2>
+        <h2>Contact Form Submission</h2>
 
         <div class="field">
           <span class="label">Name:</span>
@@ -50,6 +40,11 @@ export const emailTemplate = ({
         <div class="field">
           <span class="label">Email:</span>
           <span class="value">${email}</span>
+        </div>
+
+        <div class="field">
+          <span class="label">Country:</span>
+          <span class="value">${country}</span>
         </div>
 
         <div class="field">

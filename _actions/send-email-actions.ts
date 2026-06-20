@@ -12,14 +12,8 @@ interface MailOptions {
   html: string;
 }
 
-const subjects: Record<string, string> = {
-  advisory: "Website form submission - EXOS (One-on-One Advisory enquiry)",
-  contact: "Website form submission - EXOS (Contact enquiry)",
-};
-
 export async function sendEmail(
   formData: FormData,
-  formType: "advisory" | "contact",
 ): Promise<{ success: boolean; error?: string }> {
   const honey = formData.get("_honey");
   const recaptchaToken = formData.get("recaptchaToken") as string;
@@ -40,21 +34,15 @@ export async function sendEmail(
 
       const name = formData.get("name")?.toString() || "";
       const email = formData.get("email")?.toString() || "";
+      const country = formData.get("country")?.toString() || "";
       const message = formData.get("message")?.toString() || "";
 
-      if (!name.trim() || !email.trim() || !message.trim()) {
+      if (!name.trim() || !email.trim() || !country.trim()) {
         return {
           success: false,
           error: "All required fields must be filled",
         };
       }
-
-      const emailHtmlContent = emailTemplate({
-        name,
-        email,
-        message,
-        formType,
-      });
 
       const transporter = nodemailer.createTransport({
         host: process.env.SMTP_HOST as string,
@@ -69,9 +57,9 @@ export async function sendEmail(
       const mailOptions: MailOptions = {
         from: `EXOS Advisory <${process.env.SMTP_USER}>`,
         to: process.env.SMTP_SEND_TO as string,
-        subject: subjects[formType],
+        subject: "Website form submission - EXOS Advisory",
         replyTo: email,
-        html: emailHtmlContent,
+        html: emailTemplate({ name, email, country, message }),
       };
 
       await transporter.sendMail(mailOptions);

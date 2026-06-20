@@ -10,6 +10,5 @@ export interface ButtonProps {
   border?: "charcoal" | "citrine" | "mist";
   target?: "_self" | "_blank";
   title?: string;
-  backButton?: boolean;
   formButton?: boolean;
 }

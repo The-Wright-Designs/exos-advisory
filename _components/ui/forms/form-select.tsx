@@ -26,7 +26,7 @@ const FormSelect = ({
 
   return (
     <div className={classNames("flex flex-col gap-[12px]", cssClasses)}>
-      <label htmlFor={name} className="text-[18px] font-extralight text-white">
+      <label htmlFor={name} className="text-[18px] font-extralight text-charcoal">
         {label}
       </label>
       <div className="relative">
