@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
+import type { Swiper as SwiperType } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import { CircleChevronLeft, CircleChevronRight } from "lucide-react";
@@ -23,9 +24,11 @@ const {
 const TestimonialSlide = ({
   quote,
   name,
+  onReadMore,
 }: {
   quote: string[];
   name: string;
+  onReadMore?: () => void;
 }) => {
   const [expanded, setExpanded] = useState(false);
   const [overflows, setOverflows] = useState(false);
@@ -56,7 +59,10 @@ const TestimonialSlide = ({
       </div>
       {!expanded && overflows && (
         <button
-          onClick={() => setExpanded(true)}
+          onClick={() => {
+            setExpanded(true);
+            onReadMore?.();
+          }}
           className="text-white text-[14px] px-2 py-1 bg-citrine rounded-md font-light desktop:hover:opacity-80 desktop:hover:cursor-pointer ease-in-out duration-300"
         >
           Read more +
@@ -68,6 +74,11 @@ const TestimonialSlide = ({
 };
 
 const TestimonialsComponent = ({ cssClasses }: Props) => {
+  const swiperRef = useRef<SwiperType | null>(null);
+  const stopAutoplay = useCallback(() => {
+    swiperRef.current?.autoplay.stop();
+  }, []);
+
   return (
     <section
       className={classNames(
@@ -79,6 +90,9 @@ const TestimonialsComponent = ({ cssClasses }: Props) => {
       <div className="relative pb-10 border-b-[3px] border-citrine">
         <div className="overflow-x-hidden">
           <Swiper
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+            }}
             autoplay={{
               delay: 6000,
               disableOnInteraction: true,
@@ -104,6 +118,7 @@ const TestimonialsComponent = ({ cssClasses }: Props) => {
                 <TestimonialSlide
                   quote={testimonial.quote}
                   name={testimonial.name}
+                  onReadMore={stopAutoplay}
                 />
               </SwiperSlide>
             ))}

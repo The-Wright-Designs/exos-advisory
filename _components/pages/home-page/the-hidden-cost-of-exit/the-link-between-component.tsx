@@ -21,13 +21,10 @@ const TheLinkBetweenComponent = ({
       </h4>
       <div className="flex flex-col gap-5">
         <p>
-          There is a direct and well-documented{" "}
-          <strong className="font-bold">link</strong> between post-exit wealth
-          loss and the <strong className="font-bold">failure to process</strong>{" "}
-          the <strong className="font-bold">emotional</strong>,{" "}
-          <strong className="font-bold">identity</strong>, and{" "}
-          <strong className="font-bold">structural challenges</strong> of the
-          transition.
+          There is a direct and well-documented <strong>link</strong> between
+          post-exit wealth loss and the <strong>failure to process</strong> the{" "}
+          <strong>emotional</strong>, <strong>identity</strong>, and{" "}
+          <strong>structural challenges</strong> of the transition.
         </p>
         <p>
           Exited entrepreneurs often experience a breakdown of their personal

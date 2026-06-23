@@ -30,7 +30,7 @@ const TheHiddenCostComponent = () => {
           <TheLinkBetweenComponent />
           <TheInvestmentTrapComponent />
           <ButtonLink
-            href="/pathfinder-playbook"
+            href="/discovery-meeting"
             background="citrine"
             border="charcoal"
             cssClasses="min-[600px]:self-start"

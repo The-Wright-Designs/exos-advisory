@@ -37,26 +37,22 @@ const TheInvestmentTrapComponent = ({ cssClasses }: Props) => {
               <p>
                 Most entrepreneurs begin the transition on the financial side.
                 It feels logical because capital is tangible, measurable, and
-                familiar. But the{" "}
-                <strong className="font-bold">sequence is often wrong</strong>.
+                familiar. But the <strong>sequence is often wrong</strong>.
               </p>
             </li>
             <li>
               <p>
-                <strong className="font-bold">
-                  Decisions about capital are influenced
-                </strong>{" "}
-                by deeper questions about{" "}
-                <strong className="font-bold">identity, purpose</strong>, and
+                <strong>Decisions about capital are influenced</strong> by
+                deeper questions about <strong>identity, purpose</strong>, and
                 the kind of second chapter you want to build.
               </p>
             </li>
             <li>
               <p>
                 When those questions remain unresolved, capital often moves{" "}
-                <strong className="font-bold">too quickly</strong> into
-                opportunities that look compelling but ultimately lead in the{" "}
-                <strong className="font-bold">wrong direction</strong>.
+                <strong>too quickly</strong> into opportunities that look
+                compelling but ultimately lead in the{" "}
+                <strong>wrong direction</strong>.
               </p>
             </li>
           </ul>

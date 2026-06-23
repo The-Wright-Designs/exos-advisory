@@ -101,6 +101,10 @@
     @apply rounded-[6px]
   }
 
+  strong {
+    @apply font-bold
+  }
+
   .font-nudista {
     font-family: "Nudista", Arial, sans-serif;
   }

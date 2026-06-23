@@ -41,8 +41,7 @@ const FivePillarsComponent = ({ cssClasses }: Props) => {
   return (
     <div className={classNames("flex flex-col gap-5", cssClasses)}>
       <p className="text-subheading desktop:text-[26px]">
-        <strong className="font-bold">The five pillars</strong>, and why they
-        are interdependent
+        <strong>The five pillars</strong>, and why they are interdependent
       </p>
       <div className="flex flex-col gap-5 tablet:flex-row tablet:flex-wrap tablet:justify-center desktop:flex-col desktop:items-start">
         {pillars.map((pillar) => (

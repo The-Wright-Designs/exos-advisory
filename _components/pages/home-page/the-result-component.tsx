@@ -36,11 +36,11 @@ const items = [
 export default function TheResultComponent() {
   return (
     <section
-      className="mt-15 w-full scroll-mt-10 tablet:bg-slate tablet:py-15 desktop:scroll-mt-40 desktop:mt-[100px]"
+      className="mt-15 w-full scroll-mt-10 bg-slate py-15 desktop:scroll-mt-40 desktop:mt-[100px]"
       id="the-result"
     >
       <div className="max-w-[1280px] mx-auto flex flex-col gap-10 px-7 tablet:px-10 desktop:px-15">
-        <SectionHeadingComponent cssClasses="tablet:text-white">
+        <SectionHeadingComponent cssClasses="text-white">
           The Result?
         </SectionHeadingComponent>
         <div className="flex flex-col gap-10 w-full">
@@ -72,11 +72,11 @@ export default function TheResultComponent() {
             </div>
           </div>
           <div className="flex flex-col gap-[10px] tablet:p-10 tablet:border-y-[2px] tablet:border-white desktop:gap-1">
-            <p className="italic text-center tablet:text-white tablet:text-left desktop:text-[26px] desktop:font-thin">
+            <p className="italic text-center text-white tablet:text-left desktop:text-[26px] desktop:font-thin">
               &ldquo;People have been here before. The problem is real and
               normal. And you can learn from how they navigated it.&rdquo;
             </p>
-            <p className="text-center tablet:text-white tablet:text-left desktop:text-[26px]">
+            <p className="text-center text-white tablet:text-left desktop:text-[26px]">
               - EXOS client
             </p>
           </div>

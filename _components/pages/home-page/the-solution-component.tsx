@@ -18,24 +18,20 @@ const TheSolutionComponent = () => {
         <div className="flex flex-col gap-5">
           <p>
             EXOS is{" "}
-            <strong className="font-bold">
-              an Exit Operating System for life after exit
-            </strong>
-            . During the years of building a company, decisions are made within
-            a defined context shaped by cadence, accountability, and
+            <strong>an Exit Operating System for life after exit</strong>.
+            During the years of building a company, decisions are made within a
+            defined context shaped by cadence, accountability, and
             interconnected priorities. After exit, that context disappears, but
             the decisions do not become any less consequential.
           </p>
           <p>
             EXOS replaces that context with a more deliberate one.{" "}
-            <strong className="font-bold">
-              At its core is the Pathfinder Playbook
-            </strong>
-            , a structured approach that combines lived entrepreneur experience
-            with institutional research to map the full landscape of the
-            transition, surface what matters most, and bring coherence to
-            decisions that would otherwise remain fragmented.{" "}
-            <strong className="font-bold">
+            <strong>At its core is the Pathfinder Playbook</strong>, a
+            structured approach that combines lived entrepreneur experience with
+            institutional research to map the full landscape of the transition,
+            surface what matters most, and bring coherence to decisions that
+            would otherwise remain fragmented.{" "}
+            <strong>
               It provides a framework for pre and post-exit entrepreneurs
             </strong>{" "}
             to sequence decisions across identity, structure, capital, and
@@ -43,16 +39,14 @@ const TheSolutionComponent = () => {
           </p>
           <p>
             Inside every pillar it runs the same engine,{" "}
-            <strong className="font-bold text-citrine">LRIA</strong>:{" "}
-            <strong className="font-bold">Learnings</strong> from those who have
-            walked the path, <strong className="font-bold">Reflection</strong>{" "}
-            on what they mean for you, the{" "}
-            <strong className="font-bold">Insight</strong> you reach yourself,
-            and the <strong className="font-bold">Action</strong> that converts
-            that insight into a decision
+            <strong className="text-citrine">LRIA</strong>:{" "}
+            <strong>Learnings</strong> from those who have walked the path,{" "}
+            <strong>Reflection</strong> on what they mean for you, the{" "}
+            <strong>Insight</strong> you reach yourself, and the{" "}
+            <strong>Action</strong> that converts that insight into a decision
           </p>
           <ButtonLink
-            href="/what-is-exos"
+            href="/pathfinder-playbook"
             background="citrine"
             border="charcoal"
             cssClasses="hidden desktop:flex self-start mt-5"
@@ -96,7 +90,7 @@ const TheSolutionComponent = () => {
         </div>
 
         <ButtonLink
-          href="/what-is-exos"
+          href="/pathfinder-playbook"
           background="citrine"
           border="charcoal"
           cssClasses="min-[600px]:self-center desktop:hidden"

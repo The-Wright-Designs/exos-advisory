@@ -30,7 +30,7 @@ export default function AboutComponent() {
               </p>
             </div>
             <ButtonLink
-              href="/pathfinder-playbook"
+              href="/discovery-meeting"
               background="charcoal"
               border="citrine"
               cssClasses="hidden desktop:flex"
@@ -71,7 +71,7 @@ export default function AboutComponent() {
           second chapter defined by both meaning and enduring value.
         </p>
         <ButtonLink
-          href="/pathfinder-playbook"
+          href="/discovery-meeting"
           background="charcoal"
           border="citrine"
           cssClasses="desktop:hidden min-[600px]:self-start"
