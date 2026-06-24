@@ -38,15 +38,13 @@ const PathfinderPlaybookComponent = ({ cssClasses }: Props) => {
             that no pillar is worked in isolation and the insight from each
             connects into a coherent whole.
           </p>
-          <FivePillarsComponent cssClasses="hidden desktop:flex" />
         </div>
-        <div className="flex flex-col gap-15">
-          <EvolvingEntrepreneurComponent />
-          <OthersDistortComponent cssClasses="hidden desktop:flex" />
-        </div>
+        <EvolvingEntrepreneurComponent />
       </div>
-      <FivePillarsComponent cssClasses="desktop:hidden" />
-      <OthersDistortComponent cssClasses="desktop:hidden" />
+      <div className="grid gap-15 desktop:grid-cols-[1fr_466px] desktop:border-t border-charcoal/25 desktop:pt-15">
+        <FivePillarsComponent />
+        <OthersDistortComponent />
+      </div>
     </main>
   );
 };
