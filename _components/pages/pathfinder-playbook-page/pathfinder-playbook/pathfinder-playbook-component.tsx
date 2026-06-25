@@ -22,7 +22,7 @@ const PathfinderPlaybookComponent = ({ cssClasses }: Props) => {
             The Pathfinder Playbook{" "}
             <span className="text-[26px]">How the Playbook works</span>
           </SectionHeadingComponent>
-          <p>
+          <p className="text-[24px]">
             <strong>Everything in EXOS runs on the Playbook.</strong> It is the
             framework that maps the five interconnected pillars of an
             entrepreneur&apos;s transition:{" "}
